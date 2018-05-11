@@ -31,10 +31,26 @@ client.on('message', function(message) {
 
 client.on('message', msg => {
   if (msg.content === '!galleta') {
-     msg.channel.send('galletita para ti! ', {files: ["https://i.imgur.com/PK23Px5.png"]});
+     msg.channel.send('galletita! ', {files: ["https://i.imgur.com/PK23Px5.png"]});
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === '!galleta2') {
+     msg.channel.send('galleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
+  }
+});
 
+client.on('message', msg => {
+  if (msg.content === '!mira') {
+     msg.channel.send('', {files: ["https://i.imgur.com/LfKhMSm.png"]});
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '!doit') {
+     msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
+  }
+});
 
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
