@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+
+
+
 client.on('ready', () => { client.user.setGame('KHUX') });
 
 client.on('ready', () => {
@@ -61,7 +64,7 @@ client.on('message', msg => {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
-      return msg.reply("Sorry, you don't have permissions to use this!");}
+      return msg.reply('', {files: ["https://i.imgur.com/f8PwoDM.png"]});}
 });
 
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
