@@ -29,5 +29,12 @@ client.on('message', function(message) {
     }
 });
 
+client.on('message', msg => {
+  if (msg.content === '!galleta') {
+     msg.channel.send('galletita para ti! ', {files: ["https://i.imgur.com/PK23Px5.png"]});
+  }
+});
+
+
 
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
