@@ -56,7 +56,7 @@ client.on('message', msg => {
   
 });
 client.on('message', msg => {
-  if(message.member.roles.find("name", "admin"){
+  if(msg.member.roles.find("name", "admin"){
   if (msg.content === '!ya') {
      msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
   }
