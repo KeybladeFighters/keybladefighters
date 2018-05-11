@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.user.setPresence({game:{name: "This game!"}})
-
+client.on('ready', () => { client.user.setGame('GAME HERE') })
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
