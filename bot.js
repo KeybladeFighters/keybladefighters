@@ -59,9 +59,9 @@ client.on('message', msg => {
 client.on("message", msg => {
     if (msg.content === "pingo") {
         if (client.memberHasRole(msg.author, msg.server.roles.get("name", "admin")) {
-            client.sendMessage(msg, "pong");
+            msg.channel.send( "pong");
         } else {
-            client.sendMessage(msg, "You do not have the Admin role.");
+            msg.channel.send("You do not have the Admin role.");
         }
     }
 });
