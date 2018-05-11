@@ -64,7 +64,7 @@ client.on('message', msg => {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
-      return msg.reply('', {files: ["https://i.imgur.com/f8PwoDM.png"]});}
+      return msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});}
 });
 
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
