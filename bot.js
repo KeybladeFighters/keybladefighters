@@ -55,12 +55,5 @@ client.on('message', msg => {
   }
   
 });
-client.on('message', msg => {
-if (msg.content == "test") {
-    if (msg.member.roles.find("name", "admin") {        
-        msg.channel.send("xe") // Or replace with FileOptions object
-        });
-    }
 
-});
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
