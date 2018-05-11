@@ -56,12 +56,11 @@ client.on('message', msg => {
   
 });
 client.on('message', msg => {
-  if(msg.member.roles.find("name", "admin"){
-  if (msg.content === '!ya') {
+if (message.content.startsWith(prefix + 'commandname')) {
+    if (message.author.id !== '125557470616616960') return;
+    if (msg.content === 'xd') {
      msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
   }
-  } else {
- // not vip
 }
 });
 
