@@ -56,7 +56,15 @@ client.on('message', msg => {
   
 });
 
-msg.channel.send("Test").then(sentMessage => sentMessage.edit("Blah"));
+client.on("message", msg => {
+    if (msg.content === "pingo") {
+        if (client.memberHasRole(msg.author, msg.server.roles.get("name", "admin")) {
+            client.sendMessage(msg, "pong");
+        } else {
+            client.sendMessage(msg, "You do not have the Admin role.");
+        }
+    }
+});
 
 
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
