@@ -55,4 +55,14 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'xd') {
+    let modRole = msg.guild.roles.find("name","admin");
+    if(msg.member.roles.has(modRole.id)){
+     msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
+  }else {
+    msg.reply("no");
+});
+
+
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
