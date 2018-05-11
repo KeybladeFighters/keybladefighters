@@ -56,13 +56,11 @@ client.on('message', msg => {
   
 });
 client.on('message', msg => {
-if (message.content.startsWith(prefix + 'commandname')) {
-    if (message.author.id !== '125557470616616960') return;
-    if (msg.content === 'xd') {
-     msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
-  }
-}
+if (message.content == ",test") {
+    if (message.member.roles.find("name", "admin")) {        
+        message.channel.send("xe" // Or replace with FileOptions object
+        });
+    }
+
 });
-
-
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
