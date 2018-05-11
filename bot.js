@@ -36,35 +36,37 @@ client.on('message', function(message) {
 
 client.on('message', msg => {
   if (msg.content === '!galleta') {
-     msg.channel.send('galletita! ', {files: ["https://i.imgur.com/PK23Px5.png"]});
+    if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+       return msg.channel.send('galletita! ', {files: ["https://i.imgur.com/PK23Px5.png"]});
   }
 });
 
 client.on('message', msg => {
   if (msg.content === '!galleta2') {
-     msg.channel.send('galleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
+    if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+       return msg.channel.send('galleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
   }
 });
 
 client.on('message', msg => {
   if (msg.content === '!mira') {
-     msg.channel.send('', {files: ["https://i.imgur.com/LfKhMSm.png"]});
+    if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+      return msg.channel.send('', {files: ["https://i.imgur.com/LfKhMSm.png"]});
   }
 });
 
 client.on('message', msg => {
   if (msg.content === '!doit') {
-     msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
+     if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+      return msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
   }
   
 });
 
 client.on('message', msg => {
   if(msg.content === "xd") {
-    // Most of this command is identical to kick, except that here we'll only let admins do it.
-    // In the real world mods could ban too, but this is just an example, right? ;)
     if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
       return msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});}
-});
+}); 
 
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
