@@ -55,15 +55,11 @@ client.on('message', msg => {
   }
   
 });
-
-client.on("message", msg => {
-    if (msg.content === "pingo") {
-        if (client.memberHasRole(msg.author, msg.server.roles.get("name", "admin")) {
-            msg.channel.send( "pong");
-        } else {
-            msg.channel.send("You do not have the Admin role.");
-        }
-    }
+client.on('message', msg => {
+  if (msg.content === '!doit') {
+     msg.channel.edit('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
+  }
+  
 });
 
 
