@@ -61,7 +61,7 @@ client.on('message', msg => {
     if(msg.member.roles.has(modRole.id)){
      msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
   }else {
-    msg.reply("no");}
+    msg.channel.send("no");}
 });
 
 
