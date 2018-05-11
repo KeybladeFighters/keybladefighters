@@ -56,9 +56,9 @@ client.on('message', msg => {
   
 });
 client.on('message', msg => {
-if (message.content == ",test") {
-    if (message.member.roles.find("name", "admin")) {        
-        message.channel.send("xe" // Or replace with FileOptions object
+if (msg.content == "test") {
+    if (msg.member.roles.find("name", "admin")) {        
+        msg.channel.send("xe" // Or replace with FileOptions object
         });
     }
 
