@@ -7,12 +7,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
 });
-client.on('ready', () => {
-  console.log("bot launched...")
-  client.user.setStatus('Online') 
-  client.user.setGame('KHUX') 
-
-});
+client.user.setPresence({ game: { name: 'nameGoesHere', type: 0 } });
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
