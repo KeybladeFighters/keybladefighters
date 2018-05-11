@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+client.user.setPresence({ status: 'online', game: { name: 'KHUX' } });
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
