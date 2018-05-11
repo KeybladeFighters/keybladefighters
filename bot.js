@@ -56,7 +56,7 @@ client.on('message', msg => {
   
 });
 client.on('message', msg => {
-  if (msg.content === '!doit') {
+  if (msg.content === '!ya') {
      msg.channel.edit('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
   }
   
