@@ -12,9 +12,9 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping!! ') {
+  if (msg.content === 'ping!!') {
     if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
-      return msg.reply('pong!! <:perturba2:431317649780113418>');
+      return msg.reply('pong!! %<:perturba2:431317649780113418>');
   }
 });
 
