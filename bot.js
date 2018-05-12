@@ -18,6 +18,16 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', function(message) {
+    // Now, you can use the message variable inside
+    if (message.content === "$lo0op") { 
+        var interval = setInterval (function () {
+            // use the message's channel (TextChannel) to send a new message
+            message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]})
+            .catch(console.error); // add error handling here
+        }, 1 * 21600000); 
+    }
+});
 
 
 
