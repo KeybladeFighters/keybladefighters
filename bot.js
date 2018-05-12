@@ -12,16 +12,12 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('pongoooo!');
+  if (msg.content === 'ping!!') {
+    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
+      return msg.reply('pong!!');
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'NA: Double lux active!') {
-     msg.channel.send('@everyone :fire: :lux: Lux Time!!! A darle con todo mis Keyblade Rangers~ :lux: :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
-  }
-});
 
 client.on('message', function(message) {
     // Now, you can use the message variable inside
@@ -42,9 +38,9 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === '!galleta2') {
+  if (msg.content === '!supergalleta') {
     if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
-       return msg.channel.send('galleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
+       return msg.channel.send('Supergalleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
   }
 });
 
