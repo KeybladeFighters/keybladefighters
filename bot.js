@@ -36,28 +36,28 @@ client.on('message', function(message) {
 
 client.on('message', msg => {
   if (msg.content === '!galleta') {
-    if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
        return msg.channel.send('galletita! ', {files: ["https://i.imgur.com/PK23Px5.png"]});
   }
 });
 
 client.on('message', msg => {
   if (msg.content === '!galleta2') {
-    if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
        return msg.channel.send('galleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
   }
 });
 
 client.on('message', msg => {
   if (msg.content === '!mira') {
-    if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
       return msg.channel.send('', {files: ["https://i.imgur.com/LfKhMSm.png"]});
   }
 });
 
 client.on('message', msg => {
   if (msg.content === '!doit') {
-     if(msg.member.roles.some(r=>["admin"].includes(r.name)) )
+     if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
       return msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
   }
   
