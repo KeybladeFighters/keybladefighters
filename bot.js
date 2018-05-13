@@ -18,11 +18,6 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'prueba') {
-client.channels.get(127500279846273026).send('My Message');
- }
-});
 
 
 client.on('message', function(message) {
