@@ -20,7 +20,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'prueba') {
- message.guild.channels.find("name", "127500279846273026").sendMessage("blabla");
+client.channels.get(127500279846273026).send('My Message');
  }
 });
 
