@@ -18,6 +18,15 @@ client.on('message', msg => {
   }
 });
 
+
+var now = new Date();
+var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 30, 0, 0) - now;
+if (millisTill10 < 0) {
+     millisTill10 += 10000; // it's after 10am, try 10am tomorrow.
+}
+setTimeout(function(){alert("It's 10am!")}, millisTill10);
+
+
 client.on('message', function(message) {
     // Now, you can use the message variable inside
     if (message.content === "$lo0op") { 
