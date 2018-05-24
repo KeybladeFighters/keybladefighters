@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 
 
-client.on('ready', () => { client.user.setGame('KHUX') });
+client.on('ready', () => { client.user.setGame('KHUX PvP') });
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
