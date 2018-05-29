@@ -76,18 +76,28 @@ client.on('message', async message => {
   // we ignore it
   if (!message.guild) return;
 
+  
   if (message.content === '/join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       const connection = await message.member.voiceChannel.join();
      
-connection.play('https://www.youtube.com/watch?v=ZlAU_w7-Xp8',
- );
     } else {
       message.reply('You need to join a voice channel first!');
     }
   }
   });
+
+client.on('ready', () => {
+  // Get the channel via ID
+  let channel = client.channels.get('127500279846273027');
+  // Or via name (less persistent)
+ 
+
+  channel.join()
+  .then(connection => console.log('Connected'))
+  .catch(console.error);
+});
 
 client.on('message', function(message) {
     // Now, you can use the message variable inside
