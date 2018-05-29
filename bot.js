@@ -96,29 +96,29 @@ client.on("message", function(message) {
         case "slap":
             let slappedUser = message.mentions.users.first();
 
-            if(message.mentions.users.size < 1) return message.reply("You forgot to name a bitch to slap.");
-            message.reply("You just slapped da fauq out of " + slappedUser);
+            if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre a quien pegarle.");
+            message.reply("Acabas de abofetear a " + slappedUser);
             break;
 
-        case "overseer":
-            message.channel.sendMessage("Go to https://316thebrains.wixsite.com/home and click 'Get Overseer'");
+        case "camii":
+            message.channel.sendMessage("Ve a https://www.youtube.com/channel/UCfC5uaY01NBD-vIq5tXfaag/videos?disable_polymer=1");
             break;
 
         case "dm":
             let person = message.mentions.users.first();
             let msg = message.content.split(" ").slice(2).join(" ");
 
-            if(message.mentions.users.size < 1) return message.reply("Usage: /dm @PLAYER000 I Like Ponies");
+            if(message.mentions.users.size < 1) return message.reply("Uso: !dm @PLAYER000 Me gustan los ponys");
             if(!msg) return message.reply("Usage: /dm @PLAYER000 I Like Ponies");
 
             const customEmbed = new Discord.RichEmbed()
             .setAuthor(`UNKNOWN`, message.author.displayAvatarURL)
-            .addField(`__And Unknown User Says:__`, `${msg}\n ======================== \n *F.Y.I You will not be able to respond to **UNKNOWN** through this chat.* `)
+            .addField(`__And Unknown User Says:__`, `${msg}\n ======================== \n *Tu no puedes responderle **UNKNOWN** por este chat.* `)
             .setColor(embedOrange);
             person.send({
                 embed : customEmbed
             });
-            message.channel.send(`I have DM'd ${message.author}`);
+            message.channel.send(`MP enviado a ${message.author}`);
             break;
         
      
