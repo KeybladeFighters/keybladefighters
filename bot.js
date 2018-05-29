@@ -1,7 +1,26 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = "!";
+const fs = require("fs");
+client.commands = new Discord.collection();
 
+fs.readdir("./commands/",(err, files) => {
+  if(err) console.log(err);
+  
+  let jsfile = files.filter(f => f.split("."),pop() === "js")
+  if(jsfile.length<=0){
+    console.log("Couldn't find command,");   
+    return;
+  }
+  
+  jsfile.foreach((f, i) =>{
+    let props = require("./commands/${f}");
+    console.log("${f} loaded!");
+    client.commands.set(props.help.name, props);
+  
+  });
+   
+ });
 
 client.on('ready', () => { client.user.setGame('KHUX PvP') });
 
