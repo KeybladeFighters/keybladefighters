@@ -10,26 +10,6 @@ client.on('ready', () => {
 
 });
 
-client.on('message', message => {
-
-  if (message.author.bot) return;
-  if (message.channel.type === 'dm') return;
-
-let guild = message.member.guild;
-let Role = guild.roles.find('name', 'moderador');
-
-if(!message.content.startsWith(prefix)) return;
-
-if (message.content.startsWith(prefix + 'AddRole') || message.content.startsWith(prefix + 'addRole') ) {
-  if (message.member.roles.has(moderador)) {
-      message.channel.sendMessage('You already have this role!');
-      console.log(`${message.author.username} already has role`);
- }
-  else {
-  message.member.addRole(Role);
-  message.channel.sendMessage('WooHoo , You got a role!');
-  console.log(`${message.author.username} got a role`);
-};}});
 
 
 client.on("message", (message) => {
