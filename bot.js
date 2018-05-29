@@ -7,12 +7,13 @@ client.on("message", (message) => {
   // Exit and stop if the prefix is not there or if user is a bot
 
   if (!message.content.startsWith(prefix) || message.author.bot  ) return;
-  
-  if (message.content.startsWith(prefix + "ping") && message.member.roles.some(r=>["administrador"].includes(r.name)) ) {
+
+  if (message.content.startsWith(prefix + "ping") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send("pong!");
   } else
-  if (message.content.startsWith(prefix + "foo")) {
-    message.channel.send("bar!");
+  if (message.content.startsWith(prefix + "galleta") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    message.channel.send("galletita!", {files: ["https://i.imgur.com/PK23Px5.png"]});
+
   } 
 
 });
