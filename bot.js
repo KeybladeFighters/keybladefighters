@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = "!";
-const game = ("khux", "https://www.twitch.tv/Camii_669")
+const game = "khux"
 const status = "Online"
   const embedRed = 0xff0000
 const embedOrange = 0xff790c
