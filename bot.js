@@ -112,8 +112,8 @@ client.on("message", function(message) {
             if(!msg) return message.reply("Usage: /dm @PLAYER000 I Like Ponies");
 
             const customEmbed = new Discord.RichEmbed()
-            .setAuthor(`UNKNOWN`, message.author.displayAvatarURL)
-            .addField(`__And Unknown User Says:__`, `${msg}\n ======================== \n *Tu no puedes responderle **UNKNOWN** por este chat.* `)
+            .setAuthor(`Desconocido`, message.author.displayAvatarURL)
+            .addField(`__Un usuario desconocido dice:__`, `${msg}\n ======================== \n *Tu no puedes responderle al **Desconocido** por este chat.* `)
             .setColor(embedOrange);
             person.send({
                 embed : customEmbed
