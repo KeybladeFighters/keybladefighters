@@ -14,9 +14,9 @@ client.on("message", (message) => {
   } else
     
    
-  if (msg.content === 'supergalleta') {
+  if (msg.content.startsWith(prefix + 'supergalleta')) {
     if(msg.member.roles.some(r=>["administrador"; "moderador"].includes(r.name)) )
-       return msg.channel.send('Supergalleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
+      message.channel.send('Supergalleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
   }
 
 });
