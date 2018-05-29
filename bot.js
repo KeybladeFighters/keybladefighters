@@ -62,11 +62,11 @@ client.on("message", function(message) {
     if (message.author.equals(client.user)) return;
 
     if (!message.content.startsWith(prefix)) return;
- if message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-
+ if message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         case "8ball":
             if (args[1]) {
                 //message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
