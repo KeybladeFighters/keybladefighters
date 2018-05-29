@@ -14,7 +14,9 @@ client.on('ready', () => {
 
 client.on('message', (message) => {
 if(message.content.startsWith('!recrutar')) {
-message.member.addRole(451129032646328320).catch(console.error);
+let userToModify = message.mentions.users.first();
+let roleToAdd = message.mentions.roles.first();
+userToModify.addRole(moderador);
 }
 });
 
