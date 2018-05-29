@@ -2,6 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = "!";
 
+const ytdl = require('ytdl-core');
+connection.play(ytdl(
+  'https://www.youtube.com/watch?v=ZlAU_w7-Xp8',
+  { filter: 'audioonly' }));
 
 client.on('ready', () => { client.user.setGame('KHUX PvP') });
 
