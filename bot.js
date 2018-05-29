@@ -11,15 +11,18 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
 });
+let role = message.guild.roles.find("name", "moderador");
 
-client.on('message', (message) => {
-if(message.content.startsWith('!recrutar')) {
-let userToModify = message.member;
-let roleToAdd = message.mentions.roles.first();
-userToModify.addRole(moderador);
-}
-});
+// Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
+let member = message.mentions.members.first();
 
+// or the person who made the command: let member = message.member;
+
+// Add the role!
+member.addRole(role).catch(console.error);
+
+// Remove a role!
+member.removeRole(role).catch(console.error);
 
 client.on("message", (message) => {
   
