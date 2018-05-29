@@ -10,7 +10,10 @@ client.on('ready', () => {
 
 });
 
-
+client.on('message', (autorol) => {
+  const guildMember = message.member;
+  guildMember.addRole('autorol');
+});
 
 client.on("message", (message) => {
   
