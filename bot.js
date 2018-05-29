@@ -80,10 +80,9 @@ client.on('message', async message => {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       const connection = await message.member.voiceChannel.join();
-      const ytdl = require('ytdl-core');
-connection.play(ytdl(
-  'https://www.youtube.com/watch?v=ZlAU_w7-Xp8',
-  { filter: 'audioonly' }));
+     
+connection.play('https://www.youtube.com/watch?v=ZlAU_w7-Xp8',
+ );
     } else {
       message.reply('You need to join a voice channel first!');
     }
