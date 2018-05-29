@@ -81,8 +81,24 @@ client.on("message", function(message) {
                     }});
             }
             break;
+        
+                case "help":
+            let member = message.author;
+
+            const helpEmbed = new Discord.RichEmbed()
+            .setAuthor(`Commands`, bot.user.displayAvatarURL)
+            .addField("--------------------------------------", `**/dm**     **dms a player without using your username.**\n**/ping**     Pong!\n**/info**     Tells current bot version\n**/8ball**    Ask it a question!\n**/roll**     Rolls a 6 sided die\n**/admin**    Give urshmelf admin priveledges\n**/kick**     Kicks users from the server\n**/ban**      Bans users from the server\n**/copycat**  316thebrains hates me for this...\n**/slap**   Slap dem b#tches!\n**/overseer**  Invite Overseer to your server`)
+            .setColor(embedRed);
+            member.send({
+            embed : helpEmbed
+            });
+            message.reply("I have DM'd you the list of help commands!")
+            break;
+        
             }
+  
 });
+
 
 client.on("message", (message) => {
   
