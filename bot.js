@@ -3,7 +3,8 @@ const client = new Discord.Client();
 let prefix = "!";
 
 
-client.on('ready', () => { client.user.setGame('KHUX PvP') });
+client.on('ready', () => { client.user.setGame("xd", "https://www.twitch.tv/monstercat") });
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
