@@ -13,7 +13,10 @@ client.on("message", (message) => {
   } else
   if (message.content.startsWith(prefix + "galleta") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send("galletita!", {files: ["https://i.imgur.com/PK23Px5.png"]});
-
+  } else
+    
+  if (message.content.startsWith(prefix + "supergalleta") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    message.channel.send('Supergalleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
   } 
 
 });
@@ -56,12 +59,7 @@ client.on('message', msg => {
 });
 
 
-client.on('message', msg => {
-  if (msg.content === '!galleta') {
-    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
-       return msg.channel.send('galletita! ', {files: ["https://i.imgur.com/PK23Px5.png"]});
-  }
-});
+
 
 client.on('message', msg => {
   if (msg.content === '!supergalleta') {
