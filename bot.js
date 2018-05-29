@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = "!";
-const game = "khux"
+const game = "KHUX! "
 const status = "Online"
   const embedRed = 0xff0000
 const embedOrange = 0xff790c
