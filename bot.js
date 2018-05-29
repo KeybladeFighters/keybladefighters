@@ -24,26 +24,26 @@ var x = [
 var output = x[Math.floor(Math.random()*x.length)];
 
 var fortunes = [
-    "Yes.",
-    "It is certain.",
-    "It is decidedly so.",
-    "Without a doubt.",
-    "Yes definelty.",
-    "You may rely on it.",
-    "As I see it, yes.",
-    "Most likely.",
-    "Outlook good.",
-    "Signs point to yes.",
-    "Reply hazy, try again.",
-    "Ask again later.",
-    "Better not tell you now...",
-    "Cannot predict now.",
-    "Concentrate and ask again.",
-    "Don't count on it.",
-    "My reply is no.",
-    "My sources say no.",
-    "Outlook not so good...",
-    "Very doubtful.",
+    "Si.",
+    "Es cierto.",
+    "Definitivamente si.",
+    "Sin duda.",
+    "En teoria si.",
+    "Puedes confiar en ello.",
+    "Como yo lo veo, si.",
+    "Lo mas probable.",
+    "Se ve bien.",
+    "Las señales dicen que si.",
+    "Respuesta confusa,intenta otra vez.",
+    "Preguntalo denuevo despues.",
+    "Mejor no te lo digo ahora...",
+    "No puedo predecirlo ahora.",
+    "Concentrate y pregunta despues.",
+    "No cuentes con ello.",
+    "Mi respuesta es no.",
+    "Mis fuentes dicen que no.",
+    "Eso no se ve bien...",
+    "Muy dudoso.",
 ];
 
 
@@ -77,7 +77,7 @@ client.on("message", function(message) {
                 message.channel.send({embed: {
                     color: embedRed,
                     title: "Oops...",
-                    description: "The usage of this command is: **/8ball [Question]**",
+                    description: "El comando es: **!8ball [Question]**",
                     }});
             }
             break;
