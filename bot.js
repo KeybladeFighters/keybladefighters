@@ -2,6 +2,16 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = "!";
 
+
+client.on('ready', () => { client.user.setGame('KHUX PvP') });
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+
+});
+
+
+
 client.on("message", (message) => {
   
   // Exit and stop if the prefix is not there or if user is a bot
@@ -17,18 +27,29 @@ client.on("message", (message) => {
     
   if (message.content.startsWith(prefix + "supergalleta") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send('Supergalleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
+  } else
+    
+  if (message.content.startsWith(prefix + "mira") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    message.channel.send('', {files: ["https://i.imgur.com/LfKhMSm.png"]});
+  } else
+    
+      if (message.content.startsWith(prefix + "doit") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    message.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
+  } else
+   
+    if (message.content.startsWith(prefix + "aviso") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
   } 
 
+
+
 });
 
+  
 
 
-client.on('ready', () => { client.user.setGame('KHUX PvP') });
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
 
-});
 
 client.on('message', msg => {
   if (msg.content === 'ping!!') {
@@ -51,37 +72,8 @@ client.on('message', function(message) {
 
 
 
-client.on('message', msg => {
-  if (msg.content === '!aviso') {
-    if(msg.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) )
-       return msg.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]})
-  }
-});
 
 
-
-
-client.on('message', msg => {
-  if (msg.content === '!supergalleta') {
-    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
-       return msg.channel.send('Supergalleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === '!mira') {
-    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
-      return msg.channel.send('', {files: ["https://i.imgur.com/LfKhMSm.png"]});
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === '!doit') {
-     if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
-      return msg.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
-  }
-  
-});
 
 
 client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
