@@ -11,18 +11,48 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
 });
-let role = message.guild.roles.find("name", "moderador");
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
 
-// Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
-let member = message.mentions.members.first();
+    if (!message.content.startsWith(prefix)) return;
 
-// or the person who made the command: let member = message.member;
+    var args = message.content.substring(prefix.length).split(" ");
 
-// Add the role!
-member.addRole(role).catch(console.error);
+    switch (args[0].toLowerCase()) {
+        case "ping":
+            message.channel.send({embed: {
+            color: embedRed,
+            title: "Pong!",
+            }});
+            break;
 
-// Remove a role!
-member.removeRole(role).catch(console.error);
+        case "info":
+            message.channel.send({embed: {
+            color: 0xf50107,
+            title: "Currently using latest version of Overseer.",
+            description: "(Version " + version + ")",
+            }});
+            break;
+
+        case "8ball":
+            if (args[1]) {
+                //message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
+                message.channel.send({embed: {
+                    color: embedRed,
+                    title: "Hmmm...",
+                    description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
+                    }});
+            }
+            else {
+                message.channel.send({embed: {
+                    color: embedRed,
+                    title: "Oops...",
+                    description: "The usage of this command is: **/8ball [Question]**",
+                    }});
+            }
+            break;
+            }
+});
 
 client.on("message", (message) => {
   
