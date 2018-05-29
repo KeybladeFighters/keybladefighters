@@ -93,6 +93,34 @@ client.on("message", function(message) {
                     }});
                     break;
         
+        case "slap":
+            let slappedUser = message.mentions.users.first();
+
+            if(message.mentions.users.size < 1) return message.reply("You forgot to name a bitch to slap.");
+            message.reply("You just slapped da fauq out of " + slappedUser);
+            break;
+
+        case "overseer":
+            message.channel.sendMessage("Go to https://316thebrains.wixsite.com/home and click 'Get Overseer'");
+            break;
+
+        case "dm":
+            let person = message.mentions.users.first();
+            let msg = message.content.split(" ").slice(2).join(" ");
+
+            if(message.mentions.users.size < 1) return message.reply("Usage: /dm @PLAYER000 I Like Ponies");
+            if(!msg) return message.reply("Usage: /dm @PLAYER000 I Like Ponies");
+
+            const customEmbed = new Discord.RichEmbed()
+            .setAuthor(`UNKNOWN`, message.author.displayAvatarURL)
+            .addField(`__And Unknown User Says:__`, `${msg}\n ======================== \n *F.Y.I You will not be able to respond to **UNKNOWN** through this chat.* `)
+            .setColor(embedOrange);
+            person.send({
+                embed : customEmbed
+            });
+            message.channel.send(`I have DM'd ${message.author}`);
+            break;
+        
      
         
             }
