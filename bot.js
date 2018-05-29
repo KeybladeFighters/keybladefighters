@@ -1,6 +1,50 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = "!";
+  const embedRed = 0xff0000
+const embedOrange = 0xff790c
+const embedYellow = 0xffff00
+const embedGreen = 0x00ff00
+const embedBlue = 0x0064ff
+const embedPurple = 0x6a00b0
+const embedMagenta = 0x9600ff
+const embedPink = 0xff00ff
+const embedBlack = 0x000000
+const embedWhite = 0xffffff
+const embedGray = 0x777777
+
+var x = [
+    1,
+    2,
+    3,
+    4,
+    5,
+]
+
+var output = x[Math.floor(Math.random()*x.length)];
+
+var fortunes = [
+    "Yes.",
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes definelty.",
+    "You may rely on it.",
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Signs point to yes.",
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now...",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good...",
+    "Very doubtful.",
+];
 
 
 
@@ -26,13 +70,7 @@ bot.on("message", function(message) {
             }});
             break;
 
-        case "info":
-            message.channel.send({embed: {
-            color: 0xf50107,
-            title: "Currently using latest version of Overseer.",
-            description: "(Version " + version + ")",
-            }});
-            break;
+        
 
         case "8ball":
             if (args[1]) {
