@@ -45,23 +45,6 @@ client.on("message", (message) => {
 
   
 
-client.on('voiceStateUpdate', (oldMember, newMember) => {
-  let newUserChannel = 127500279846273027
-  let oldUserChannel = 127500279846273027
-
-
-  if(oldUserChannel === undefined && newUserChannel !== undefined) {
-client.channels.get(432935659871666177).send('My Message');
-     // User Joins a voice channel
-
-  } else if(newUserChannel === undefined){
-
-    // User leaves a voice channel
-
-  }
-})
-
-
 
 
 client.on('message', msg => {
@@ -71,35 +54,7 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', async message => {
-  // Voice only works in guilds, if the message does not come from a guild,
-  // we ignore it
-  if (!message.guild) return;
 
-  
-  if (message.content === '/join') {
-    // Only try to join the sender's voice channel if they are in one themselves
-    if (message.member.voiceChannel) {
-      const connection = await message.member.voiceChannel.join();
-     
-    } else {
-      message.reply('You need to join a voice channel first!');
-    }
-  }
-  });
-
-client.on('message', message => {
-  if (message.content === '!entra') {
-    // Note that this will only work if the message was sent in a guild
-    // and the author is actually in a voice channel.
-    // You might want to check for all that stuff first
-    const channel = message.member.voiceChannel;
-
-    channel.join()
-    .then(connection => console.log('Connected!'))
-    .catch(console.error);
-  }
-});
 
 client.on('message', function(message) {
     // Now, you can use the message variable inside
