@@ -84,6 +84,7 @@ client.on('message', async message => {
       message.reply('You need to join a voice channel first!');
     }
   }
+  });
 
 client.on('message', function(message) {
     // Now, you can use the message variable inside
