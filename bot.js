@@ -51,7 +51,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
- message.channel.send('', {files: ["https://i.imgur.com/f8PwoDM.png"]});
+
      // User Joins a voice channel
 
   } else if(newUserChannel === undefined){
