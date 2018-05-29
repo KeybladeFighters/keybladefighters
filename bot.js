@@ -5,8 +5,8 @@ let prefix = "!";
 client.on("message", (message) => {
   
   // Exit and stop if the prefix is not there or if user is a bot
+
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-  if(msg.member.roles.some(r=>["administrador"; "moderador"].includes(r.name)) )
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   } else
