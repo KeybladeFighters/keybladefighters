@@ -88,7 +88,7 @@ client.on("message", function(message) {
           case "roll":
         message.channel.send({embed: {
                     color: embedRed,
-                    title: "You rolled...",
+                    title: "Tu tiraste...",
                     description: Math.floor(Math.random() * 6) + 1,
                     }});
                     break;
