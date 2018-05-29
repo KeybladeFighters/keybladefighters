@@ -4,6 +4,7 @@ let prefix = "!";
 
 
 
+
 client.on('ready', () => { client.user.setGame('KHUX PvP') });
 
 client.on('ready', () => {
@@ -11,6 +12,11 @@ client.on('ready', () => {
 
 });
 
+client.on('message', (message) => {
+if(message.content.startsWith('!recrutar')) {
+message.member.addRole(451129032646328320).catch(console.error);
+}
+});
 
 
 client.on("message", (message) => {
