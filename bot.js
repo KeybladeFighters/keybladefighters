@@ -16,12 +16,12 @@ client.on('message', message => {
   if (message.channel.type === 'dm') return;
 
 let guild = message.member.guild;
-let Role = guild.roles.find('name', 'randomRole');
+let Role = guild.roles.find('name', 'moderador');
 
 if(!message.content.startsWith(prefix)) return;
 
 if (message.content.startsWith(prefix + 'AddRole') || message.content.startsWith(prefix + 'addRole') ) {
-  if (message.member.roles.has(Role.id)) {
+  if (message.member.roles.has(moderador)) {
       message.channel.sendMessage('You already have this role!');
       console.log(`${message.author.username} already has role`);
  }
