@@ -13,7 +13,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'ping!!') {
-    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
+    if(msg.member.roles.some(r=>["administrador", "Moderator"].includes(r.name)) )
       return msg.reply('pong!!  <:lux:421728762716225540>');
   }
 });
@@ -34,7 +34,7 @@ client.on('message', function(message) {
 
 client.on('message', msg => {
   if (msg.content === '!aviso') {
-    if(msg.member.roles.some(r=>["administrador"].includes(r.name)) )
+    if(msg.member.roles.some(r=>["administrador", "Moderator"].includes(r.name)) )
        return msg.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]})
   }
 });
