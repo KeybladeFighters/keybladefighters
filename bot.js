@@ -66,9 +66,9 @@ client.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
- 
+  if(message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) )
         case "8ball":
-         if message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+        
             if (args[1]) {
                 //message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
                 message.channel.send({embed: {
@@ -78,7 +78,6 @@ client.on("message", function(message) {
                     }});
             }
            
- }
             else {
                 message.channel.send({embed: {
                     color: embedRed,
