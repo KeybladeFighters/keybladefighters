@@ -49,14 +49,15 @@ var fortunes = [
 ];
 
 
-
-
-
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+client.on("ready", () => {
+    client.user.setStatus(status)
+    client.user.setGame(game)
+ console.log(`Logged in as ${client.user.tag}!`);
 
 });
+
+
+
 client.on("message", function(message) {
     if (message.author.equals(client.user)) return;
 
