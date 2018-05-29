@@ -16,7 +16,7 @@ client.on('message', (message) => {
 if(message.content.startsWith('!recrutar')) {
 let userToModify = message.mentions.users.first();
 let roleToAdd = message.mentions.roles.first();
-userToModify.addRole(moderador);
+userToModify.addRole(451129032646328320);
 }
 });
 
