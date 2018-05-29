@@ -46,12 +46,12 @@ client.on("message", (message) => {
   
 
 client.on('voiceStateUpdate', (oldMember, newMember) => {
-  let newUserChannel = newMember.127500279846273027
-  let oldUserChannel = oldMember.127500279846273027
+  let newUserChannel = 127500279846273027
+  let oldUserChannel = 127500279846273027
 
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
-
+client.channels.get(432935659871666177).send('My Message');
      // User Joins a voice channel
 
   } else if(newUserChannel === undefined){
