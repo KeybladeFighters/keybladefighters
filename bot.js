@@ -3,21 +3,16 @@ const client = new Discord.Client();
 let prefix = "!";
 
 client.on("message", (message) => {
+  
   // Exit and stop if the prefix is not there or if user is a bot
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-
+  if(msg.member.roles.some(r=>["administrador"; "moderador"].includes(r.name)) )
   if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
   } else
   if (message.content.startsWith(prefix + "foo")) {
     message.channel.send("bar!");
-  } else
-    
-   
-  if (msg.content.startsWith(prefix + 'supergalleta')) {
-    if(msg.member.roles.some(r=>["administrador"; "moderador"].includes(r.name)) )
-      message.channel.send('Supergalleta! ', {files: ["https://i.imgur.com/3zrv0PB.png"]});
-  }
+  } 
 
 });
 
