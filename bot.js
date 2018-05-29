@@ -41,12 +41,25 @@ client.on("message", (message) => {
     message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
   } 
 
-
-
 });
 
   
 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+  let newUserChannel = newMember.voiceChannel
+  let oldUserChannel = oldMember.voiceChannel
+
+
+  if(oldUserChannel === undefined && newUserChannel !== undefined) {
+
+     // User Joins a voice channel
+
+  } else if(newUserChannel === undefined){
+
+    // User leaves a voice channel
+
+  }
+})
 
 
 
