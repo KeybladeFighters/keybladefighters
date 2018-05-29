@@ -55,22 +55,14 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
 });
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
+client.on("message", function(message) {
+    if (message.author.equals(client.user)) return;
 
     if (!message.content.startsWith(prefix)) return;
 
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "ping":
-            message.channel.send({embed: {
-            color: embedRed,
-            title: "Pong!",
-            }});
-            break;
-
-        
 
         case "8ball":
             if (args[1]) {
