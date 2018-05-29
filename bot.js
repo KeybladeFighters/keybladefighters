@@ -88,15 +88,17 @@ client.on('message', async message => {
   }
   });
 
-client.on('ready', () => {
-  // Get the channel via ID
-  let channel = client.channels.get('127500279846273027');
-  // Or via name (less persistent)
- 
+client.on('message', message => {
+  if (message.content === '!entra') {
+    // Note that this will only work if the message was sent in a guild
+    // and the author is actually in a voice channel.
+    // You might want to check for all that stuff first
+    const channel = message.member.voiceChannel;
 
-  channel.join()
-  .then(connection => console.log('Connected'))
-  .catch(console.error);
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
+  }
 });
 
 client.on('message', function(message) {
