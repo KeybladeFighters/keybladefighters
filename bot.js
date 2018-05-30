@@ -57,12 +57,39 @@ client.on("ready", () => {
 });
 
 client.on ("message", message => {
-    if (message.content == "ROL") {
-        let role = message.guild.roles.get("451508996134797314");
-    
-      
-    
-    }
+ if(command === "kill")
+{
+	let myRole = message.guild.roles.find("name", "Moderador");
+	if(!message.member.roles.has(myRole.id))
+	{
+		return message.reply("you pleb, you don't have the permission to use this command.")
+	}
+	if(message.mentions.users.size === 0) 
+	{
+	return message.reply("please mention a user to kill");
+	}
+	let killMember = message.guild.member(message.mentions.users.first());
+	if (!killMember)
+	{
+		return message.reply("user doesn't exist or not valid");
+	}
+	let roleMembro = message.guild.roles.find("name", "membro");
+	let roleSilenced = message.guild.roles.find("name", "silenced");
+	if(killMember.roles.has(roleMembro.id))
+	{
+		killMember.removeRole(roleMembro).then(() => 
+		{	
+			setTimeout(function()
+			{
+				if(!killMember.roles.has(roleSilenced.id))
+				{
+					killMember.addRole(roleSilenced);
+				}
+					message.reply(`${killMember.user.username} was succesfully silenced`).catch(console.error);
+				}, 5000);
+			}).catch(console.error);		
+	}
+}
 });
 
 
