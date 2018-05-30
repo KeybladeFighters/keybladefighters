@@ -132,9 +132,9 @@ client.on("message", function(message) {
 client.on("message", (message) => {
   
   if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("no puedes hacer eso");
-  let rMember = message.guild.member(message.mentions.users.first()) || message.guild.member.get(args[0]);
+  let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
   if(!rMember) return message.reply("No se encuetra el usuer");
-  let role = ars.join(" ").slice(22);
+  let role = args.join(" ").slice(22);
   if(!role) return message.reply("espeficia un rol!");
   let gRole = message.guild.roles.find("name", role);
   if(!gRole) return message.reply("no encontramos el rol");
