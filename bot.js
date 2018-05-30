@@ -147,7 +147,7 @@ client.on("message", (message) => {
   } catch(e){
    message.channel.send("rip a <@${rMember.id}>, removimos ${gRole.name} de el ") 
   }
-}
+
   });
 
 client.on("message", (message) => {
