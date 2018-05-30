@@ -1,5 +1,5 @@
 # keybladefighters
-[![Para keybladefighters](https://imgur.com/dnyKx2z)](http://discordapp.com)
+[![Para keybladefighters](https://i.imgur.com/dnyKx2z.jpg)](http://discordapp.com)
 
 ## **bot en proceso**
 
