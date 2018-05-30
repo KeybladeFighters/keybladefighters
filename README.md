@@ -1,5 +1,5 @@
 # keybladefighters
-[![Para keybladefighters](https://img.shields.io/badge/built%20for-Discord-7289DA.svg)](http://discordapp.com)
+[![Para keybladefighters](https://imgur.com/dnyKx2z)](http://discordapp.com)
 
 ## **bot en proceso**
 
