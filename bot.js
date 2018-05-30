@@ -157,7 +157,7 @@ client.on("message", function(message) {
         } else { // if role does not exist
             client.reply(message, "Role does not exist.");
         }
-    }
+    
 
 });
 
