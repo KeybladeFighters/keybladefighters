@@ -57,7 +57,13 @@ client.on("ready", () => {
 });
 
 
-
+client.on('message', (message) => {
+if(message.content.startsWith('!recrutar')) {
+message.member.addRole('451507313174380545')
+  .then(console.log)
+  .catch(console.error);
+}
+});
 
 client.on("message", function(message) {
     if (message.author.equals(client.user)) return;
