@@ -60,7 +60,7 @@ client.on ("message", message => {
     if (message.content == "ROL") {
         let role = message.guild.roles.get("451508996134797314");
     
-        message.server.members.get("name", "Vulpes").addRole(role).catch(console.error);
+      
     
     }
 });
