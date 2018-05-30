@@ -59,7 +59,8 @@ client.on("ready", () => {
 
 client.on('message', (message) => {
 if(message.content.startsWith('!rol')) {
-guildMember.addRole('451508996134797314');  
+   const guildMember = message.member;
+    guildMember.addRole('451508996134797314');
 });
 
 
