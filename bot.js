@@ -130,7 +130,7 @@ client.on("message", function(message) {
 
 
 client.on("message", function(message) {
- else if (input.startsWith("!ADDROLE") || input.startsWith("!ADD")) {
+  if (input.startsWith("!ADDROLE") || input.startsWith("!ADD")) {
         //bot.sendMessage(message,roleName[1]); // send message that contains the roleid
         // Check of role matches the class list
         if (roleName[1] == "Mage" || roleName[1] == "Death" || roleName[1] == "Druid" || roleName[1] == "Hunter" || roleName[1] == "Demon" || roleName[1] == "Monk" || roleName[1] == "Paladin" || roleName[1] == "Rogue" || roleName[1] == "Shaman" || roleName[1] == "Warlock" || roleName[1] == "Warrior") {
