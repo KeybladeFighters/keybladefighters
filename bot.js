@@ -153,7 +153,7 @@ Client.on('message', msg => {
 
     return
   }
-})
+});
 
 
 
