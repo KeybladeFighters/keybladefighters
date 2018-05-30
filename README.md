@@ -1,4 +1,4 @@
 # keybladefighters
 
 **bot en proceso**
-https://imgur.com/dnyKx2z
+<a href="https://imgur.com/dnyKx2z"><img src="https://i.imgur.com/dnyKx2z.jpg" title="source: imgur.com" /></a>
