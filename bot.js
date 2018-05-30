@@ -129,34 +129,53 @@ client.on("message", function(message) {
 
 
 
-client.on("message", function(message) {
-  if (input.startsWith("!ADDROLE") || input.startsWith("!ADD")) {
-        //bot.sendMessage(message,roleName[1]); // send message that contains the roleid
-        // Check of role matches the class list
-        if (roleName[1] == "Mage" || roleName[1] == "Death" || roleName[1] == "Druid" || roleName[1] == "Hunter" || roleName[1] == "Demon" || roleName[1] == "Monk" || roleName[1] == "Paladin" || roleName[1] == "Rogue" || roleName[1] == "Shaman" || roleName[1] == "Warlock" || roleName[1] == "Warrior") {
-            role = roles.get("name", "moderador").id; //get roll id of Officer/Admin role
-            // Check if member is an Officer/Admin
-            if (client.memberHasRole(user, role)) {
-                if(roleName[1] == "Death"){
-                  roleName[1] = "Death Knight";
-                }
-                if(roleName[1] == "Demon"){
-                  roleName[1] = "Demon Hunter";
-                }
-                role = roles.get("name", roleName[1]).id; // get roleid of class
-                client.addMemberToRole(user, role);
-                client.reply(message, "You are now a " + roleName[1] + "!");
-            } else { // if not an officer/admin
-                client.reply(message, "Class does not exist, or you do not have permission to add that role.");
-            }
-        // Check if role matches channel list
-      } else if (roleName[1] == "Developers" || roleName[1] == "CMs" || roleName[1] == "Healers" || roleName[1] == "Theorycrafting" || roleName[1] == "Overwatch" || roleName[1] == "HBI") {
-            role = roles.get("name", roleName[1]).id; // get roleid of channel
-            client.addMemberToRole(user, role);
-            client.reply(message, "Added you to the " + roleName[1] + " channel!");
-        } else { // if role does not exist
-            client.reply(message, "Role does not exist.");
-        }
+client.on("message", msg=> {
+  var input = message.content.toUpperCase();
+	if (message.channel.type == 'text') {
+		var roles = message.channel.guild.roles;
+		var channels = message.channel.guild.channels;
+		var server = message.channel.guild.id;
+	}
+	var user = message.author;
+	var role;
+	var parsed = message.content.split(" ");
+	var parsedReg = input.split(" ");
+	var arthas = "226510296221483008";
+	var exiledpower = "170037904842817537";
+	var publik = "338380273416798208";
+	var guildchat = "170037904842817537";
+	var dev = "180011389115564032";
+  
+  
+	else if ((input.startsWith("!ADDROLE") || input.startsWith("!ADD") || input.startsWith("!JOIN")) && !(message.channel.isPrivate) && server != publik) {
+		role = admin.get_role(parsed, roles);
+		if (role) {
+			message.member.addRole(role);
+			message.reply("Added " + parsed[1] + " role.");
+		} else {
+			message.delete();
+			try {
+				message.member.send("Role does not exist, or you do not have permission to add that role. Available roles: " + "```" + commands.channelRoles + "```" + "```" + commands.classes + "```")
+			} catch (err) {
+				console.log(err);
+			}
+		}
+	}
+  // !removerole Developers
+	else if ((input.startsWith("!REMOVEROLE") || input.startsWith("!REMOVE") || input.startsWith("!RM")) && !(message.channel.isPrivate) && server != publik) {
+		role = admin.get_role(parsed, roles);
+		if (role) {
+			message.member.removeRole(role);
+			message.reply("Removed " + parsed[1] + " role.");
+		} else {
+			message.delete();
+			try {
+				message.member.send("Role does not exist, or you do not have permission to remove that role. Available roles: " + "```" + commands.channelRoles + "```" + "```" + commands.classes + "```")
+			} catch (err) {
+				console.log(err);
+			}
+		}
+	}
     
 
 });
