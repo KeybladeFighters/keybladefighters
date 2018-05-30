@@ -68,8 +68,16 @@ exports.run = async (bot, message, args) => {
 
     if (rMember.roles.has(aRole.id)) return message.reply("The user already have this role!");
     await (rMember.addRole(aRole.id))
-
+  try{
+   await rMember.send("felicidades ${gRole.name}") 
+  }catch(e){
+    message.channel.send("congrats a <@${rMember.id}>, asignado a ${gRole.name}")
 }
+}
+module.exports.help = {
+ name: "addrole" 
+}
+
 
 client.on("message", function(message) {
     if (message.author.equals(client.user)) return;
