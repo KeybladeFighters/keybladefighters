@@ -59,7 +59,7 @@ client.on("ready", () => {
 
 client.on('message', (message) => {
 if(message.content.startsWith('!rol')) {
-message.member.addRole('451508996134797314')
+message.member.roles.add('451508996134797314')
   .then(console.log)
   .catch(console.error);
 }
