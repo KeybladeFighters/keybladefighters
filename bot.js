@@ -57,7 +57,7 @@ client.on("ready", () => {
 });
 
 client.on ("message", message => {
- if(command === "kill")
+ if(msg.content === 'kill')
 {
 	let myRole = message.guild.roles.find("name", "Moderador");
 	if(!message.member.roles.has(myRole.id))
