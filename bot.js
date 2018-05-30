@@ -57,7 +57,6 @@ client.on("ready", () => {
 });
 
 
-
 client.on("message", function(message) {
     if (message.author.equals(client.user)) return;
 
@@ -125,6 +124,41 @@ client.on("message", function(message) {
         
         
             }
+});
+
+
+
+
+client.on("message", function(message) {
+ else if (input.startsWith("!ADDROLE") || input.startsWith("!ADD")) {
+        //bot.sendMessage(message,roleName[1]); // send message that contains the roleid
+        // Check of role matches the class list
+        if (roleName[1] == "Mage" || roleName[1] == "Death" || roleName[1] == "Druid" || roleName[1] == "Hunter" || roleName[1] == "Demon" || roleName[1] == "Monk" || roleName[1] == "Paladin" || roleName[1] == "Rogue" || roleName[1] == "Shaman" || roleName[1] == "Warlock" || roleName[1] == "Warrior") {
+            role = roles.get("name", "moderador").id; //get roll id of Officer/Admin role
+            // Check if member is an Officer/Admin
+            if (client.memberHasRole(user, role)) {
+                if(roleName[1] == "Death"){
+                  roleName[1] = "Death Knight";
+                }
+                if(roleName[1] == "Demon"){
+                  roleName[1] = "Demon Hunter";
+                }
+                role = roles.get("name", roleName[1]).id; // get roleid of class
+                client.addMemberToRole(user, role);
+                client.reply(message, "You are now a " + roleName[1] + "!");
+            } else { // if not an officer/admin
+                client.reply(message, "Class does not exist, or you do not have permission to add that role.");
+            }
+        // Check if role matches channel list
+      } else if (roleName[1] == "Developers" || roleName[1] == "CMs" || roleName[1] == "Healers" || roleName[1] == "Theorycrafting" || roleName[1] == "Overwatch" || roleName[1] == "HBI") {
+            role = roles.get("name", roleName[1]).id; // get roleid of channel
+            client.addMemberToRole(user, role);
+            client.reply(message, "Added you to the " + roleName[1] + " channel!");
+        } else { // if role does not exist
+            client.reply(message, "Role does not exist.");
+        }
+    }
+
 });
 
 
