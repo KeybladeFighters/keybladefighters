@@ -123,15 +123,9 @@ client.on("message", function(message) {
             message.channel.send(`MP enviado a ${message.author}`);
             break;
         
+          case "removerole":
      
-          
-            }
-});
-
-
-client.on("message", (message) => {
-  
-  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("no puedes hacer eso");
+           if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("no puedes hacer eso");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
   if(!rMember) return message.reply("No se encuetra el usuer");
   let role = args.join(" ").slice(22);
@@ -146,9 +140,12 @@ client.on("message", (message) => {
     await rMember.send("Tu perdiste el ${gRole.name} rol")
   } catch(e){
    message.channel.send("rip a <@${rMember.id}>, removimos ${gRole.name} de el ") 
-  }
+  };
+break;
+            }
+});
 
-  });
+
 
 client.on("message", (message) => {
   
