@@ -131,6 +131,27 @@ client.on("message", function(message) {
 
 client.on("message", (message) => {
   
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("no puedes hacer eso");
+  let rMember = message.guild.member(message.mentions.users.first()) || message.guild.member.get(args[0]);
+  if(!rMember) return message.reply("No se encuetra el usuer");
+  let role = ars.join(" ").slice(22);
+  if(!role) return message.reply("espeficia un rol!");
+  let gRole = message.guild.roles.find("name", role);
+  if(!gRole) return message.reply("no encontramos el rol");
+  
+  if(!rMember.roles.has(gRole.id)) return message.reply("Ellos no tienen ese rol");
+    await(rMember.removeRole(gRole.id));
+  
+  try{
+    await rMember.send("Tu perdiste el ${gRole.name} rol")
+  } catch(e){
+   message.channel.send("rip a <@${rMember.id}>, removimos ${gRole.name} de el ") 
+  }
+}
+  });
+
+client.on("message", (message) => {
+  
   // Exit and stop if the prefix is not there or if user is a bot
 
   if (!message.content.startsWith(prefix) || message.author.bot  ) return;
