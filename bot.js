@@ -1,5 +1,17 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+let dotenv = require('dotenv');
+
+// Grabs the BOT_TOKEN from .env and stores in on the `process.env`
+dotenv.load()
+
+let allowedRoles = NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U.ALLOWED_ROLES.split(',')
+let allowedString = ''
+allowedRoles.forEach((role) => {
+  allowedString = allowedString.concat('- ' + role + '\n')
+})
+
+
 let prefix = "!";
 const game = "KHUX! "
 const status = "Online"
@@ -131,10 +143,10 @@ client.on("message", function(message) {
 
 
 
-Client.on('message', msg => {
+client.on('message', msg => {
 
   
-   let prefix = "!"
+   
    
 if (!msg.content.startsWith(prefix)
     || msg.author.bot
