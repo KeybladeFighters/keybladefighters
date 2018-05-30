@@ -1,17 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-let dotenv = require('dotenv');
-
-// Grabs the BOT_TOKEN from .env and stores in on the `process.env`
-dotenv.load()
-
-let allowedRoles = NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U.ALLOWED_ROLES.split(',')
-let allowedString = ''
-allowedRoles.forEach((role) => {
-  allowedString = allowedString.concat('- ' + role + '\n')
-})
-
-
 let prefix = "!";
 const game = "KHUX! "
 const status = "Online"
@@ -142,47 +130,6 @@ client.on("message", function(message) {
 
 
 
-
-client.on('message', msg => {
-
-  
-   
-   
-if (!msg.content.startsWith(prefix)
-    || msg.author.bot
-  ) return
-
-  if (msg.content.startsWith(prefix + 'role')) {
-
-    // Get args
-    let args = msg.content.split(" ");
-
-    if (args.length < 2 || args[1] == '--help') {
-      msg.channel.sendMessage('These are the roles you\'re allowed to join: \n'+
-        allowedString +
-        '\nuse "!role `<role_name>` to join a role')
-
-      return
-    }
-    // Get the role
-    let role = msg.guild.roles.find("name", args[1].toLowerCase());
-
-    if (!role || role === null) {
-      msg.channel.sendMessage('Could not find a role by that name.')
-      return
-    }
-
-    if (allowedRoles.indexOf(role.name) === -1) {
-      msg.channel.sendMessage('Doesn\'t look like you\'re allowed to join that group. \nFor a list of allowed roles type `!role --help`')
-      return
-    }
-
-    msg.member.addRole(role).catch(console.error);
-    msg.channel.sendMessage('You\'ve been added to: ' + role.name)
-
-    return
-  }
-});
 
 
 
