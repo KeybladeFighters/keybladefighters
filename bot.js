@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const commands = JSON.parse(fs.readFileSync('Storage/commands.json', 'utf8'));
 let prefix = "!";
 const game = "KHUX! "
 const status = "Online"
