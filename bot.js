@@ -74,9 +74,7 @@ exports.run = async (bot, message, args) => {
     message.channel.send("congrats a <@${rMember.id}>, asignado a ${gRole.name}")
 }
 }
-module.exports.help = {
- name: "addrole" 
-}
+
 
 
 client.on("message", function(message) {
