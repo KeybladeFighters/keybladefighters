@@ -131,6 +131,29 @@ client.on("message", function(message) {
 
 
 
+Client.on('message', msg => {
+
+  
+
+    // Get the role
+    let role = msg.guild.roles.find("name", args[1].toLowerCase());
+
+    if (!role || role === null) {
+      msg.channel.sendMessage('Could not find a role by that name.')
+      return
+    }
+
+    if (allowedRoles.indexOf(role.name) === -1) {
+      msg.channel.sendMessage('Doesn\'t look like you\'re allowed to join that group. \nFor a list of allowed roles type `!role --help`')
+      return
+    }
+
+    msg.member.addRole(role).catch(console.error);
+    msg.channel.sendMessage('You\'ve been added to: ' + role.name)
+
+    return
+  }
+})
 
 
 
