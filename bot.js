@@ -129,56 +129,7 @@ client.on("message", function(message) {
 
 
 
-client.on("message", msg=> {
-  var input = message.content.toUpperCase();
-	if (message.channel.type == 'text') {
-		var roles = message.channel.guild.roles;
-		var channels = message.channel.guild.channels;
-		var server = message.channel.guild.id;
-	}
-	var user = message.author;
-	var role;
-	var parsed = message.content.split(" ");
-	var parsedReg = input.split(" ");
-	var arthas = "226510296221483008";
-	var exiledpower = "170037904842817537";
-	var publik = "338380273416798208";
-	var guildchat = "170037904842817537";
-	var dev = "180011389115564032";
-  
-  
-	else if ((input.startsWith("!ADDROLE") || input.startsWith("!ADD") || input.startsWith("!JOIN")) && !(message.channel.isPrivate) && server != publik) {
-		role = admin.get_role(parsed, roles);
-		if (role) {
-			message.member.addRole(role);
-			message.reply("Added " + parsed[1] + " role.");
-		} else {
-			message.delete();
-			try {
-				message.member.send("Role does not exist, or you do not have permission to add that role. Available roles: " + "```" + commands.channelRoles + "```" + "```" + commands.classes + "```")
-			} catch (err) {
-				console.log(err);
-			}
-		}
-	}
-  // !removerole Developers
-	else if ((input.startsWith("!REMOVEROLE") || input.startsWith("!REMOVE") || input.startsWith("!RM")) && !(message.channel.isPrivate) && server != publik) {
-		role = admin.get_role(parsed, roles);
-		if (role) {
-			message.member.removeRole(role);
-			message.reply("Removed " + parsed[1] + " role.");
-		} else {
-			message.delete();
-			try {
-				message.member.send("Role does not exist, or you do not have permission to remove that role. Available roles: " + "```" + commands.channelRoles + "```" + "```" + commands.classes + "```")
-			} catch (err) {
-				console.log(err);
-			}
-		}
-	}
-    
 
-});
 
 
 
