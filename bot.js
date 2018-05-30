@@ -59,10 +59,8 @@ client.on("ready", () => {
 
 client.on('message', (message) => {
 if(message.content.startsWith('!rol')) {
-message.member.roles.add('451508996134797314')
-  .then(console.log)
-  .catch(console.error);
-}
+const role = message.guild.roles.find('name', 'Vulpes');
+guildMember.addRole(role);
 });
 
 
