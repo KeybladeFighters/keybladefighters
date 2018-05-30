@@ -131,9 +131,11 @@ client.on("message", function(message) {
 
 
 
-Client.on('message', message => {
+Client.on('message', msg => {
 
   
+   let prefix = "!"
+   
 if (!msg.content.startsWith(prefix)
     || msg.author.bot
   ) return
