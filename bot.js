@@ -49,7 +49,7 @@ var fortunes = [
 ];
 
 
-client.on("ready", () => {
+client.on("ready", function() => {
     client.user.setStatus(status)
     client.user.setGame(game)
  console.log(`Logged in as ${client.user.tag}!`);
@@ -170,12 +170,6 @@ client.on("message", function(message) {
 
 
 
-client.on("guildMemberAdd"), function(member){
-	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido");
-	
-	member.AddRole(member.guild.roles.find("name", "nuevo"));
-	
-});
 
 client.on("message", (message) => {
   
