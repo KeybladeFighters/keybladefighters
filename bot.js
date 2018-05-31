@@ -106,8 +106,7 @@ client.on("message", function(message) {
     message.channel.send("congrats a <@${rMember.id}>, asignado a ${gRole.name}")
 
 }
-    }
-});
+
 		    break;
         
           case "roll":
