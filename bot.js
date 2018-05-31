@@ -133,8 +133,8 @@ client.on("message", function(message) {
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor(0x00AE86)
-  .setDescription("This is the main body of text, it can hold 2048 characters.")
-  .setFooter("This is the footer text, it can hold 2048 characters", "https://i.imgur.com/dnyKx2z.jpg")
+  .setDescription("Con el tiempo se modificaran o añadiran más comandos.")
+  .setFooter("Cualquier sugerencia o ayuda es aceptada.", "https://i.imgur.com/dnyKx2z.jpg")
   .setImage("https://i.imgur.com/dnyKx2z.jpg")
   .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
   /*
@@ -147,12 +147,12 @@ client.on("message", function(message) {
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
-  .addField("Inline Field", "They can also be inline.", true)
+  .addField("!roll", "Publica un numero aleatorio del 1 al 6.", true)
   /*
    * Blank field, useful to create some space.
    */
   .addBlankField(true)
-  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+  .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
 
   message.channel.send({embed});	
 		    
