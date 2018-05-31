@@ -154,7 +154,7 @@ client.on("message", function(message) {
 
   .addField("!slap @[usuario]", "Descripcion: Golpea a un usario.", true);
 		    
-
+  message.channel.send({embed});
 		    
             }
 });
