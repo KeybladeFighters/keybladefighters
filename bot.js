@@ -168,10 +168,10 @@ client.on("message", function(message) {
 });
 
 
-client.on("guildMemberAdd"), function(user){
-	user.guild.channels.find("name", "general").sendMessage(user.toString() + "bienvenido");
+client.on("guildMemberAdd"), function(member){
+	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido");
 	
-	user.addRole(user.guild.roles.find("name", "nuevo"));
+	member.addRole(member.guild.roles.find("name", "nuevo"));
 	
 });
 
