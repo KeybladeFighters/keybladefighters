@@ -127,7 +127,7 @@ client.on("message", function(message) {
          case "comandos":
         message.channel.send({embed: {
                     color: embedRed,
-                    title: "Comandos",
+                    title: "Comandos "!" ",
                    description: "!camii",
                     }});
                     break;
