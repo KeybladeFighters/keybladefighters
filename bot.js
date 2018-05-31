@@ -154,8 +154,7 @@ client.on("message", function(message) {
   .addBlankField(true)
   .addField("!slap @*<usuario>*", "Descripcion: Golpea a un usario.", true);
 		    
-  .addField("!8ball *<Pregunta>*", "Descripcion: Responde la pregunta que le hagas.", true);
-  message.channel.send({embed});
+
 		    
             }
 });
