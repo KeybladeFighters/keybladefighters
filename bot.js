@@ -131,8 +131,7 @@ client.on("message", function(message) {
             yeet.addRole(Punished).catch(console.error);
             break;
 
-        default:
-            message.channel.sendMessage("You Appear to have typed an invalid command!");
+      
 		    break;
 	
         
