@@ -164,7 +164,7 @@ client.on("message", function(message) {
 });
 
 
-client.on ("message", message => {
+client.on ("message", function(message) => {
 exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("You do not have permissions.")
     let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
