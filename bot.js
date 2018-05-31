@@ -172,7 +172,11 @@ client.on("message", function(message) {
 
 
 client.on('message', (message) => {
+	let userToModify = message.mentions.members.first();
+let roleToAdd = message.mentions.roles.first();
+	userToModify.addRole(roleToAdd);
 if(message.content.startsWith('!recrutar')) {
+	
 message.member.addRole(275331552198656000).catch(console.error);
 }
 });
