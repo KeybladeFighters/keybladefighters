@@ -57,39 +57,7 @@ client.on("ready", () => {
 });
 
 client.on ("message", message => {
- if(msg.content === 'kill')
-{
-	let myRole = message.guild.roles.find("name", "Moderador");
-	if(!message.member.roles.has(myRole.id))
-	{
-		return message.reply("you pleb, you don't have the permission to use this command.")
-	}
-	if(message.mentions.users.size === 0) 
-	{
-	return message.reply("please mention a user to kill");
-	}
-	let killMember = message.guild.member(message.mentions.users.first());
-	if (!killMember)
-	{
-		return message.reply("user doesn't exist or not valid");
-	}
-	let roleMembro = message.guild.roles.find("name", "membro");
-	let roleSilenced = message.guild.roles.find("name", "silenced");
-	if(killMember.roles.has(roleMembro.id))
-	{
-		killMember.removeRole(roleMembro).then(() => 
-		{	
-			setTimeout(function()
-			{
-				if(!killMember.roles.has(roleSilenced.id))
-				{
-					killMember.addRole(roleSilenced);
-				}
-					message.reply(`${killMember.user.username} was succesfully silenced`).catch(console.error);
-				}, 5000);
-			}).catch(console.error);		
-	}
-}
+ 
 });
 
 
@@ -140,6 +108,42 @@ client.on("message", function(message) {
         case "camii":
             message.channel.sendMessage("Ve a https://www.youtube.com/channel/UCfC5uaY01NBD-vIq5tXfaag/videos?disable_polymer=1");
             break;
+		    
+	case"kill":
+		    if(command === "kill")
+{
+	let myRole = message.guild.roles.find("name", "Moderador");
+	if(!message.member.roles.has(myRole.id))
+	{
+		return message.reply("you pleb, you don't have the permission to use this command.")
+	}
+	if(message.mentions.users.size === 0) 
+	{
+	return message.reply("please mention a user to kill");
+	}
+	let killMember = message.guild.member(message.mentions.users.first());
+	if (!killMember)
+	{
+		return message.reply("user doesn't exist or not valid");
+	}
+	let roleMembro = message.guild.roles.find("name", "membro");
+	let roleSilenced = message.guild.roles.find("name", "silenced");
+	if(killMember.roles.has(roleMembro.id))
+	{
+		killMember.removeRole(roleMembro).then(() => 
+		{	
+			setTimeout(function()
+			{
+				if(!killMember.roles.has(roleSilenced.id))
+				{
+					killMember.addRole(roleSilenced);
+				}
+					message.reply(`${killMember.user.username} was succesfully silenced`).catch(console.error);
+				}, 5000);
+			}).catch(console.error);		
+	}
+}
+		    break;
 
         case "dm":
             let person = message.mentions.users.first();
