@@ -110,7 +110,7 @@ client.on("message", function(message) {
             break;
 		    
 	case"kill":
-		    if(command === "kill")
+		   
 {
 	let myRole = message.guild.roles.find("name", "Moderador");
 	if(!message.member.roles.has(myRole.id))
