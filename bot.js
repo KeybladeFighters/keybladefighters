@@ -151,7 +151,7 @@ client.on("message", function(message) {
   /*
    * Blank field, useful to create some space.
    */
-  .addBlankField(true)
+
   .addField("!slap @[usuario]", "Descripcion: Golpea a un usario.", true);
 		    
 
