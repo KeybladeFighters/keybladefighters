@@ -49,7 +49,7 @@ var fortunes = [
 ];
 
 
-client.on("ready", function() => {
+client.on("ready", () => {
     client.user.setStatus(status)
     client.user.setGame(game)
  console.log(`Logged in as ${client.user.tag}!`);
