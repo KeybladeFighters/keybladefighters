@@ -167,7 +167,7 @@ client.on("message", function(message) {
 client.on ("message", message => {
     if (message.content == "!addrole") {
         let role = message.guild.roles.get("275331552198656000");
-     
+       message.server.members.get("name", "Vulpes").addRole(role).catch(console.error);
        
        
     }
