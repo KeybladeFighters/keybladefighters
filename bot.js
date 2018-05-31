@@ -49,13 +49,13 @@ var fortunes = [
 ];
 var client = new Discord.Client();
 
-client.on("ready", () => {
-    client.user.setStatus(status)
-    client.user.setGame(game)
- console.log(`Logged in as ${client.user.tag}!`);
+client.on("ready", function() => {
+
+ console.log("Ready);
 
 });
-
+//   client.user.setStatus(status)
+  //  client.user.setGame(game)
 
 
 client.on("message", function(message) {
