@@ -151,11 +151,11 @@ client.on("message", function(message) {
   /*
    * Blank field, useful to create some space.
    */
- 
+ .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
+    
   .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
 	
-   .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)		    
-		    
+  
 
 		    
   message.channel.send({embed});	
