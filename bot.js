@@ -171,7 +171,7 @@ client.on("message", function(message) {
 
 
 exports.run = async (reaction, user) => {
-  console.log('new reacrion')
+  console.log('new reaction')
   var role
   var given
   var msg = await reaction.message
@@ -194,7 +194,7 @@ exports.run = async (reaction, user) => {
     console.log('new reacrion done')
     user.send(reaction.emoji.toString() + given + role.name + '.')
   }
-}
+};
 
 client.on("message", (message) => {
   
