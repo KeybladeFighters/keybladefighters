@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+
 let prefix = "!";
 const game = "KHUX! "
 const status = "Online"
@@ -47,7 +47,7 @@ var fortunes = [
     "Eso no se ve bien...",
     "Muy dudoso.",
 ];
-
+var client = new Discord.Client();
 
 client.on("ready", () => {
     client.user.setStatus(status)
