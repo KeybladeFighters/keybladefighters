@@ -125,7 +125,7 @@ client.on("message", function(message) {
             message.channel.send(`MP enviado a ${message.author}`);
             break;
 		    	        case "punish":
-            let yeet = message.mentions.users.first();
+            let yeet = message.mentions.members.first();
             let Punished = message.guild.roles.find(`name`, `Punished`)
 
             yeet.addRole(Punished).catch(console.error);
