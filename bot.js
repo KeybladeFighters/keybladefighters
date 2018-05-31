@@ -124,8 +124,13 @@ client.on("message", function(message) {
             message.channel.send(`MP enviado a ${message.author}`);
             break;
         
-       
-          
+         case "comandos":
+        message.channel.send({embed: {
+                    color: embedRed,
+                    title: "Comandos",
+                  
+                    }});
+                    break;
 		    
 		    
             }
