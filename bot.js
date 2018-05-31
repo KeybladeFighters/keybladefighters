@@ -147,13 +147,17 @@ client.on("message", function(message) {
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
-  .addField("!roll", "Publica un numero aleatorio del 1 al 6.", true)
+  .addField("!roll", "Descripcion: Publica un numero aleatorio del 1 al 6.", true)
   /*
    * Blank field, useful to create some space.
    */
-  .addBlankField(true)
+ 
   .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
+	
+   .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)		    
+		    
 
+		    
   message.channel.send({embed});	
 		    
             }
