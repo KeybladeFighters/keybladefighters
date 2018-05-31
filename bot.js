@@ -170,31 +170,12 @@ client.on("message", function(message) {
 
 
 
-exports.run = async (reaction, user) => {
-  console.log('new reaction')
-  var role
-  var given
-  var msg = await reaction.message
-  if (msg.id == '451647570788352000') {
-    console.log('valid reacrion')
-    if (reaction.emoji.id == '451647570788352000') {
-      role = msg.guild.roles.get('275331552198656000')
-      console.log('new ping reaction')
-    } else if (reaction.emoji.id == '451647570788352000') {
-      role = msg.guild.roles.get('451624985287720962')
-      console.log('new pingo reacrion')
-    }
-    if (user.hasRole(role)) {
-      user.removeRole(role)
-      given = ' You have left @'
-    } else {
-      user.addRole(role)
-      given = ' You have joined @'
-    }
-    console.log('new reacrion done')
-    user.send(reaction.emoji.toString() + given + role.name + '.')
-  }
-};
+
+client.on('message', (message) => {
+if(message.content.startsWith('!recrutar')) {
+message.member.addRole(275331552198656000).catch(console.error);
+}
+});
 
 client.on("message", (message) => {
   
