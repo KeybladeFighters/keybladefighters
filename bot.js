@@ -51,7 +51,7 @@ var client = new Discord.Client();
 
 client.on("ready", function() => {
 
- console.log("Ready);
+ console.log(`Logged in as ${client.user.tag}!`);
 
 });
 //   client.user.setStatus(status)
