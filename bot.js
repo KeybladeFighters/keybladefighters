@@ -135,7 +135,7 @@ client.on("message", function(message) {
   .setColor(0x00AE86)
   .setDescription("Con el tiempo se modificaran o añadiran más comandos.")
   .setFooter("Cualquier sugerencia o ayuda es aceptada.", "https://i.imgur.com/dnyKx2z.jpg")
-  .setImage("https://i.imgur.com/dnyKx2z.jpg")
+  .setImage("https://cdn.discordapp.com/attachments/425413613898039317/448098501184716801/Ganador_Lux.png")
   .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
   /*
    * Takes a Date object, defaults to current date.
