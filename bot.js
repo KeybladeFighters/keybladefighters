@@ -129,11 +129,11 @@ client.on("message", function(message) {
         
           case "comandos":
          message.channel.send({embed: {
-                    color: embedWhite,
+                    color: embedRed,
                     title: "Comandos (Prefijo:" ! ")",
                     description: "!camii, !8ball <pregunta>, !roll, !slap <@usuario>",
                     }});
-            break;
+          
 		    
 		    
             }
