@@ -225,6 +225,14 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);                    
     }
+	
+   if(message.content == `!reverse`) {
+        const ListEmbed = new Discord.RichEmbed()
+            .setTitle('Usuarios reverse:')
+            .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
+        message.channel.send(ListEmbed);                    
+    }	
+	
 });
 
   
