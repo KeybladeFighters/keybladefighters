@@ -303,7 +303,7 @@ client.on("message", (message) => {
 	
      if(message.content.startsWith(`!añadir`)) {
         message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
-    }
+    }else
 
     if(message.content == `!upright`) {
         const ListEmbed = new Discord.RichEmbed()
@@ -312,7 +312,7 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
 	    
         message.channel.send(ListEmbed);                    
-    }
+    }else
 	
    if(message.content == `!reverse`) {
         const ListEmbed = new Discord.RichEmbed()
@@ -320,9 +320,27 @@ client.on("message", (message) => {
 	    .setColor(embedPurple)
             .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);                    
-    }	
+    }	else
 	
-		
+		if(message.content.startsWith("//inrole")){
+    let roleName = message.content.split(" ").slice(1).join(" ");
+
+    //Filtering the guild members only keeping those with the role
+    //Then mapping the filtered array to their usernames
+    let membersWithRole = message.guild.members.filter(member => { 
+        return member.roles.find("name", Vulpes);
+    }).map(member => {
+        return member.user.username;
+    })
+
+    let embed = new discord.RichEmbed({
+        "title": `Users with the ${roleName} role`,
+        "description": membersWithRole.join("\n"),
+        "color": 0xFFFF
+    });
+
+    return message.channel.send({embed});
+}
  
 	
 	
