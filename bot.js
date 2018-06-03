@@ -139,11 +139,13 @@ client.on("message", message => {
         message.channel.send(ListEmbed);       
  
     }
-	    if(message.content.startsWith(`!add`)) {
+	    if(message.content.startsWith(`!vulpes`)) {
 	       const guildMember = message.member;
 
         guildMember.addRole('275331552198656000'); // gets the <GuildMember> from a mention and then adds the role to that member 
         guildMember.removeRole('451624985287720962');
+	guildMember.removeRole('451652968752611328');
+		    
     }
 });
  client.on("MessageReactionAdd", function(users) {
