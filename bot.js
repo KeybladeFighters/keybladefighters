@@ -61,14 +61,25 @@ client.on('messageReactionAdd', (reaction, user, member) => {
 	if(reaction.emoji.name === "431317649780113418")
 	
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
-	  var role = member.guild.roles.find("name", "Vulpes");
-	 member.addRole(role)
+	
 });
 
 const events = {
 	MESSAGE_REACTION_ADD: 'messageReactionAdd',
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
 };
+client.on('message', async message => {
+    if (message.content === '!meh') {
+        try {
+            await message.react('m');
+            await message.react('e');
+            await message.react('h');
+        }
+        catch (error) {
+            console.error('One of the emojis failed to react.');
+        }
+    }
+});
 
 client.on('raw', async ({ t: eventName, d: data }) => {
 	if (!events.hasOwnProperty(eventName)) return;
