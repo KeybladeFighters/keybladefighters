@@ -328,7 +328,9 @@ client.on("message", (message) => {
 	     .setColor(embedYellow)
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
 	    
-        message.channel.send(ListEmbed);                    
+        message.channel.send(ListEmbed);  
+	    
+      message.delete(1000); //Supposed to delete message
     }else
 	
    if(message.content == `!reverse`) {
