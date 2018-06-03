@@ -82,6 +82,7 @@ client.on('message', async message => {
             await message.react('🇲');
             await message.react('🇪');
             await message.react('🇭');
+		 await message.react(':perturba2:');
 		
         }
         catch (error) {
