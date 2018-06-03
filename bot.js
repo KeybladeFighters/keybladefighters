@@ -48,8 +48,7 @@ var fortunes = [
     "Eso no se ve bien...",
     "Muy dudoso.",
 ];
-
-
+var client = new Discord.Client();
 client.on("ready", () => {
   client.user.setStatus(status)
  client.user.setGame(game)
@@ -331,4 +330,4 @@ client.on('message', function(message) {
 
 
 
-client.login(NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U");
+client.login("NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U");
