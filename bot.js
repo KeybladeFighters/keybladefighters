@@ -63,10 +63,12 @@ client.on('messageReactionAdd', (reaction, user) => {
 		client.channels.get("127500279846273026").send("xd");
 		client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
 	
+	
 });
 client.on('messageReactionAdd', (reaction, user) => {
-	if(reaction.emoji.name === "431317649780113418")
+	if(reaction.emoji.name === ":thinking:")
 		client.channels.get("127500279846273026").user.addRole(user.guild.roles.find("name", "Vulpes"));
+	message.
 		
 });
 
@@ -119,7 +121,7 @@ client.on('message', message => {
 
  client.on("guildMemberAdd", member => {
 	console.log("user" + member.username + "se unio al server")
-	 var role = member.guild.roles.find("name", "Vulpes");
+	 var role = member.guild.roles.find("name", "nuevo");
 	 member.addRole(role)
 });
 
