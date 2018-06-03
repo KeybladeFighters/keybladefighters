@@ -73,7 +73,8 @@ client.on("message", message => {
 	    if(message.content.startsWith(`!add`)) {
 	       const guildMember = message.member;
 
-        guildMember.addRole('275331552198656000'); // gets the <GuildMember> from a mention and then adds the role to that member                     
+        guildMember.addRole('275331552198656000'); // gets the <GuildMember> from a mention and then adds the role to that member 
+		  guildMember.removeRole('451624985287720962');
     }
 });
  client.on("MessageReactionAdd", function(users) {
