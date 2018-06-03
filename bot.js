@@ -94,9 +94,8 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.content === '!meh') {
 		console.log('First reaction incoming.');
-		await message.react('m');
-		await message.react('e');
-		await message.react('h');
+		await message.react('regional_indicator_m');
+		
 		await message.react('427222452246937601');
 	}
 });
