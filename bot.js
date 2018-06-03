@@ -57,7 +57,7 @@ client.on("ready", () => {
 
 });
 
-
+client.commands.set('ejemplo', require('./commands/ejemplo.js'));
 const events = {
 	MESSAGE_REACTION_ADD: 'messageReactionAdd',
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
@@ -91,14 +91,7 @@ client.on('message', message => {
 		message.react('431317649780113418');
 	}
 });
-client.on('message', message => {
-	if (message.content === '!meh') {
-		console.log('First reaction incoming.');
-		await message.react('regional_indicator_m');
-		
-		await message.react('427222452246937601');
-	}
-});
+
  client.on("guildMemberAdd", member => {
 	console.log("user" + member.username + "se unio al server")
 	 var role = member.guild.roles.find("name", "Vulpes");
