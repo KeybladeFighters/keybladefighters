@@ -215,11 +215,11 @@ client.on("message", (message) => {
     message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
   } 
 	
-     if(message.content.startsWith(``${prefix}añadir`)) {
+     if(message.content.startsWith(`${prefix}añadir`)) {
         message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
     }
 
-    if(message.content == ``${prefix}upright`) {
+    if(message.content == `${prefix}upright`) {
         const ListEmbed = new Discord.RichEmbed()
             .setTitle('Usuarios upright:')
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
