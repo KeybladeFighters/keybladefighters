@@ -79,12 +79,7 @@ const events = {
 	MESSAGE_REACTION_ADD: 'messageReactionAdd',
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
 };
-client.on('message', message => {
-   if (message.content.startsWith("!reverse")) {
-      message.delete(1000); //Supposed to delete message
 
-   }
-});
 
 client.on('message', async message => {
     if (message.content === '!meh') {
@@ -341,9 +336,13 @@ client.on("message", (message) => {
             .setTitle('Usuarios reverse:')
 	    .setColor(embedPurple)
             .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
-        message.channel.send(ListEmbed);                    
-    }	
+        message.channel.send(ListEmbed);      
 
+      message.delete(1000); //Supposed to delete message
+
+   
+    }	
+	
 	
 	
 });
