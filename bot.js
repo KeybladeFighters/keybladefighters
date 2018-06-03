@@ -222,7 +222,9 @@ client.on("message", (message) => {
     if(message.content == `!upright`) {
         const ListEmbed = new Discord.RichEmbed()
             .setTitle('Usuarios upright:')
+	     .setColor(embedYellow)
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
+	    
         message.channel.send(ListEmbed);                    
     }
 	
