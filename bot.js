@@ -68,7 +68,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 client.on('messageReactionAdd', (reaction, user) => {
 	if(reaction.emoji.name === ":thinking:")
 		client.channels.get("127500279846273026").user.addRole(user.guild.roles.find("name", "Vulpes"));
-	message.
+	
 		
 });
 
