@@ -59,8 +59,8 @@ client.on("ready", () => {
 
 client.on('messageReactionAdd', (reaction, user) => {
 	if(reaction.emoji.name === "431317649780113418")
-	
-	client.channels.get("127500279846273026").send("reaccion ");
+		client.channels.get("127500279846273026").send("xd");
+		client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
 	
 });
 
@@ -71,9 +71,9 @@ const events = {
 client.on('message', async message => {
     if (message.content === '!meh') {
         try {
-            await message.react(':regional_indicator_m:');
-            await message.react(':regional_indicator_e:');
-            await message.react(':regional_indicator_h:');
+            await message.react('🇲');
+            await message.react('🇪');
+            await message.react('🇭');
         }
         catch (error) {
             console.error('One of the emojis failed to react.');
