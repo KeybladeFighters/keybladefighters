@@ -91,6 +91,15 @@ client.on('message', message => {
 		message.react('431317649780113418');
 	}
 });
+client.on('message', message => {
+	if (message.content === '!meh') {
+		console.log('First reaction incoming.');
+		await message.react('m');
+		await message.react('e');
+		await message.react('h');
+		await message.react('427222452246937601');
+	}
+});
  client.on("guildMemberAdd", member => {
 	console.log("user" + member.username + "se unio al server")
 	 var role = member.guild.roles.find("name", "Vulpes");
