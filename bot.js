@@ -71,6 +71,8 @@ client.on("message", message => {
     }
 });
 
+
+
 client.on("message", function(message) {
     if (message.author.equals(client.user)) return;
 
@@ -212,7 +214,13 @@ client.on("message", (message) => {
     if (message.content.startsWith(prefix + "aviso") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
   } 
-
+	
+   if(message.content.startsWith(prefix + "upright") {
+        const ListEmbed = new Discord.RichEmbed()
+            .setTitle('Usuarios upright:')
+            .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
+        message.channel.send(ListEmbed);                    
+    }
 });
 
   
