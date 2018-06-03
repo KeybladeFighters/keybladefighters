@@ -70,6 +70,25 @@ client.on("message", message => {
         message.channel.send(ListEmbed);                    
     }
 });
+ client.on("MessageReactionAdd", function(users) {
+if (message.content === "prueba") {
+  users.addRole(users.guild.roles.find("name", prueba))
+} 
+});
+
+client.on("message", message => {
+
+    if(message.content.startsWith(`añadir`)) {
+        message.mentions.members.first().addRole('275331552198656000'); // gets the <GuildMember> from a mention and then adds the role to that member                     
+    }
+
+    if(message.content == `lista`) {
+        const ListEmbed = new Discord.RichEmbed()
+            .setTitle('Users with the go4 role:')
+            .setDescription(message.guild.roles.get('275331552198656000').members.map(m=>m.user.tag).join('\n'));
+        message.channel.send(ListEmbed);                    
+    }
+});
 
 
 
