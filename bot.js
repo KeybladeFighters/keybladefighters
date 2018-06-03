@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-
+client.config = require('./config.json');
 let prefix = "!";
 const game = "KHUX! "
 const status = "Online"
@@ -331,5 +331,4 @@ client.on('message', function(message) {
 
 
 
-
-client.login('NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U');
+client.login(client.config.token);
