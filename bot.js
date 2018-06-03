@@ -88,7 +88,7 @@ client.on('messageReactionRemove', (reaction, user) => {
 client.on('message', message => {
 	if (message.content === '!react') {
 		console.log('First reaction incoming.');
-		message.react('🤔');
+		message.react('431317649780113418');
 	}
 });
 
