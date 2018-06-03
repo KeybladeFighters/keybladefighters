@@ -48,7 +48,7 @@ var fortunes = [
     "Eso no se ve bien...",
     "Muy dudoso.",
 ];
-var client = new Discord.Client();
+
 
 client.on("ready", () => {
   client.user.setStatus(status)
