@@ -60,7 +60,7 @@ client.on("ready", () => {
 client.on('messageReactionAdd', (reaction, user, member) => {
 	if(reaction.emoji.name === "431317649780113418")
 	
-	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
+	client.channels.get("127500279846273026").send("reaccion ");
 	
 });
 
