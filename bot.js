@@ -56,15 +56,7 @@ client.on("ready", () => {
  console.log(`Logged in as ${client.user.tag}!`);
 
 });
-client.on('messageReactionAdd', (reaction, user, message) => {
-	if(reaction.emoji.name === "431317649780113418")
-		
-	
-        message.reaction.members.addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
-    }else
- 
-	
-});
+
 
 client.on('messageReactionAdd', (reaction, user) => {
 	if(reaction.emoji.name === "431317649780113418")
