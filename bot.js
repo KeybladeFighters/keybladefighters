@@ -61,7 +61,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 	if(reaction.emoji.name === "431317649780113418")
 	
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
-	
+	 const guildMember = message.member;
 
         guildMember.addRole('275331552198656000');
 });
