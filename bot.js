@@ -61,7 +61,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 	if(reaction.emoji.name === "431317649780113418")
 		client.channels.get("127500279846273026").send("xd");
 		client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
-	
+	  user.addRole(user.guild.roles.find("name", "Vulpes"))
 });
 
 const events = {
@@ -322,13 +322,13 @@ client.on("message", (message) => {
         message.channel.send(ListEmbed);                    
     }	else
 	
-		if(message.content.startsWith("//inrole")){
+if(message.content.startsWith("//inrole")){
     let roleName = message.content.split(" ").slice(1).join(" ");
 
     //Filtering the guild members only keeping those with the role
     //Then mapping the filtered array to their usernames
     let membersWithRole = message.guild.members.filter(member => { 
-        return member.roles.find("name", "Vulpes");
+        return member.roles.find("name", roleName);
     }).map(member => {
         return member.user.username;
     })
