@@ -231,6 +231,7 @@ client.on("message", (message) => {
    if(message.content == `!reverse`) {
         const ListEmbed = new Discord.RichEmbed()
             .setTitle('Usuarios reverse:')
+	    .setColor(embedPurple)
             .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);                    
     }	
