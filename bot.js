@@ -91,6 +91,11 @@ client.on('message', message => {
 		message.react('431317649780113418');
 	}
 });
+ client.on("guildMemberAdd", member => {
+	console.log("user" + member.username + "se unio al server")
+	 var role = member.guild.roles.find("name", "Vulpes");
+	 member.addRole(role)
+});
 
 
 client.on("message", message => {
