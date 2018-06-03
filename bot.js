@@ -60,18 +60,33 @@ client.on("ready", () => {
 
 
 
+client.on("message", message => {
 
+    if(message.content.startsWith(`🇲`)) {
+        try {
+            await message.react('🇲');
+            await message.react('🇪');
+            await message.react('🇭');
+		 await message.react('427222452246937601');
+		
+        }
+        catch (error) {
+            console.error('One of the emojis failed to react.');
+        }
+    }
+});
 const events = {
 	MESSAGE_REACTION_ADD: 'messageReactionAdd',
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
 };
+
 client.on('message', async message => {
     if (message.content === '!meh') {
         try {
             await message.react('🇲');
             await message.react('🇪');
             await message.react('🇭');
-		 await message.react('431317649780113418');
+		 await message.react('427222452246937601');
 		
         }
         catch (error) {
