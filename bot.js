@@ -67,12 +67,18 @@ client.on("message", message => {
         const ListEmbed = new Discord.RichEmbed()
             .setTitle('Users with the go4 role:')
             .setDescription(message.guild.roles.get('275331552198656000').members.map(m=>m.user.tag).join('\n'));
-        message.channel.send(ListEmbed);                    
+        message.channel.send(ListEmbed);       
+ 
+    }
+	    if(message.content.startsWith(`!add`)) {
+	       const guildMember = message.member;
+
+        guildMember.addRole('275331552198656000'); // gets the <GuildMember> from a mention and then adds the role to that member                     
     }
 });
  client.on("MessageReactionAdd", function(users) {
 if (message.content === "prueba") {
-  users.addRole(users.guild.roles.find("name", prueba))
+  users.addRole(users.guild.roles.find("name", vulpes))
 } 
 });
 
