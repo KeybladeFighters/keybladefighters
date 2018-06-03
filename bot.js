@@ -56,6 +56,7 @@ client.on("ready", () => {
  console.log(`Logged in as ${client.user.tag}!`);
 
 });
+client.commands = new Discord.Collection();
 client.commands.set('ejemplo', require('./commands/ejemplo.js'));
 
 const events = {
