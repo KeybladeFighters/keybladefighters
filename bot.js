@@ -79,6 +79,12 @@ const events = {
 	MESSAGE_REACTION_ADD: 'messageReactionAdd',
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
 };
+client.on('message', message => {
+   if (message.content.startsWith("!reverse")) {
+      message.delete(1000); //Supposed to delete message
+      message.channel.send(message.content.slice(5, message.content.length));
+   }
+});
 
 client.on('message', async message => {
     if (message.content === '!meh') {
