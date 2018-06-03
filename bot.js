@@ -61,7 +61,7 @@ client.on("ready", () => {
 client.on('messageReactionAdd', (reaction, user) => {
 	if(reaction.emoji.name === "431317649780113418")
 		client.channels.get("127500279846273026").send("xd");
-		client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
+		client.message.get("452932188091187212").send("reaccion " + reaction.emoji.name);
 	
 	
 });
