@@ -71,9 +71,9 @@ const events = {
 client.on('message', async message => {
     if (message.content === '!meh') {
         try {
-            await message.react('m');
-            await message.react('e');
-            await message.react('h');
+            await message.react(':regional_indicator_m:');
+            await message.react(':regional_indicator_e:');
+            await message.react(':regional_indicator_h:');
         }
         catch (error) {
             console.error('One of the emojis failed to react.');
