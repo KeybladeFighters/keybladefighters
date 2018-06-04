@@ -330,7 +330,7 @@ client.on("message", (message) => {
 	    
         message.channel.send(ListEmbed);  
 	    
-      message.delete(0000); //Supposed to delete message
+      message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
     }else
 	
    if(message.content == `!reverse`) {
@@ -340,7 +340,7 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
 
-      message.delete(1000); //Supposed to delete message
+      message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 
    
     }	
