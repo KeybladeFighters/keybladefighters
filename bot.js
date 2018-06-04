@@ -330,7 +330,7 @@ client.on("message", (message) => {
 	    
         message.channel.send(ListEmbed);  
 	    
-      message.delete(1000); //Supposed to delete message
+      message.delete(0000); //Supposed to delete message
     }else
 	
    if(message.content == `!reverse`) {
