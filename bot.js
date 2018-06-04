@@ -295,7 +295,7 @@ client.on("message", (message) => {
 
   if (!message.content.startsWith(prefix) || message.author.bot  ) return;
 
-  if (message.content.startsWith(prefix + "ping") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+  if (message.content.startsWith(prefix + "ping!") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send("pong!");
   } else
   if (message.content.startsWith(prefix + "galleta") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
