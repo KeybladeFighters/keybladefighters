@@ -425,13 +425,13 @@ message.delete()
 	   if (message.content.startsWith(prefix + "adminc") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
    
     const embed = new Discord.RichEmbed()
-  .setTitle("Lista de comandos:")
+  .setTitle("Lista de comandos (de administrador):")
   .setAuthor("KeyBladeFighters", "https://i.imgur.com/dnyKx2z.jpg")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor(0x00AE86)
-  .setDescription("Con el tiempo se modificaran o añadiran más comandos.")
+  .setDescription("hola")
   .setFooter("Cualquier sugerencia o ayuda es aceptada.", "https://i.imgur.com/dnyKx2z.jpg")
   .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
   /*
