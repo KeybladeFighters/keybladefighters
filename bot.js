@@ -234,24 +234,15 @@ client.on("message", function(message) {
             if(!msg) return message.reply("Usage: /dm @PLAYER000 I Like Ponies");
 
             const customEmbed = new Discord.RichEmbed()
-            .setAuthor(`Desconocido`, message.author.displayAvatarURL)
+            .setAuthor(`Desconocido`)
             .addField(`__Un usuario desconocido dice:__`, `${msg}\n ======================== \n *Tu no puedes responderle al **Desconocido** por este chat.* `)
             .setColor(embedOrange);
             person.send({
                 embed : customEmbed
             });
-            message.channel.send(`MP enviado a ${message.author}`);
+            message.channel.send(`MP enviado ${message.author}`);
             break;
-		     case "Profile":
-const ListEmbed = new Discord.RichEmbed()
-     .addField(message.author.username, "Roles: " + message.member.roles.map(role => role.name).join(", ")) // user, roles
-     .addField("Stats", "XP: 0/100 Level 0") // XP, Level?
-     .setColor(0x00ffff)
-     .setThumbnail(message.author.avatarURL)
-  message.channel.sendEmbed(embed);
-  console.log(message.author + ` Viewed their profile!`)
-  break;
-	
+
       
 	
         
