@@ -367,7 +367,7 @@ client.on("message", (message) => {
 	   if (message.content.startsWith(prefix + "say") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
       message.delete(0000); //Supposed to delete message
       message.channel.send(message.content.slice(4, message.content.length));
-  } else
+  } 
 	
 	
 });
