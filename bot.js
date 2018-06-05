@@ -374,7 +374,7 @@ client.on("message", (message) => {
 message.delete()
 	message.channel.send('👀').then(msg => {
 		setTimeout(() => {
-			msg.edit('248874616142036992').then(msg => {
+			msg.edit('<:ojos:453450937168822273>').then(msg => {
 				setTimeout(() => {
 					msg.edit('👀').then(msg => {
 						setTimeout(() => {
