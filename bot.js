@@ -374,19 +374,19 @@ client.on("message", (message) => {
 message.delete()
 	message.channel.send('👀').then(msg => {
 		setTimeout(() => {
-			msg.edit('<:eyes2:248874616142036992>').then(msg => {
+			msg.edit('248874616142036992').then(msg => {
 				setTimeout(() => {
 					msg.edit('👀').then(msg => {
 						setTimeout(() => {
-							msg.edit('<:eyes2:248874616142036992>').then(msg => {
+							msg.edit('248874616142036992').then(msg => {
 								setTimeout(() => {
 									msg.edit('👀').then(msg => {
 										setTimeout(() => {
-											msg.edit('<:eyes2:248874616142036992>').then(msg => {
+											msg.edit('248874616142036992').then(msg => {
 												setTimeout(() => {
 													msg.edit('👀').then(msg => {
 														setTimeout(() => {
-															msg.edit('<:eyes2:248874616142036992>')
+															msg.edit('248874616142036992')
 														}, 500)
 													})
 												}, 500)
