@@ -293,8 +293,7 @@ client.on("message", function(message) {
 		    
 		    break;
 		    
-		    
-		       case "adminc":
+		             case "je":
     const embed = new Discord.RichEmbed()
   .setTitle("Lista de comandos:")
   .setAuthor("KeyBladeFighters", "https://i.imgur.com/dnyKx2z.jpg")
@@ -311,32 +310,27 @@ client.on("message", function(message) {
    */
   .setTimestamp()
   .setURL("https://steamcommunity.com/id/Shoowderify/")
-  .addField("!doit , !galleta , !supergalleta , !mira",
-    "Descripcion: Publica una imagen")
+  .addField("!camii",
+    "Descripcion: Publica el canal de YT de camii")
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
-  
-  .addField("!ping!",
-    "Descripcion: El bot reponde con: Pong!", true)
-      .addField("!aviso",
-    "Descripcion: Publica un aviso para la hora de doble lux", true)
-      .addField("!upright , !reverse",
-    "Descripcion: Publica una lista del respectivo rol.", true)
-      .addField("!ojos",
-    "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
-	  .addField("!say",
-    "Descripcion: El bot dice que tu quieras", true);
-    
+  .addField("!roll", "Descripcion: Publica un numero aleatorio del 1 al 6.", true)
+  /*
+   * Blank field, useful to create some space.
+   */
+ .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
 
+	
+    
+  .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
 		   
 	
   
 
 		    
   message.channel.send({embed});	
-		    
-            break;
+
    
             }
 	
