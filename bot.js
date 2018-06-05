@@ -378,15 +378,15 @@ message.delete()
 				setTimeout(() => {
 					msg.edit('👀').then(msg => {
 						setTimeout(() => {
-							msg.edit('248874616142036992').then(msg => {
+							msg.edit('<:ojos:453450937168822273>').then(msg => {
 								setTimeout(() => {
 									msg.edit('👀').then(msg => {
 										setTimeout(() => {
-											msg.edit('248874616142036992').then(msg => {
+											msg.edit('<:ojos:453450937168822273>').then(msg => {
 												setTimeout(() => {
 													msg.edit('👀').then(msg => {
 														setTimeout(() => {
-															msg.edit('248874616142036992')
+															msg.edit('<:ojos:453450937168822273>')
 														}, 500)
 													})
 												}, 500)
