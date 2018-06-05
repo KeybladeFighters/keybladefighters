@@ -292,6 +292,52 @@ client.on("message", function(message) {
   message.channel.send({embed});	
 		    
 		    break;
+		    
+		    
+		       case "adminc":
+    const embed = new Discord.RichEmbed()
+  .setTitle("Lista de comandos:")
+  .setAuthor("KeyBladeFighters", "https://i.imgur.com/dnyKx2z.jpg")
+  /*
+   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+   */
+  .setColor(0x00AE86)
+  .setDescription("Con el tiempo se modificaran o añadiran más comandos.")
+  .setFooter("Cualquier sugerencia o ayuda es aceptada.", "https://i.imgur.com/dnyKx2z.jpg")
+  .setImage("https://cdn.discordapp.com/attachments/425413613898039317/448098501184716801/Ganador_Lux.png")
+  .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
+  /*
+   * Takes a Date object, defaults to current date.
+   */
+  .setTimestamp()
+  .setURL("https://steamcommunity.com/id/Shoowderify/")
+  .addField("!doit , !galleta , !supergalleta , !mira",
+    "Descripcion: Publica una imagen")
+  /*
+   * Inline fields may not display as inline if the thumbnail and/or image is too big.
+   */
+  
+  .addField("!ping!",
+    "Descripcion: El bot reponde con: Pong!", true)
+      .addField("!aviso",
+    "Descripcion: Publica un aviso para la hora de doble lux", true)
+      .addField("!upright , !reverse",
+    "Descripcion: Publica una lista del respectivo rol.", true)
+      .addField("!ojos",
+    "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
+	  .addField("!say",
+    "Descripcion: El bot dice que tu quieras", true);
+    
+
+		   
+	
+  
+
+		    
+  message.channel.send({embed});	
+		    
+            break;
+   
             }
 	
 	
