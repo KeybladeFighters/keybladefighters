@@ -340,7 +340,7 @@ client.on("message", (message) => {
             
 	    .setColor(embedPurple)
 	    .setThumbnail("https://i.imgur.com/tODBzy2.png")
-            .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user).join('\n'));
+            .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
 
       message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
@@ -367,7 +367,12 @@ client.on("message", (message) => {
 });
 
   
-
+client.on('message', message => {
+   if (message.content.startsWith("!say ")) {
+      message.delete(0000); //Supposed to delete message
+      message.channel.send(message.content.slice(4, message.content.length));
+   }
+});
 
 
 
