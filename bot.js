@@ -423,8 +423,8 @@ message.delete()
 	})
 }else
 	   if (message.content.startsWith(prefix + "adminc") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
-   
-		   const embed = new Discord.RichEmbed()
+      case "adminc":
+    const embed = new Discord.RichEmbed()
   .setTitle("Lista de comandos:")
   .setAuthor("KeyBladeFighters", "https://i.imgur.com/dnyKx2z.jpg")
   /*
@@ -440,20 +440,24 @@ message.delete()
    */
   .setTimestamp()
   .setURL("https://steamcommunity.com/id/Shoowderify/")
-  .addField("!camii",
-    "Descripcion: Publica el canal de YT de camii")
+  .addField("!doit , !galleta , !supergalleta , !mira",
+    "Descripcion: Publica una imagen")
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
-  .addField("!roll", "Descripcion: Publica un numero aleatorio del 1 al 6.", true)
-  /*
-   * Blank field, useful to create some space.
-   */
- .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
-
-	
+  
+  .addField("!ping!",
+    "Descripcion: El bot reponde con: Pong!", true)
+      .addField("!aviso",
+    "Descripcion: Publica un aviso para la hora de doble lux", true)
+      .addField("!upright , !reverse",
+    "Descripcion: Publica una lista del respectivo rol.", true)
+      .addField("!ojos",
+    "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
+	  .addField("!say",
+    "Descripcion: El bot dice que tu quieras", true);
     
-  .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
+
 		   
 	
   
@@ -461,7 +465,8 @@ message.delete()
 		    
   message.channel.send({embed});	
 		    
-  } 
+            }
+   
 	
 	
 });
