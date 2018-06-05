@@ -326,6 +326,7 @@ client.on("message", (message) => {
         const ListEmbed = new Discord.RichEmbed()
             .setTitle('Usuarios upright:')
 	     .setColor(embedYellow)
+	    .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
 	    
         message.channel.send(ListEmbed);  
@@ -337,6 +338,7 @@ client.on("message", (message) => {
         const ListEmbed = new Discord.RichEmbed()
             .setTitle('Usuarios reverse:')
 	    .setColor(embedPurple)
+	    .setThumbnail("https://i.imgur.com/tODBzy2.png")
             .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
 
@@ -347,9 +349,11 @@ client.on("message", (message) => {
 		
    if(message.content == `!mixto`) {
         const ListEmbed = new Discord.RichEmbed()
-            .setTitle('Usuarios uprigth y reverse:')
+            .setTitle('Usuarios upright y reverse:')
 	    .setColor(embedBlue)
+	    .setThumbnail("https://i.imgur.com/Q8uZ3mI.png")
             .setDescription(message.guild.roles.get('434695269897207819' || "434695066167279616").members.map(m=>m.user.tag).join('\n'));
+	   
         message.channel.send(ListEmbed);      
 
       message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
