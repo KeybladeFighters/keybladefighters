@@ -62,12 +62,11 @@ client.on("ready", () => {
 
 client.on("message", async message => {
 
-    if(message.content.startsWith(`🇲`)) {
+    if(message.content.startsWith(`!pls`)) {
         try {
             await message.react('🇲');
             await message.react('🇪');
-            await message.react('🇭');
-		 await message.react('427222452246937601');
+           
 		
         }
         catch (error) {
