@@ -369,7 +369,42 @@ client.on("message", (message) => {
 	   if (message.content.startsWith(prefix + "say") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
       message.delete(0000); //Supposed to delete message
       message.channel.send(message.content.slice(4, message.content.length));
-  } 
+  } else
+	     if (message.content.startsWith(prefix + "ojos") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+message.delete()
+	message.channel.send('👀').then(msg => {
+		setTimeout(() => {
+			msg.edit('<:eyes2:248874616142036992>').then(msg => {
+				setTimeout(() => {
+					msg.edit('👀').then(msg => {
+						setTimeout(() => {
+							msg.edit('<:eyes2:248874616142036992>').then(msg => {
+								setTimeout(() => {
+									msg.edit('👀').then(msg => {
+										setTimeout(() => {
+											msg.edit('<:eyes2:248874616142036992>').then(msg => {
+												setTimeout(() => {
+													msg.edit('👀').then(msg => {
+														setTimeout(() => {
+															msg.edit('<:eyes2:248874616142036992>')
+														}, 500)
+													})
+												}, 500)
+											})
+										}, 500)
+									})
+								}, 500)
+							})
+						}, 500)
+					})
+				}, 500)
+			})
+		}, 500)
+	})
+}
+  
+	
+	
 	
 	
 });
