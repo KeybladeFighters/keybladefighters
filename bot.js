@@ -224,9 +224,9 @@ client.on("message", function(message) {
             break;
 
         case "camii":
-		    if message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) {
+		   
             message.channel.sendMessage("Ve a https://www.youtube.com/channel/UCfC5uaY01NBD-vIq5tXfaag/videos?disable_polymer=1");
-		    }
+		    
             break;
 		    
 
