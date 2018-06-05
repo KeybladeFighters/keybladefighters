@@ -336,7 +336,8 @@ client.on("message", (message) => {
 	
    if(message.content == `!reverse`) {
         const ListEmbed = new Discord.RichEmbed()
-            .setTitle('Usuarios reverse:')
+	    .setAuthor("Usuarios Upright;", "https://i.imgur.com/tODBzy2.png")
+            
 	    .setColor(embedPurple)
 	    .setThumbnail("https://i.imgur.com/tODBzy2.png")
             .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user).join('\n'));
