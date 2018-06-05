@@ -242,6 +242,15 @@ client.on("message", function(message) {
             });
             message.channel.send(`MP enviado a ${message.author}`);
             break;
+		     case "Profile":
+  var embed = new Discord.RichEmbed()
+     .addField(message.author.username, "Roles: " + message.member.roles.map(role => role.name).join(", ")) // user, roles
+     .addField("Stats", "XP: 0/100 Level 0") // XP, Level?
+     .setColor(0x00ffff)
+     .setThumbnail(message.author.avatarURL)
+  message.channel.sendEmbed(embed);
+  console.log(message.author + ` Viewed their profile!`)
+  break;
 	
       
 	
