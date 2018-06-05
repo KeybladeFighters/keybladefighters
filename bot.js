@@ -387,6 +387,12 @@ message.delete()
 													msg.edit('👀').then(msg => {
 														setTimeout(() => {
 															msg.edit('<:ojos:453450937168822273>')
+																msg.edit('👀').then(msg => {
+																	setTimeout(() => {
+																		msg.edit('<:ojos:453450937168822273>')
+																
+																	}, 500)
+																})
 														}, 500)
 													})
 												}, 500)
