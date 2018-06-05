@@ -463,8 +463,7 @@ message.delete()
 	
   
 
-		    
-  message.channel.send({embed});	
+message.channel.send(ListEmbed);	
 		    
             }
    
