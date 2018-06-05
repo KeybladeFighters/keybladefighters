@@ -324,7 +324,7 @@ client.on("message", (message) => {
 
     if(message.content == `!upright`) {
         const ListEmbed = new Discord.RichEmbed()
-            .setTitle('Usuarios upright:')
+             .setAuthor("Usuarios Upright:", "https://i.imgur.com/1gKp70Y.png")
 	     .setColor(embedYellow)
 	    .setThumbnail("https://i.imgur.com/1gKp70Y.png")
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
@@ -336,7 +336,7 @@ client.on("message", (message) => {
 	
    if(message.content == `!reverse`) {
         const ListEmbed = new Discord.RichEmbed()
-	    .setAuthor("Usuarios Upright;", "https://i.imgur.com/tODBzy2.png")
+	    .setAuthor("Usuarios Upright:", "https://i.imgur.com/tODBzy2.png")
             
 	    .setColor(embedPurple)
 	    .setThumbnail("https://i.imgur.com/tODBzy2.png")
@@ -350,7 +350,7 @@ client.on("message", (message) => {
 		
    if(message.content == `!mixto`) {
         const ListEmbed = new Discord.RichEmbed()
-            .setTitle('Usuarios upright y reverse:')
+     .setAuthor("Usuarios Upright:", "https://i.imgur.com/Q8uZ3mI.png")
 	    .setColor(embedBlue)
 	    .setThumbnail("https://i.imgur.com/Q8uZ3mI.png")
             .setDescription(message.guild.roles.get('434695269897207819' || "434695066167279616").members.map(m=>m.user.tag).join('\n'));
