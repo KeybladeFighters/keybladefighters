@@ -326,7 +326,7 @@ client.on("message", (message) => {
         const ListEmbed = new Discord.RichEmbed()
             .setTitle('Usuarios upright:')
 	     .setColor(embedYellow)
-	    .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
+	    .setThumbnail("https://i.imgur.com/1gKp70Y.png")
             .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
 	    
         message.channel.send(ListEmbed);  
