@@ -124,6 +124,7 @@ client.on('message', message => {
 	}
 });
 
+
  client.on("guildMemberAdd", member => {
 	console.log("user" + member.username + "se unio al server")
 	 var role = member.guild.roles.find("name", "nuevo");
@@ -337,6 +338,18 @@ client.on("message", (message) => {
             .setTitle('Usuarios reverse:')
 	    .setColor(embedPurple)
             .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
+        message.channel.send(ListEmbed);      
+
+      message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
+
+   
+    }	else
+		
+   if(message.content == `!mixto`) {
+        const ListEmbed = new Discord.RichEmbed()
+            .setTitle('Usuarios mixtos:')
+	    .setColor(embedPurple)
+            .setDescription(message.guild.roles.get('434695269897207819' && "434695066167279616").members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
 
       message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
