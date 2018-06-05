@@ -423,7 +423,7 @@ message.delete()
 	})
 }else
 	   if (message.content.startsWith(prefix + "adminc") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
-      case "adminc":
+   
     const embed = new Discord.RichEmbed()
   .setTitle("Lista de comandos:")
   .setAuthor("KeyBladeFighters", "https://i.imgur.com/dnyKx2z.jpg")
