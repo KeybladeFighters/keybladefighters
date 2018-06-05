@@ -180,6 +180,8 @@ client.on("message", function(message) {
     if (message.author.equals(client.user)) return;
 
     if (!message.content.startsWith(prefix)) return;
+   if  message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)){ 
+	
 
     var args = message.content.substring(prefix.length).split(" ");
 
@@ -283,6 +285,7 @@ client.on("message", function(message) {
   message.channel.send({embed});	
 		    
             }
+   }
 });
 
 
@@ -316,7 +319,7 @@ client.on("message", (message) => {
    
     if (message.content.startsWith(prefix + "aviso") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
-  } 
+  } else
 	
      if(message.content.startsWith(`!añadir`)) {
         message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
@@ -360,19 +363,15 @@ client.on("message", (message) => {
       message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 
    
-    }	
-	
+    }	else
+	   if (message.content.startsWith(prefix + "say") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+      message.delete(0000); //Supposed to delete message
+      message.channel.send(message.content.slice(4, message.content.length));
+  } else
 	
 	
 });
 
-  
-client.on('message', message => {
-   if (message.content.startsWith("!say ")) {
-      message.delete(0000); //Supposed to delete message
-      message.channel.send(message.content.slice(4, message.content.length));
-   }
-});
 
 
 
