@@ -206,7 +206,7 @@ client.on("message", function(message) {
                     }});
             }
             break;
-		                 case "jeje":
+		                 case "quepasa":
     const embed = new Discord.RichEmbed()
   .setTitle("Lista de comandos:")
   .setAuthor("KeyBladeFighters", "https://i.imgur.com/dnyKx2z.jpg")
