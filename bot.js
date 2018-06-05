@@ -315,15 +315,15 @@ client.on("message", function(message) {
    */
   
   .addField("!ping!",
-    "Descripcion: El bot reponde con: Pong!",true)
+    "Descripcion: El bot reponde con: Pong!", true)
       .addField("!aviso",
-    "Descripcion: Publica un aviso para la hora de doble lux",true)
+    "Descripcion: Publica un aviso para la hora de doble lux", true)
       .addField("!upright , !reverse",
-    "Descripcion: Publica una lista del respectivo rol.",true)
+    "Descripcion: Publica una lista del respectivo rol.", true)
       .addField("!ojos",
-    "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos",true)
+    "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
 	  .addField("!say",
-    "Descripcion: El bot dice que tu quieras",true);
+    "Descripcion: El bot dice que tu quieras", true);
     
 
 		   
