@@ -345,9 +345,9 @@ client.on("message", (message) => {
    
     }	else
 		
-   if(message.content == `!atributo`) {
+   if(message.content == `!mixto`) {
         const ListEmbed = new Discord.RichEmbed()
-            .setTitle('Usuarios con rol:')
+            .setTitle('Usuarios uprigth y reverse:')
 	    .setColor(embedBlue)
             .setDescription(message.guild.roles.get('434695269897207819' || "434695066167279616").members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
