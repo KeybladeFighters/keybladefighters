@@ -465,7 +465,7 @@ message.delete()
 
 message.channel.send(ListEmbed);	
 		    
-            }
+            
    
   } 
 	
