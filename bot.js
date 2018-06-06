@@ -206,6 +206,28 @@ client.on("message", function(message) {
                     }});
             }
             break;
+		    case "strawpoll': {
+	
+			if (!/ \[(.*)\]/.test(msg.content)) return;
+			let question = /!strawpoll ([^\[\]]*) /.exec(msg.content)[1];
+			let options = / \[(.*)\]/.exec(msg.content)[1].split(',').map( (e) => { return e.trim(); } );
+			if (options.length == 0 || question.length == 0) return;
+			message = msg.content.trim();
+			let isMulti = false;
+			if (args[args.length - 1] == 'm') {
+				message = message.slice(0, -2);
+				isMulti = true;
+			}
+			let duration = '';
+			if (/] (.*)/.test(message)) {
+				duration = /] (.*)/.exec(message)[1];
+			}
+			let endTime = processDate(duration);
+			if (endTime == null) endTime = processDate('1 hour');
+			
+			initStrawpoll(msg, question, options, endTime, isMulti);
+		
+	}break;
 
 	
         
