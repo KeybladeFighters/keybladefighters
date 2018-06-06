@@ -125,27 +125,7 @@ client.on('raw', event => {
 
 //Termina el rol por reacciones-----------------------
 
-client.on("message",  msg => {
-	if (message.content === '!jaja') {
-	
-var request = require("request");
 
-    request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
-      var data = JSON.parse(body);
-
-      var max = data.data.length;
-      var min = 0;
-
-      var randomNumber = Math.floor(Math.random() * (max - min)) + min;
-
-      gifUrl = data.data[randomNumber].images.downsized.url;
-
-      replyMessage = "I don't think you know what you're saying\n" + gifUrl;
-
-      client.reply(message, replyMessage);
-    }
-    });
-		});
 
 
 
@@ -446,6 +426,16 @@ client.on("message", (message) => {
 
    
     }	else
+	    
+	    if(message.content == "!hug") {
+    if(message.mentions.members.size == 1) {
+        let member = message.mentions.members.first()
+     message.channel.send(`${message.author} gave ${member} a hug!`, {
+    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+});
+    }
+}
+	else
 		
    if(message.content == `!mixto`) {
         const ListEmbed = new Discord.RichEmbed()
