@@ -60,7 +60,7 @@ client.on("ready", () => {
 
 
 client.on('messageReactionAdd', (reaction, user) => {
-	if(reaction.emoji.name === "431317649780113418")
+	if(reaction.emoji.name === "<:perturba2:431317649780113418>")
 
 		
 	
