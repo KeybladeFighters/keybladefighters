@@ -5,8 +5,7 @@ let initialMessage = `**Elije tu atributo**`;
 const roles = ["Upright", "Reverse"];
 const reactions = ["428233218895118357", "428233668235100170"];
 const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
-const api = "dc6zaTOxFJmzC";
-const got = require("got");
+
 
 
 let prefix = "!";
@@ -122,20 +121,46 @@ client.on('raw', event => {
 
 //Termina el rol por reacciones-----------------------
 
-client.on("message", async msg => {
-	const args = msg.content.split(" ").splice(1);
+client.on("message",  msg => {
+	if (message.content === '!react') {
 	
-	if(msg.content.toLowerCase().startsWith("!gif")) {
-		if(args.length < 1) return msg.channel.send('Un texto es requerido en el argumento', {code: "py"})
-		const res = await got ('http://api.giphy.com/v1/gifs/random?api_keys=${api}&tag=${encodeURIComponent(args.join(" "))}', {json: true})
-		if(!res || !res.body || !res.body.data) return msg.channel.send("@fallo al encontrar un GIF con esa caracteristica!", {code: "py"})
-		
-		const embed = new Discord.RichEmbed()
-		.setImage(res.body.data.image_url)
-		.setAuthor(msg.author.tag, msg.author.displayAvatarURL)
-		msg.channel.send({embed: embed});
+var request = require("request");
+
+    request("http://api.giphy.com/v1/gifs/search?q=fail&api_key=dc6zaTOxFJmzC", function (error, response, body){
+      var data = JSON.parse(body);
+
+      var max = data.data.length;
+      var min = 0;
+
+      var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+
+      gifUrl = data.data[randomNumber].images.downsized.url;
+
+      replyMessage = "I don't think you know what you're saying\n" + gifUrl;
+
+      client.reply(message, replyMessage);
+    });
+
+
+
+    //Remove "working on it" reaction
+    client.api.reactions.remove({timestamp: message.ts, channel: message.channel, name: 'thinking_face'},function(err,res) {
+      if (err) {
+        client.botkit.log("Failed to remove emoji reaction :(",err);
+      }
+    });
+
+    
+    //Add "sorry it failed" reaction
+    client.api.reactions.add({timestamp: message.ts, channel: message.channel, name: 'slightly_frowning_face'},function(err,res) {
+      if (err) {
+        client.botkit.log("Failed to add emoji reaction :(",err);
+      }
+    });
 	}
+
 });
+
 		
 		
 const events = {
