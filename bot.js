@@ -14,8 +14,7 @@ const rando_rega = [
 'https://www.surfeatuvida.com/wp-content/uploads/2016/04/regañar.gif',
 'https://media.giphy.com/media/kD2iSc3t9W5JC/giphy.gif',
 'https://78.media.tumblr.com/tumblr_matnctrgBQ1rpa4tjo1_400.gif',
-	"https://media.giphy.com/media/11VW2xPAb4OFPO/giphy.gif",
-	"https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif",
+"https://media.giphy.com/media/11VW2xPAb4OFPO/giphy.gif",	
 ];
 
 let prefix = "!";
@@ -64,6 +63,13 @@ var fortunes = [
     "Mis fuentes dicen que no.",
     "Eso no se ve bien...",
     "Muy dudoso.",
+];
+var pelea = [
+    "acaba de abofetear a ",
+    "golpeó con su keyblade a ",
+    "ha usado impactrueno a ",
+    "usó como limpia pisos a ",
+
 ];
 var client = new Discord.Client();
 client.on("ready", () => {
@@ -287,7 +293,7 @@ client.on("message", function(message) {
             let slappedUser = message.mentions.users.first();
 
             if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre a quien pegarle.");
-            message.reply("Acabas de abofetear a " + slappedUser);
+            message.reply((pelea[Math.floor(Math.random() * pelea.length)]) + slappedUser);
             break;
 
         case "camii":
