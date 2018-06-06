@@ -540,6 +540,7 @@ message.delete()
  .addField("!ojos", "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
     
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
+      .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
 
 	
     
