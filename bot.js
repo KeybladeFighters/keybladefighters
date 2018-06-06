@@ -5,6 +5,8 @@ let initialMessage = `**Elije tu atributo**`;
 const roles = ["Upright", "Reverse"];
 const reactions = ["428233218895118357", "428233668235100170"];
 const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
+const api = "dc6zaTOxFJmzC";
+const got = require("got");
 
 
 let prefix = "!";
@@ -63,7 +65,7 @@ client.on("ready", () => {
 
 });
 
-
+//empieza el rol por reacciones
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
 
 //Function to generate the role messages, based on your settings
@@ -118,11 +120,24 @@ client.on('raw', event => {
     }   
 });
 
+//Termina el rol por reacciones-----------------------
 
-
-
-
-
+client.on("message", async msg => {
+	const args = msg.content.split(" ").splice(1);
+	
+	if(msg.content.toLowerCase().startsWith("!gif")) {
+		if(args.lenght < 1) return.msg.channel.send("Un texto es requerido en el argumento", {code:"py"})
+		const res = await got ("http://api.giphy.com/v1/gifs/random?api_keys=${api}&tag=${encodeURIComponent(args.join(" "))}", {json: true})
+		if(!res || !res.body || !res.body.data) return msg.channel.send("@fallo al encontrar un GIF con esa caracteristica!", {code: "py"})
+		
+		const embed = new Discord.RichEmbed()
+		.setImage(res.body.data.image_url)
+		.setAuthor(msg.author.tag, msg.author.displayAvatarURL)
+		msg.channel.send({embed: embed});
+	}
+});
+		
+		
 const events = {
 	MESSAGE_REACTION_ADD: 'messageReactionAdd',
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
