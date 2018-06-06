@@ -66,7 +66,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 			client.channels.get("127500279846273026").send("xd");
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
 
-        client.members.map(m=>m.user).addRole('275331552198656000');
+       
 	}
 	
 });
