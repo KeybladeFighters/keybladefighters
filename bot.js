@@ -65,11 +65,11 @@ var fortunes = [
     "Muy dudoso.",
 ];
 var pelea = [
-    "acaba de abofetear a  " 'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
-    "golpeó con su keyblade a " 'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
-    "ha usado impactrueno a " 'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
-    "usó como limpia pisos a " 'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
-    "le ha dado una patada en el lóbulo occipital a " 'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
+    "acaba de abofetear a  " ,
+    "golpeó con su keyblade a " ,
+    "ha usado impactrueno a " ,
+    "usó como limpia pisos a " ,
+    "le ha dado una patada en el lóbulo occipital a " ,
 
 ];
 var client = new Discord.Client();
