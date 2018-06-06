@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const yourID = "125557470616616960";
 const setupCMD = "!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const roles = ["Hacker", "Artist", "Public Relations", "Intern"];
+const roles = ["Vulpes", "Artist", "Public Relations", "Intern"];
 const reactions = ["💻", "🖌", "😃", "🆕"];
 const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
 
