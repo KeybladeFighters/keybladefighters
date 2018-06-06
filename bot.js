@@ -126,7 +126,7 @@ client.on("message", async msg => {
 	const args = msg.content.split(" ").splice(1);
 	
 	if(msg.content.toLowerCase().startsWith("!gif")) {
-		if(args.length < 1) return msg.channel.send("Un texto es requerido en el argumento", {code: "py"})
+		if(args.length < 1) return msg.channel.send('Un texto es requerido en el argumento', {code: "py"})
 		const res = await got ('http://api.giphy.com/v1/gifs/random?api_keys=${api}&tag=${encodeURIComponent(args.join(" "))}', {json: true})
 		if(!res || !res.body || !res.body.data) return msg.channel.send("@fallo al encontrar un GIF con esa caracteristica!", {code: "py"})
 		
