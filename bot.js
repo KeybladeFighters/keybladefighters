@@ -64,7 +64,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 		client.channels.get("127500279846273026").send("xd");
 	
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
-	user.addRole(user.guild.roles.find("name", "Vulpes");
+	
 	}
 	
 });
@@ -75,15 +75,22 @@ client.on('messageReactionAdd', (reaction, user) => {
 client.on("message", async message => {
 
     if(message.content.startsWith(`!pls`)) {
-        try {
-            await message.react('🇲');
-            await message.react('🇪');
-           
-		
-        }
-        catch (error) {
-            console.error('One of the emojis failed to react.');
-        }
+const collector = message.createReactionCollector((reaction, user) => 
+    user.id === message.author.id &&
+    reaction.emoji.name === "◀" ||
+    reaction.emoji.name === "▶" ||
+    reaction.emoji.name === "❌"
+).once("collect", reaction => {
+    const chosen = reaction.emoji.name;
+    if(chosen === "◀"){
+        // Prev page
+    }else if(chosen === "▶"){
+        // Next page
+    }else{
+        // Stop navigating pages
+    }
+    collector.stop();
+});
     }
 });
 const events = {
