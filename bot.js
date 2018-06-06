@@ -10,7 +10,12 @@ const rando_imgs = [
 'https://media.giphy.com/media/lXiRKBj0SAA0EWvbG/giphy.gif',
 'https://media.giphy.com/media/16bJmyPvRbCDu/giphy.gif',
 ];
-
+const rando_rega = [
+'https://www.surfeatuvida.com/wp-content/uploads/2016/04/regañar.gif',
+'https://media.giphy.com/media/kD2iSc3t9W5JC/giphy.gif',
+'https://78.media.tumblr.com/tumblr_matnctrgBQ1rpa4tjo1_400.gif',
+	"https://media.giphy.com/media/11VW2xPAb4OFPO/giphy.gif",
+];
 
 let prefix = "!";
 const game = "KHUX! "
@@ -411,6 +416,18 @@ client.on("message", (message) => {
 });
     
 } else 
+	 if(message.content.startsWith (prefix + "regaño")) {
+
+        let member = message.mentions.members.first()
+	message.delete(0000);
+     message.channel.send(`${message.author} ha regañado a ${member} !`, {
+    file: rando_rega[Math.floor(Math.random() * rando_imgs.length)]
+	     
+	     
+});
+    
+} else 
+
 
     if(message.content == `!upright`) {
         const ListEmbed = new Discord.RichEmbed()
