@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const yourID = "125557470616616960";
-const setupCMD = "!createrolemessage"
-let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const roles = ["Vulpes", "Artist", "Public Relations", "Intern"];
-const reactions = ["💻", "🖌", "😃", "🆕"];
+const setupCMD = "!atributo"
+let initialMessage = `**Elije tu atributo**`;
+const roles = ["Upright", "Reverse"];
+const reactions = ["💻", "🖌"];
 const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
 
 
@@ -70,7 +70,7 @@ if (roles.length !== reactions.length) throw "Roles list and reactions list are 
 function generateMessages(){
     var messages = [];
     messages.push(initialMessage);
-    for (let role of roles) messages.push(`React below to get the **"${role}"** role!`); //DONT CHANGE THIS
+    for (let role of roles) messages.push(` **"${role}"** `); //DONT CHANGE THIS
     return messages;
 }
 
