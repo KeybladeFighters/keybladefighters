@@ -61,7 +61,7 @@ client.on("ready", () => {
 client.on('messageReactionAdd', (reaction, user) => {
 	if(reaction.emoji.name === "🇲"){
 
-		client.channels.get("127500279846273026").send("xd");
+		client.channels.get("127500279846273026").message.get("453792990167564298").send("xd");
 	
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
 	
@@ -72,27 +72,6 @@ client.on('messageReactionAdd', (reaction, user) => {
 
 
 
-client.on('messageReactionAdd', (reaction, user)=> {
-
-    if(message.content.startsWith(`!pls`)) {
-const collector = message.createReactionCollector((reaction, user) => 
-    user.id === message.author.id &&
-    reaction.emoji.name === "◀" ||
-    reaction.emoji.name === "▶" ||
-    reaction.emoji.name === "❌"
-).once("collect", reaction => {
-    const chosen = reaction.emoji.name;
-    if(chosen === "◀"){
-        // Prev page
-    }else if(chosen === "▶"){
-        // Next page
-    }else{
-        // Stop navigating pages
-    }
-    collector.stop();
-});
-    }
-});
 const events = {
 	MESSAGE_REACTION_ADD: 'messageReactionAdd',
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
