@@ -431,7 +431,7 @@ message.delete()
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor(0x00AE86)
-  .setDescription("hola")
+
   .setFooter("Cualquier sugerencia o ayuda es aceptada.", "https://i.imgur.com/dnyKx2z.jpg")
   .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
   /*
