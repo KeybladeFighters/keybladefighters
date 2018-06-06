@@ -122,7 +122,7 @@ client.on('raw', event => {
 //Termina el rol por reacciones-----------------------
 
 client.on("message",  msg => {
-	if (message.content === '!react') {
+	if (message.content === '!jaja') {
 	
 var request = require("request");
 
