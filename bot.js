@@ -72,7 +72,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 
 
 
-client.on("message", async message => {
+client.on('messageReactionAdd', (reaction, user)=> {
 
     if(message.content.startsWith(`!pls`)) {
 const collector = message.createReactionCollector((reaction, user) => 
