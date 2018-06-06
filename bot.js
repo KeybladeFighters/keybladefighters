@@ -372,7 +372,7 @@ client.on("message", (message) => {
      .setAuthor("Usuarios Upright:", "https://i.imgur.com/Q8uZ3mI.png")
 	    .setColor(embedBlue)
 	    .setThumbnail("https://i.imgur.com/Q8uZ3mI.png")
-            .setDescription(message.guild.roles.get('434695269897207819' || "434695066167279616").members.map(m=>m.user.tag).join('\n'));
+            .setDescription(message.guild.roles.get('434695269897207819' || "434695066167279616").members.map(m=>m.user).join('\n'));
 	   
         message.channel.send(ListEmbed);      
 
