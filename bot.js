@@ -403,8 +403,11 @@ client.on("message", (message) => {
 	    	    if(message.content.startsWith (prefix + "abrazo")) {
 
         let member = message.mentions.members.first()
+	message.delete(0000);
      message.channel.send(`${message.author} le dio a ${member} un abrazo!`, {
     file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+	     
+	     
 });
     
 } else 
