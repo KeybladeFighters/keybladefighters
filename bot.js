@@ -451,7 +451,7 @@ message.delete()
  .addField("!ojos", "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
     
        */
- .addField("!ping!", "Descripcion: Responde con: Pong!", true)
+
 	
     
   .addField("!say", "Descripcion:El bot dice que tu quieras", true);
