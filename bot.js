@@ -65,7 +65,7 @@ const guildMember = reaction.member;
 			client.channels.get("127500279846273026").send("xd");
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
 
-        guildMember.addRole('275331552198656000');
+        client.guildMember.addRole('275331552198656000');
 	}
 	
 });
