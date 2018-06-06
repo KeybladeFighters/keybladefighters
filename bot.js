@@ -68,7 +68,7 @@ var pelea = [
 	
     "acaba de abofetear a " ,
     "golpeó con su keyblade a " ,
-    "ha usado impactrueno a " ,
+    "ha usado impactrueno en contra de " ,
     "usó de limpia pisos a " ,
     "le ha dado una patada en el lóbulo occipital a " ,
     "usó granizo de Farron en contra de " ,
