@@ -59,7 +59,7 @@ client.on("ready", () => {
 
 
 client.on('messageReactionAdd', (reaction, user) => {
-	if(reaction.emoji.name === "431317649780113418"){
+	if(reaction.emoji.name === "🇲"){
 
 		client.channels.get("127500279846273026").send("xd");
 	
