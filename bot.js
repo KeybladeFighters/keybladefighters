@@ -66,7 +66,12 @@ var fortunes = [
 ];
 var pelea = [
 	
-
+    "acaba de abofetear a " ,
+    "golpeó con su keyblade a " ,
+    "ha usado impactrueno a " ,
+    "usó de limpia pisos a " ,
+    "le ha dado una patada en el lóbulo occipital a " ,
+    "usó granizo de Farron en contra de " ,
     "<:BibleThump:454069403437236226> le ha lanzado lagrimas a  " ,
 
   
