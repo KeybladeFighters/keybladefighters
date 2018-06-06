@@ -5,7 +5,11 @@ let initialMessage = `**Elije tu atributo**`;
 const roles = ["Upright", "Reverse"];
 const reactions = ["428233218895118357", "428233668235100170"];
 const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
-
+const rando_imgs = [
+'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
+'https://media.giphy.com/media/CZpro4AZHs436/giphy2.gif',
+'https://media.giphy.com/media/CZpro4AZHs436/giphy3.gif',
+];
 
 
 let prefix = "!";
@@ -139,27 +143,13 @@ var request = require("request");
       replyMessage = "I don't think you know what you're saying\n" + gifUrl;
 
       client.reply(message, replyMessage);
+    }
     });
+		});
 
 
-
-    //Remove "working on it" reaction
-    client.api.reactions.remove({timestamp: message.ts, channel: message.channel, name: 'thinking_face'},function(err,res) {
-      if (err) {
-        client.botkit.log("Failed to remove emoji reaction :(",err);
-      }
-    });
 
     
-    //Add "sorry it failed" reaction
-    client.api.reactions.add({timestamp: message.ts, channel: message.channel, name: 'slightly_frowning_face'},function(err,res) {
-      if (err) {
-        client.botkit.log("Failed to add emoji reaction :(",err);
-      }
-    });
-	}
-
-});
 
 		
 		
