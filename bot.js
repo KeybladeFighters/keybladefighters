@@ -400,6 +400,14 @@ client.on("message", (message) => {
      if(message.content.startsWith(`!añadir`)) {
         message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
     }else
+	    	    if(message.content.startsWith (prefix + "abrazo")) {
+    if(message.mentions.members.size == 1) {
+        let member = message.mentions.members.first()
+     message.channel.send(`${message.author} le dio a ${member} un abrazo!`, {
+    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+});
+    }
+} else 
 
     if(message.content == `!upright`) {
         const ListEmbed = new Discord.RichEmbed()
@@ -528,18 +536,7 @@ message.delete()
 	
 
 });
-client.on("message", (message) => {
-	
-	
-	    if(message.content.startsWith (prefix + "abrazo")) {
-    if(message.mentions.members.size == 1) {
-        let member = message.mentions.members.first()
-     message.channel.send(`${message.author} le dio a ${member} un abrazo!`, {
-    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
-});
-    }
-}
-});
+
 		
 
 
