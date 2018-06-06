@@ -58,6 +58,17 @@ client.on("ready", () => {
 });
 
 
+client.on('messageReactionAdd', (reaction, user) => {
+	if(reaction.emoji.name === "🇲")
+
+		
+	
+	client.message.get("453785557785640970").send("reaccion " + reaction.emoji.name);
+
+	
+	
+});
+
 
 
 client.on("message", async message => {
