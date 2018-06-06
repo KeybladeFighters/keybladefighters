@@ -3,7 +3,7 @@ const yourID = "125557470616616960";
 const setupCMD = "!atributo"
 let initialMessage = `**Elije tu atributo**`;
 const roles = ["Upright", "Reverse"];
-const reactions = ["💻", "431317649780113418"];
+const reactions = ["428233218895118357", "428233668235100170"];
 const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
 
 
