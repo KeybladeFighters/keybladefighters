@@ -65,11 +65,8 @@ var fortunes = [
     "Muy dudoso.",
 ];
 var pelea = [
-    "acaba de abofetear a " ,
-    "golpeó con su keyblade a " ,
-    "ha usado impactrueno a " ,
-    "usó como limpia pisos a " ,
-    "le ha dado una patada en el lóbulo occipital a " ,
+
+    "<:BibleThump:454069403437236226>" ,
 
   
 
