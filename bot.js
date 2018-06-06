@@ -59,13 +59,14 @@ client.on("ready", () => {
 
 
 client.on('messageReactionAdd', (reaction, user) => {
-const guildMember = reaction.member;
+
 	if(reaction.emoji.name === "🇲"){
+		const guildMember = reaction.member;
 
 			client.channels.get("127500279846273026").send("xd");
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
 
-        client.guildMember.addRole('275331552198656000');
+        
 	}
 	
 });
