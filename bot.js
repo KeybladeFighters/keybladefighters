@@ -7,8 +7,8 @@ const reactions = ["428233218895118357", "428233668235100170"];
 const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
 const rando_imgs = [
 'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
-'https://media.giphy.com/media/CZpro4AZHs436/giphy2.gif',
-'https://media.giphy.com/media/CZpro4AZHs436/giphy3.gif',
+'https://media.giphy.com/media/lXiRKBj0SAA0EWvbG/giphy.gif',
+'https://media.giphy.com/media/16bJmyPvRbCDu/giphy.gif',
 ];
 
 
@@ -401,12 +401,12 @@ client.on("message", (message) => {
         message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
     }else
 	    	    if(message.content.startsWith (prefix + "abrazo")) {
-    if(message.mentions.members.size == 1) {
+
         let member = message.mentions.members.first()
      message.channel.send(`${message.author} le dio a ${member} un abrazo!`, {
     file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
 });
-    }
+    
 } else 
 
     if(message.content == `!upright`) {
