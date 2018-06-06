@@ -15,6 +15,7 @@ const rando_rega = [
 'https://media.giphy.com/media/kD2iSc3t9W5JC/giphy.gif',
 'https://78.media.tumblr.com/tumblr_matnctrgBQ1rpa4tjo1_400.gif',
 	"https://media.giphy.com/media/11VW2xPAb4OFPO/giphy.gif",
+	"https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif",
 ];
 
 let prefix = "!";
