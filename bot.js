@@ -64,7 +64,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 		client.channels.get("127500279846273026").send("xd");
 	
 	client.channels.get("127500279846273026").send("reaccion " + reaction.emoji.name);
-
+	users.addRole(users.guild.roles.find("name", "Vulpes");
 	}
 	
 });
