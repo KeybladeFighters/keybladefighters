@@ -427,7 +427,7 @@ client.on("message", (message) => {
    
     }	else
 	    
-	    if(message.content == "!hug") {
+	    if(message.content.startsWith (prefix + "hug")) {
     if(message.mentions.members.size == 1) {
         let member = message.mentions.members.first()
      message.channel.send(`${message.author} gave ${member} a hug!`, {
