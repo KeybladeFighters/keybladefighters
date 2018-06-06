@@ -427,16 +427,7 @@ client.on("message", (message) => {
    
     }	else
 	    
-	    if(message.content.startsWith (prefix + "hug")) {
-    if(message.mentions.members.size == 1) {
-        let member = message.mentions.members.first()
-     message.channel.send(`${message.author} gave ${member} a hug!`, {
-    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
-});
-    }
-}
-	else
-		
+
    if(message.content == `!mixto`) {
         const ListEmbed = new Discord.RichEmbed()
      .setAuthor("Usuarios Upright:", "https://i.imgur.com/Q8uZ3mI.png")
@@ -537,8 +528,19 @@ message.delete()
 	
 
 });
-
-
+client.on("message", (message) => {
+	
+	
+	    if(message.content.startsWith (prefix + "abrazo")) {
+    if(message.mentions.members.size == 1) {
+        let member = message.mentions.members.first()
+     message.channel.send(`${message.author} le dio a ${member} un abrazo!`, {
+    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+});
+    }
+}
+});
+		
 
 
 
