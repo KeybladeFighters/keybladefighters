@@ -420,7 +420,7 @@ client.on("message", (message) => {
         message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
     } else
 	    
-    if(message.content.startsWith (prefix + "abrazo")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    if(message.content.startsWith (prefix + "abrazo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
@@ -431,7 +431,7 @@ client.on("message", (message) => {
      });
     
 } else 
-	 if(message.content.startsWith (prefix + "regaño")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	 if(message.content.startsWith (prefix + "regaño") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
@@ -444,7 +444,7 @@ client.on("message", (message) => {
 } else 
 
 
-    if(message.content == `!upright`) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    if(message.content == `!upright`)  {
         const ListEmbed = new Discord.RichEmbed()
              .setAuthor("Usuarios Upright:", "https://i.imgur.com/1gKp70Y.png")
 	     .setColor(embedYellow)
@@ -456,7 +456,7 @@ client.on("message", (message) => {
       message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
     }else
 	
-   if(message.content == `!reverse`) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+   if(message.content == `!reverse`) {
         const ListEmbed = new Discord.RichEmbed()
 	    .setAuthor("Usuarios Upright:", "https://i.imgur.com/tODBzy2.png")
             
@@ -471,7 +471,7 @@ client.on("message", (message) => {
     }	else
 	    
 
-   if(message.content == `!mixto`) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+   if(message.content == `!mixto`)  {
         const ListEmbed = new Discord.RichEmbed()
      .setAuthor("Usuarios Upright:", "https://i.imgur.com/Q8uZ3mI.png")
 	    .setColor(embedBlue)
