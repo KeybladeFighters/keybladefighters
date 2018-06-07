@@ -413,18 +413,7 @@ client.on("message", (message) => {
    
     if (message.content.startsWith(prefix + "aviso") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
-  } else
-	  	    
-    if(message.content.startsWith(prefix + "apruebo")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
-	
-    message.channel.send('Camii aprueba esto', {files: ["http://i0.kym-cdn.com/photos/images/original/000/969/999/dba.gif"]});
-    
-} else     
-    if(message.content.startsWith(prefix + "shoowmad")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
-
-    message.channel.send('Shoowie se ha enojado!! <:omaewa:438377799041024010> ', {files: ["https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif"]});
-    
-} else     
+  } else   
 	     
 	
      if(message.content.startsWith(`!añadir`)) {
