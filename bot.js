@@ -414,11 +414,24 @@ client.on("message", (message) => {
     if (message.content.startsWith(prefix + "aviso") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
   } else
+	  	    
+    if(message.content.startsWith (prefix + "apruebo")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	message.delete(0000);
+    message.channel.send('Camii aprueba esto', {files: ["http://i0.kym-cdn.com/photos/images/original/000/969/999/dba.gif"]});
+    
+} else     
+	  if(message.content.startsWith (prefix + "shoowmad")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	message.delete(0000);
+    message.channel.send('Shoowie se ha enojado!! <:omaewa:438377799041024010> ', {files: ["https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif"]});
+    
+} else     
+	     
 	
      if(message.content.startsWith(`!añadir`)) {
         message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
-    }else
-	    	    if(message.content.startsWith (prefix + "abrazo")) {
+    } else
+	    
+    if(message.content.startsWith (prefix + "abrazo")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
@@ -429,7 +442,7 @@ client.on("message", (message) => {
 });
     
 } else 
-	 if(message.content.startsWith (prefix + "regaño")) {
+	 if(message.content.startsWith (prefix + "regaño")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
@@ -442,7 +455,7 @@ client.on("message", (message) => {
 } else 
 
 
-    if(message.content == `!upright`) {
+    if(message.content == `!upright`) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         const ListEmbed = new Discord.RichEmbed()
              .setAuthor("Usuarios Upright:", "https://i.imgur.com/1gKp70Y.png")
 	     .setColor(embedYellow)
@@ -454,7 +467,7 @@ client.on("message", (message) => {
       message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
     }else
 	
-   if(message.content == `!reverse`) {
+   if(message.content == `!reverse`) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         const ListEmbed = new Discord.RichEmbed()
 	    .setAuthor("Usuarios Upright:", "https://i.imgur.com/tODBzy2.png")
             
@@ -469,7 +482,7 @@ client.on("message", (message) => {
     }	else
 	    
 
-   if(message.content == `!mixto`) {
+   if(message.content == `!mixto`) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         const ListEmbed = new Discord.RichEmbed()
      .setAuthor("Usuarios Upright:", "https://i.imgur.com/Q8uZ3mI.png")
 	    .setColor(embedBlue)
