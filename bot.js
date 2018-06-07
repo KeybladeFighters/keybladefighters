@@ -428,7 +428,7 @@ client.on("message", (message) => {
     file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
 	     
 	     
-     }});
+     });
     
 } else 
 	 if(message.content.startsWith (prefix + "regaño")) && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
@@ -439,7 +439,7 @@ client.on("message", (message) => {
     file: rando_rega[Math.floor(Math.random() * rando_imgs.length)]
 	     
 	     
-     }});
+     });
     
 } else 
 
