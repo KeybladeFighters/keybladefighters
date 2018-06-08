@@ -570,12 +570,13 @@ message.delete()
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
   .addField("!upright , !reverse", "Descripcion: Publica una lista del respectivo rol", true)
+     .addField("!apruebo , !enojo , !risa", "Descripcion: Publica un gif", true)
   /*
    * Blank field, useful to create some space.
    */
  .addField("!ojos", "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
         
-      .addField("!apruebo , !enojo , !risa", "Descripcion: Publica un gif", true)
+     
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
 
     
