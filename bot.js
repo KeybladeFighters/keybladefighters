@@ -576,7 +576,7 @@ message.delete()
    */
  .addField("!ojos", "Descripcion: Publica el emoji de ojos, pero con una animacion de 3 segundos", true)
         
-     
+      .addField("!adminc , !comandos", "Descripcion: Publica una lista de comandos   ", true)
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
 
     
