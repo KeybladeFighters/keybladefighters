@@ -16,6 +16,11 @@ const rando_rega = [
 'https://78.media.tumblr.com/tumblr_matnctrgBQ1rpa4tjo1_400.gif',
 "https://media.giphy.com/media/11VW2xPAb4OFPO/giphy.gif",	
 ];
+const rando_risa = [
+'https://i.gifer.com/50ZZ.gif',
+'https://78.media.tumblr.com/5e0681736882e1e6cca09b2906b819ec/tumblr_mx1mliRjuD1smxonlo2_1280.gif',
+"https://media.giphy.com/media/TJKm32CqAr0CA/giphy.gif",	
+];
 
 let prefix = "!";
 const game = "KHUX! "
@@ -444,7 +449,16 @@ client.on("message", (message) => {
         let member = message.mentions.members.first()
 	message.delete(0000);
      message.channel.send(`${message.author} ha regañado a ${member} !`, {
-    file: rando_rega[Math.floor(Math.random() * rando_imgs.length)]
+    file: rando_rega[Math.floor(Math.random() * rando_rega.length)]
+	     
+	     
+     });
+    
+} else 
+	 if(message.content.startsWith (prefix + "risa") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+
+     message.channel.send(`MUAJAJAJAJA  <:jaja:425806439076986893> !`, {
+    file: rando_risa[Math.floor(Math.random() * rando_risa.length)]
 	     
 	     
      });
