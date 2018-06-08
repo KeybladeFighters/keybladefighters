@@ -78,9 +78,13 @@ var pelea = [
     "le ha dado una patada en el lóbulo occipital a " ,
     "usó granizo de Farron en contra de " ,
     "<:BibleThump:454069403437236226> le ha lanzado lagrimas a  " ,
-
-  
-
+    "pisoteó a " ,
+    "lanzó un Kamehameha a " ,
+    "hizo un fatality a " ,
+    "le lanzó un caparazón de tortuga a " ,
+    "se enojó y usó ira primigenia en contra de " ,
+    "se comió una flor y le lanzó bolas de fuego a " ,
+    "usó FUS-RO-DAH! en contra de " ,
 ];
 var client = new Discord.Client();
 client.on("ready", () => {
