@@ -428,9 +428,9 @@ client.on("message", (message) => {
   		  message.delete(0000);
 	       message.channel.send('Camii aprueba esto', {files: ["http://i0.kym-cdn.com/photos/images/original/000/969/999/dba.gif"]});
   } else   
-	      if (message.content.startsWith(prefix + "shoowmad") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	      if (message.content.startsWith(prefix + "enojo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
   		  message.delete(0000);
-	       message.channel.send('Shoowie se ha enojado!! <:omaewa:438377799041024010> ', {files: ["https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif"]});
+	       message.channel.send(' <:omaewa:438377799041024010> ', {files: ["https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif"]});
   } else   
 	    
     if(message.content.startsWith (prefix + "abrazo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
