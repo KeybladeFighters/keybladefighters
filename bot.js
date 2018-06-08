@@ -577,7 +577,7 @@ message.delete()
     
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
-
+  .addField("!apruebo , !enojo , !risa", "Descripcion: Publica un gif", true)
 	
     
   .addField("!say", "Descripcion:El bot dice que tu quieras", true);
