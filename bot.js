@@ -456,7 +456,7 @@ client.on("message", (message) => {
     
 } else 
 	 if(message.content.startsWith (prefix + "risa") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
-
+	message.delete(0000);
      message.channel.send(`MUAJAJAJAJA  <:jaja:425806439076986893> !`, {
     file: rando_risa[Math.floor(Math.random() * rando_risa.length)]
 	     
