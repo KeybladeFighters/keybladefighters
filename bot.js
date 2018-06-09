@@ -425,7 +425,7 @@ client.on("message", (message) => {
   } else   
 	        if (message.content.startsWith(prefix + "video") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
   		  message.delete(0000);
-	       message.channel.send(' Camii_669 subió un video de youtube :  https://youtu.be/Vc7pKvjVznU');
+	       message.channel.send(' Camii_669 subió un video de youtube :  https://www.youtube.com/watch?v=1GIVC5RJ5dk');
   } else   
 	     
 	
