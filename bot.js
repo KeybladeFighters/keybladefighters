@@ -606,7 +606,13 @@ message.delete()
 
 });
 
-		
+		client.on("guildMemberAdd"), function(member){
+	
+	
+	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
+	
+});
+
 
 
 
