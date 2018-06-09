@@ -423,6 +423,10 @@ client.on("message", (message) => {
     if (message.content.startsWith(prefix + "aviso") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
     message.channel.send('@everyone :fire: <:lux:421728762716225540> Lux Time!!! A darle con todo mis Keyblade Rangers~ <:lux:421728762716225540> :fire:', {files: ["https://cdn.discordapp.com/attachments/421507243318706188/442339823274033184/BONO_DE_LUX.png"]});
   } else   
+	        if (message.content.startsWith(prefix + "video") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+  		  message.delete(0000);
+	       message.channel.send(' Camii_669 subió un video de youtube :  ', {files: ["https://youtu.be/Vc7pKvjVznU"]});
+  } else   
 	     
 	
      if(message.content.startsWith (prefix + "añadir") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
