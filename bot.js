@@ -85,6 +85,7 @@ var pelea = [
     "se enojó y usó ira primigenia en contra de " ,
     "se comió una flor y le lanzó bolas de fuego a " ,
     "usó FUS-RO-DAH! en contra de " ,
+    "usó Látigo cepa en contra de " ,
 ];
 var client = new Discord.Client();
 client.on("ready", () => {
