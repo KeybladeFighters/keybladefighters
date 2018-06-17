@@ -323,6 +323,12 @@ client.on("message", function(message) {
 	       message.channel.send('  ', {files: ["https://i.imgur.com/dTkdWwP.gif"]});
    
             break;
+		     case "noticias":
+		    message.delete(0000);
+      
+	       message.channel.send(' http://api.sp.kingdomhearts.com/information/list ');
+   
+            break;
 		    		    
    
 	   
