@@ -23,8 +23,9 @@ const rando_risa = [
 ];
 
 let prefix = "!";
-const game = "KHUX! "
+const game = "farmeo a muerte! "
 const status = "Online"
+
   const embedRed = 0xff0000
 const embedOrange = 0xff790c
 const embedYellow = 0xffff00
