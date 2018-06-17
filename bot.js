@@ -319,7 +319,7 @@ client.on("message", function(message) {
             break;
         case "disco":
 		   
-           message.channel.send('xd', {files: ["https://media1.tenor.com/images/8a24409468ee46e9ff8784bf252cfa7a/tenor.gif?itemid=5603732"]});
+           message.channel.send('https://media1.tenor.com/images/8a24409468ee46e9ff8784bf252cfa7a/tenor.gif?itemid=5603732');
 		    
             break;
 		    		    
