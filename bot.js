@@ -317,6 +317,11 @@ client.on("message", function(message) {
             message.channel.sendMessage("Ve a https://www.youtube.com/channel/UCfC5uaY01NBD-vIq5tXfaag/videos?disable_polymer=1");
 		    
             break;
+        case "disco":
+		   
+           message.channel.send(' ', {files: ["https://media1.tenor.com/images/8a24409468ee46e9ff8784bf252cfa7a/tenor.gif?itemid=5603732"]});
+		    
+            break;
 		    		    
    
 	   
