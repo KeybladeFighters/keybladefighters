@@ -319,8 +319,9 @@ client.on("message", function(message) {
             break;
         case "disco":
 		   
-           message.channel.send('https://media1.tenor.com/images/8a24409468ee46e9ff8784bf252cfa7a/tenor.gif?itemid=5603732');
-		    
+      
+	       message.channel.send('  ', {files: ["https://i.imgur.com/dTkdWwP.gif"]});
+   
             break;
 		    		    
    
@@ -446,10 +447,7 @@ client.on("message", (message) => {
   		  message.delete(0000);
 	       message.channel.send(' <:omaewa:438377799041024010> ', {files: ["https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif"]});
   } else   
-	       if (message.content.startsWith(prefix + "jeje") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
-  		  message.delete(0000);
-	       message.channel.send(' <:omaewa:438377799041024010> ', {files: ["https://media1.tenor.com/images/8a24409468ee46e9ff8784bf252cfa7a/tenor.gif?itemid=5603732"]});
-  } else   
+	     
     if(message.content.startsWith (prefix + "abrazo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
