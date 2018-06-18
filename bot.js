@@ -442,7 +442,7 @@ client.on("message", (message) => {
 	     
 	
      if(message.content.startsWith (prefix + "añadir") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
-        message.mentions.members.first().addRole('434695066167279616'); // gets the <GuildMember> from a mention and then adds the role to that member                     
+        message.mentions.members.first().addRole('458114676643987456'); // gets the <GuildMember> from a mention and then adds the role to that member                     
     } else	
 	     if (message.content.startsWith(prefix + "apruebo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
   		  message.delete(0000);
