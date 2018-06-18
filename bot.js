@@ -312,6 +312,15 @@ client.on("message", function(message) {
             if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre a quien pegarle.");
             message.reply((pelea[Math.floor(Math.random() * pelea.length)]) + slappedUser);
             break;
+		      
+        case "slop":
+            let slappedUser1 = message.mentions.users.first();
+		      let slappedUser2 = message.mentions.users.second();
+
+            if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre a quien pegarle.");
+            message.reply((pelea[Math.floor(Math.random() * pelea.length)]) + slappedUser1 + slappedUser1);
+            break;
+
 
         case "camii":
 		   
