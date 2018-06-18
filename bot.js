@@ -334,7 +334,7 @@ client.on("message", function(message) {
 	   
 
         case "dm":
-		    message.delete(0000);
+		
             let person = message.mentions.users.first();
             let msg = message.content.split(" ").slice(2).join(" ");
 
