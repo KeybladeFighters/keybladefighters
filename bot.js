@@ -316,11 +316,7 @@ client.on("message", function(message) {
     
 
 
-        case "camii":
-		   
-            message.channel.sendMessage("Ve a https://www.youtube.com/channel/UCfC5uaY01NBD-vIq5tXfaag/videos?disable_polymer=1");
-		    
-            break;
+      
         case "disco":
 		   
       
@@ -375,8 +371,8 @@ client.on("message", function(message) {
    */
   .setTimestamp()
   .setURL("https://steamcommunity.com/id/Shoowderify/")
-  .addField("!camii",
-    "Descripcion: Publica el canal de YT de camii")
+  .addField("!disco",
+    "Descripcion: Descrubrelo ")
   /*
    * Inline fields may not display as inline if the thumbnail and/or image is too big.
    */
