@@ -348,7 +348,7 @@ client.on("message", function(message) {
             person.send({
                 embed : customEmbed
             });
-           
+                  message.channel.send(` je`);
             break;
       
 	
