@@ -334,12 +334,14 @@ client.on("message", function(message) {
 	   
 
         case "dm":
+		    message.delete(0000);
             let person = message.mentions.users.first();
             let msg = message.content.split(" ").slice(2).join(" ");
 
             if(message.mentions.users.size < 1) return message.reply("Uso: !dm @PLAYER000 Me gustan los ponys");
             if(!msg) return message.reply("Usage: /dm @PLAYER000 I Like Ponies");
 
+      
             const customEmbed = new Discord.RichEmbed()
             .setAuthor(`Desconocido`)
             .addField(`__Un usuario desconocido dice:__`, `${msg}\n ======================== \n *Tu no puedes responderle al **Desconocido** por este chat.* `)
@@ -347,7 +349,7 @@ client.on("message", function(message) {
             person.send({
                 embed : customEmbed
             });
-            message.channel.send(`MP enviado ${message.author}`);
+  
             break;
 
       
