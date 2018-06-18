@@ -182,6 +182,23 @@ client.on('message', async message => {
         }
     }
 });
+client.on('message', async message => {
+    if (message.content === '!meh!') {
+        try {
+            await message.react('🇨');
+            await message.react('🇦');
+            await message.react('🇳');
+            await message.react('🇸');
+            await message.react('🇦');
+		await message.react('🇸');
+		 await message.react('438378115601793034');
+		
+        }
+        catch (error) {
+            console.error('One of the emojis failed to react.');
+        }
+    }
+});
 
 client.on('raw', async ({ t: eventName, d: data }) => {
 	if (!events.hasOwnProperty(eventName)) return;
