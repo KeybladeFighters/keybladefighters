@@ -23,7 +23,7 @@ const rando_risa = [
 ];
 
 let prefix = "!";
-const game = "farmeo a muerte! "
+const game = "Khux! "
 const status = "Online"
 
   const embedRed = 0xff0000
