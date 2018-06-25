@@ -95,6 +95,18 @@ client.on("ready", () => {
  console.log(`Logged in as ${client.user.tag}!`);
 
 });
+client.on("guildMemberAdd"), function(member){
+	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido");
+	
+	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
+		
+	member.addRole(member.guild.roles.find("name", "↬                                                 Estado                                    ↫"));
+		
+	member.addRole(member.guild.roles.find("name", "⇙ In Development ⇘"));
+		
+	member.addRole(member.guild.roles.find("name", "↯                                                 Atributo                                    ↯"));
+	
+});
 
 //empieza el rol por reacciones
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
