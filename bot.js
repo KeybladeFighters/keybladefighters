@@ -96,8 +96,10 @@ client.on("ready", () => {
 
 });
 client.on("guildMemberAdd", function(member){
-
+	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido, elige tu atributo en el siguiente mensaje");
+	
 	member.guild.channels.find("name", "general").sendMessage("!atributo");
+	
 	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
 		
 	member.addRole(member.guild.roles.find("name", "↯                                                 Atributo                                    ↯"));
