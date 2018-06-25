@@ -96,7 +96,7 @@ client.on("ready", () => {
 
 });
 client.on("guildMemberAdd", function(member){
-	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido");
+
 	
 	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
 	
