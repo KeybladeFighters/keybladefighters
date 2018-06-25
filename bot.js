@@ -96,9 +96,9 @@ client.on("ready", () => {
 
 });
 client.on("guildMemberAdd", function(member){
-	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido, elige tu atributo en el siguiente mensaje");
+	member.guild.channels.find("name", "spam-town").sendMessage(member.toString() + " bienvenido, elige tu atributo en el siguiente mensaje");
 	
-	member.guild.channels.find("name", "general").sendMessage("!atributo");
+	member.guild.channels.find("name", "spam-town").sendMessage("!atributo");
 	
 	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
 		
