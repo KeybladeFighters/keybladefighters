@@ -95,10 +95,12 @@ client.on("ready", () => {
  console.log(`Logged in as ${client.user.tag}!`);
 
 });
-client.on('serverNewMember', function(server, user) {
-     user.addTo(server.roles.get("name", "Keyblade Rangers"));
-	    });
-
+client.on("guildMemberAdd", function(member){
+	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido");
+	
+	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
+	
+});
 
 
 //empieza el rol por reacciones
