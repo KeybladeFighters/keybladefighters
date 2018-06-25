@@ -497,10 +497,10 @@ client.on("message", (message) => {
   
     
 } else 
-	   if(message.content.startsWith (prefix + "abrazo!") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	   if(message.content.startsWith (prefix + "todos") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
 	message.delete(0000);
-     message.channel.send(`${message.author} le dio a <@&455138716529459202> un abrazo!`, {
+     message.channel.send(`${message.author} le dio a @everyone un abrazo!`, {
     file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
 	     
 	     
