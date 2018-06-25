@@ -86,6 +86,7 @@ var pelea = [
     "se comió una flor y le lanzó bolas de fuego a " ,
     "usó FUS-RO-DAH! en contra de " ,
     "usó Látigo cepa en contra de " ,
+	
 ];
 var client = new Discord.Client();
 client.on("ready", () => {
@@ -522,7 +523,7 @@ client.on("message", (message) => {
              .setAuthor("Usuarios Upright:", "https://i.imgur.com/1gKp70Y.png")
 	     .setColor(embedYellow)
 	    .setThumbnail("https://i.imgur.com/1gKp70Y.png")
-            .setDescription(message.guild.roles.get('434695066167279616').members.map(m=>m.user.tag).join('\n'));
+            .setDescription(message.guild.roles.get('455135672592760832').members.map(m=>m.user.tag).join('\n'));
 	    
         message.channel.send(ListEmbed);  
 	    
@@ -535,7 +536,7 @@ client.on("message", (message) => {
             
 	    .setColor(embedPurple)
 	    .setThumbnail("https://i.imgur.com/tODBzy2.png")
-            .setDescription(message.guild.roles.get('434695269897207819').members.map(m=>m.user.tag).join('\n'));
+            .setDescription(message.guild.roles.get('455135602929565696').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
 
       message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
