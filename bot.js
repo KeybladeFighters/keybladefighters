@@ -95,12 +95,11 @@ client.on("ready", () => {
  console.log(`Logged in as ${client.user.tag}!`);
 
 });
-client.on("guildMemberAdd"), function(member){
-	member.guild.channels.find("name", "general").sendMessage(member.toString() + "bienvenido");
-	
-	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
-	
-};
+client.on('serverNewMember', function(server, user) {
+     user.addTo(server.roles.get("name", "Keyblade Rangers"));
+});
+
+
 
 //empieza el rol por reacciones
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
