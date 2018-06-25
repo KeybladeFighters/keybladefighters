@@ -97,10 +97,7 @@ client.on("ready", () => {
 });
 client.on('serverNewMember', function(server, user) {
      user.addTo(server.roles.get("name", "Keyblade Rangers"));
-	     user.addTo(server.roles.get("name", "↯                                                 Atributo                                    ↯"));
-	     user.addTo(server.roles.get("name", "⇙ In Development ⇘"));
-	     user.addTo(server.roles.get("name", "↬                                                 Estado                                    ↫"));
-});
+	    });
 
 
 
