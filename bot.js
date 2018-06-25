@@ -100,7 +100,7 @@ client.on("guildMemberAdd"), function(member){
 	
 	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
 	
-});
+};
 
 //empieza el rol por reacciones
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
