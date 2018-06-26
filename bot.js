@@ -88,6 +88,7 @@ var pelea = [
     "usó Látigo cepa en contra de " ,
     " :fire: :sheep: :fire: ha quemado como a una oveja a " ,
     "usó su espada de diamante en contra de " ,
+    "usó rugido de dinosaurio <:rawrr:438377900153241610> (es super efectivo) en contra de " ,
 	
 ];
 var client = new Discord.Client();
