@@ -86,7 +86,7 @@ var pelea = [
     "se comió una flor y le lanzó bolas de fuego a " ,
     "usó FUS-RO-DAH! en contra de " ,
     "usó Látigo cepa en contra de " ,
-    "ha quemado como a una oveja a " ,
+    " :fire: :sheep: :fire: ha quemado como a una oveja a " ,
     "usó su espada de diamante en contra de " ,
 	
 ];
