@@ -650,7 +650,7 @@ message.delete()
 															msg.edit(':tada: <:sheep2:461543351443914759> :balloon:')
 																msg.edit(':tada: <:sheep1:461543333223989258> :balloon:').then(msg => {
 																	setTimeout(() => {
-																		msg.edit(':tada: <:sheep2:461543351443914759> :balloon:')
+																		msg.edit(':tada: :birthday:<:sheep2:461543351443914759> :birthday: :balloon:')
 																
 																	}, 500)
 																})
