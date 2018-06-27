@@ -508,7 +508,8 @@ client.on("message", (message) => {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
-     message.channel.send(`${message.author} le dio un latigazo a ${member} !`, {
+		      if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre.");
+     message.channel.send(` ${member} fue azotado por ${message.author}  !`, {
     file: rando_latigo[Math.floor(Math.random() * rando_latigo.length)]
 	     
 	     
