@@ -20,6 +20,10 @@ const rando_risa = [
 
 "https://media.giphy.com/media/TJKm32CqAr0CA/giphy.gif",	
 ];
+const rando_latigo = [
+
+"https://media.giphy.com/media/xT5LMpgWlhdAVBCz3W/giphy.gif",	
+];
 
 let prefix = "!";
 const game = "Khux! "
@@ -494,6 +498,18 @@ client.on("message", (message) => {
 	message.delete(0000);
      message.channel.send(`${message.author} le dio a ${member} un abrazo!`, {
     file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
+	     
+	     
+     });
+  
+    
+} else 
+	    if(message.content.startsWith (prefix + "latigo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+
+        let member = message.mentions.members.first()
+	message.delete(0000);
+     message.channel.send(`${message.author} le dio un latigazo a ${member} !`, {
+    file: rando_latigo[Math.floor(Math.random() * rando_latigo.length)]
 	     
 	     
      });
