@@ -631,6 +631,45 @@ message.delete()
 		}, 500)
 	})
 }else
+	     if (message.content.startsWith(prefix + "oveja")  ) {
+message.delete()
+	message.channel.send(':tada: <:sheep1:461543333223989258> :balloon:').then(msg => {
+		setTimeout(() => {
+			msg.edit(':tada: <:sheep2:461543351443914759> :balloon:').then(msg => {
+				setTimeout(() => {
+					msg.edit(':tada: <:sheep1:461543333223989258> :balloon:').then(msg => {
+						setTimeout(() => {
+							msg.edit(':tada: <:sheep2:461543351443914759> :balloon:').then(msg => {
+								setTimeout(() => {
+									msg.edit(':tada: <:sheep1:461543333223989258> :balloon:').then(msg => {
+										setTimeout(() => {
+											msg.edit(':tada: <:sheep2:461543351443914759> :balloon:').then(msg => {
+												setTimeout(() => {
+													msg.edit(':tada: <:sheep1:461543333223989258> :balloon:').then(msg => {
+														setTimeout(() => {
+															msg.edit(':tada: <:sheep2:461543351443914759> :balloon:')
+																msg.edit(':tada: <:sheep1:461543333223989258> :balloon:').then(msg => {
+																	setTimeout(() => {
+																		msg.edit(':tada: <:sheep2:461543351443914759> :balloon:')
+																
+																	}, 500)
+																})
+														}, 500)
+													})
+												}, 500)
+											})
+										}, 500)
+									})
+								}, 500)
+							})
+						}, 500)
+
+					})
+				}, 500)
+			})
+		}, 500)
+	})
+}else
 	   if (message.content.startsWith(prefix + "adminc") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
    
     const embed = new Discord.RichEmbed()
