@@ -700,7 +700,7 @@ message.delete()
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
         .addField("!latigo , !latigo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!latigo)", true)
 
-	     .addField("!atributo", "Descripcion: Permite elegir el atributo( upright y reverse", true)
+	     .addField("!atributo", "Descripcion: Permite elegir el atributo( upright y reverse)", true)
     
   .addField("!say", "Descripcion:El bot dice que tu quieras", true);
 		   
