@@ -420,7 +420,8 @@ case "dm":
    * Blank field, useful to create some space.
    */
  .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
-
+     .addField("!meh", "Descripcion: meh", true)
+.addField("!abrazo , !abrazo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!abrazo)", true)
 	
     
   .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
@@ -697,6 +698,7 @@ message.delete()
 
     
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
+        .addField("!latigo , !latigo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!latigo)", true)
 
 	
     
