@@ -497,6 +497,8 @@ client.on("message", (message) => {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
+	    if(message.mentions.users.size < 1) return message.channel.send(`${message.author} le dio a @everyone un abrazo!`, {
+    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]});
      message.channel.send(`${message.author} le dio a ${member} un abrazo!`, {
     file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
 	     
@@ -518,17 +520,7 @@ client.on("message", (message) => {
   
     
 } else 
-	   if(message.content.startsWith (prefix + "todos") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
-	message.delete(0000);
-     message.channel.send(`${message.author} le dio a @everyone un abrazo!`, {
-    file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]
-	     
-	     
-     });
-  
-    
-} else 
 	 if(message.content.startsWith (prefix + "regaño") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
