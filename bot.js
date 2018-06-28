@@ -494,7 +494,7 @@ client.on("message", (message) => {
 	       message.channel.send(' <:omaewa:438377799041024010> ', {files: ["https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif"]});
   } else   
 	     
-    if(message.content.startsWith (prefix + "abrazo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+    if(message.content.startsWith (prefix + "abrazo") ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
