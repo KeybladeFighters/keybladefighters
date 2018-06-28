@@ -422,7 +422,7 @@ case "dm":
  .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
      .addField("!meh", "Descripcion: meh", true)
 .addField("!abrazo , !abrazo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!abrazo)", true)
-	
+	     .addField("!oveja", "Descripcion: je", true)
     
   .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
 		   
@@ -700,7 +700,7 @@ message.delete()
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
         .addField("!latigo , !latigo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!latigo)", true)
 
-	
+	     .addField("!atributo", "Descripcion: Permite elegir el atributo( upright y reverse", true)
     
   .addField("!say", "Descripcion:El bot dice que tu quieras", true);
 		   
