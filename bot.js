@@ -23,6 +23,7 @@ const rando_risa = [
 const rando_latigo = [
 
 "https://media.giphy.com/media/xT5LMpgWlhdAVBCz3W/giphy.gif",	
+	"https://media.giphy.com/media/3orif1FICBYgRwNWCc/giphy.gif".
 ];
 
 let prefix = "!";
@@ -508,7 +509,7 @@ client.on("message", (message) => {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
-		      if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre.");
+		      if(message.mentions.users.size < 1) return message.channel.send("Latigazo para todos!", {files: ["https://media.giphy.com/media/3orieMQ7zX5X633T2g/giphy.gif"]});
      message.channel.send(` ${member} fue azotado por ${message.author}  !`, {
     file: rando_latigo[Math.floor(Math.random() * rando_latigo.length)]
 	     
