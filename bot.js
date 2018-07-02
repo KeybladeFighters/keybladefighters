@@ -830,7 +830,7 @@ async function writecache(data, channel) {
 	fs.writeFileSync('vidid.tmp', JSON.stringify(cache));
 }
 
-main();
+
 
 
 
