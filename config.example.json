@@ -1,0 +1,20 @@
+{
+	"google": "",
+	"cachetime": 5,
+	"channels": [""],
+	"colors": {
+
+	},
+
+	"blacklist": "",
+	"webhook": {
+		"id": "",
+		"token": ""
+	},
+	"embed": {
+		"avatar": "",
+		"username": "",
+		"footer": ""
+	},
+	"useragent": "%s (%s, 1.0.0)"
+}
