@@ -11,5 +11,15 @@
 	"webhook":{
 		"token": "GwZSw-TkuDBgv2Eafg6wj2TmQzz5M_vmYhX2l6aKSDlPpAUrNG7VRyXF6tqHNkvTTDfz", // The Webhook token (the long string after the last '/' in webhook settings)
 		"id": "463416874684645379" // The webhook ID (the long string between 'wehooks/' and the next '/')
-	}
+	},
+	"embed": {
+		"avatar": "",
+		"username": "",
+		"footer": ""
+	},
+	"useragent": "%s (%s, 1.0.0)"
 }
+
+
+
+
