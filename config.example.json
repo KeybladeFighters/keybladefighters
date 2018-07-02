@@ -1,20 +1,15 @@
 {
-	"google": "",
-	"cachetime": 5,
-	"channels": [""],
+	"google": "AIzaSyBNaY5UDrYE1QYxjE_JYiOvdwy0xDaOt8Q", // Your Google API key
+	"cachetime": 5, // Cache time in minutes
+	"channels": ["UCjVRrR2KOLD2el9lcJnuM2A"], // YouTube channel IDs to follow
 	"colors": {
-
+		// This is for the embed color. 
+		// This is an object with the channel ID as key and the raw color as value
+		// JSON doesnt suppport the 0x000000 notation, so you need to calculate it in decimal.
+		// E.G. "UCU9pX8hKcrx06XfOB-VQLdw": 8944814 for Xisumavoid (https://discord.js.org/#/docs/main/stable/typedef/ColorResolvable)
 	},
-
-	"blacklist": "",
-	"webhook": {
-		"id": "",
-		"token": ""
-	},
-	"embed": {
-		"avatar": "",
-		"username": "",
-		"footer": ""
-	},
-	"useragent": "%s (%s, 1.0.0)"
+	"webhook":{
+		"token": "GwZSw-TkuDBgv2Eafg6wj2TmQzz5M_vmYhX2l6aKSDlPpAUrNG7VRyXF6tqHNkvTTDfz", // The Webhook token (the long string after the last '/' in webhook settings)
+		"id": "463416874684645379" // The webhook ID (the long string between 'wehooks/' and the next '/')
+	}
 }
