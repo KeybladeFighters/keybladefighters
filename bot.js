@@ -731,14 +731,14 @@ client.on('message', function(message) {
     }
 });
 
-const { Client, Util } = require('discord.js');
-const { TOKEN, PREFIX, GOOGLE_API_KEY } = require('./config');
+
+
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
 
 const client = new Client({ disableEveryone: true });
 
-const youtube = new YouTube(GOOGLE_API_KEY);
+const youtube = new YouTube(AIzaSyBNaY5UDrYE1QYxjE_JYiOvdwy0xDaOt8Q);
 
 const queue = new Map();
 
@@ -754,7 +754,7 @@ client.on('reconnecting', () => console.log('I am reconnecting now!'));
 
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
-	if (!msg.content.startsWith(PREFIX)) return undefined;
+	if (!msg.content.startsWith(!)) return undefined;
 
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
@@ -762,7 +762,7 @@ client.on('message', async msg => { // eslint-disable-line
 	const serverQueue = queue.get(msg.guild.id);
 
 	let command = msg.content.toLowerCase().split(' ')[0];
-	command = command.slice(PREFIX.length)
+	command = command.slice(!.length)
 
 	if (command === 'play') {
 		const voiceChannel = msg.member.voiceChannel;
