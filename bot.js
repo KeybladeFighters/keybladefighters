@@ -583,6 +583,32 @@ client.on("message", (message) => {
  
    
     }	else
+	         if(message.content.startsWith (prefix + "f") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+        const ListEmbed = new Discord.RichEmbed()
+	    .setAuthor("Keyblade Fighters", "https://i.imgur.com/dnyKx2z.jpg")
+            
+	    .setColor(embedPurple)
+	    .setThumbnail("https://i.imgur.com/dnyKx2z.jpg")
+            .setDescription(message.guild.roles.get('455137900036882433').members.map(m=>m.user.tag).join('\n'));
+        message.channel.send(ListEmbed);      
+  message.delete(1000);
+     //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
+ 
+   
+    }	else
+	             if(message.content.startsWith (prefix + "r") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+        const ListEmbed = new Discord.RichEmbed()
+	    .setAuthor("Keyblade Rangers", "https://i.imgur.com/rkfgpxv.jpg")
+            
+	    .setColor(embedPurple)
+	    .setThumbnail("https://i.imgur.com/rkfgpxv.jpg")
+            .setDescription(message.guild.roles.get('464039546104053760').members.map(m=>m.user.tag).join('\n'));
+        message.channel.send(ListEmbed);      
+  message.delete(1000);
+     //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
+ 
+   
+    }	else
 	    
 
 	   if (message.content.startsWith(prefix + "say") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
