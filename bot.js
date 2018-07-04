@@ -552,8 +552,7 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('455135672592760832').members.map(m=>m.user.tag).join('\n'));
 	    
         message.channel.send(ListEmbed);  
-	    
-      message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
+	 //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
     }else
 	
  if(message.content.startsWith (prefix + "reverse") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
@@ -565,7 +564,7 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('455135602929565696').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
 
-      message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
+     //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 
    
     }	else
@@ -578,8 +577,7 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('434695269897207819' || "434695066167279616").members.map(m=>m.user).join('\n'));
 	   
         message.channel.send(ListEmbed);      
-
-      message.delete(0000); //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
+ //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 
    
     }	else
