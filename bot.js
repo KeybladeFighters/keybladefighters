@@ -554,6 +554,9 @@ client.on("message", (message) => {
         message.channel.send(ListEmbed);  
 	      message.delete(1000);
 	 //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
+	         catch (error) {
+            console.error('One of the emojis failed to react.');
+        }
     }else
 	
  if(message.content.startsWith (prefix + "reverse") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
@@ -566,7 +569,9 @@ client.on("message", (message) => {
         message.channel.send(ListEmbed);      
   message.delete(1000);
      //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
-
+     catch (error) {
+            console.error('One of the emojis failed to react.');
+        }
    
     }	else
 	     if(message.content.startsWith (prefix + "kas") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
@@ -579,7 +584,9 @@ client.on("message", (message) => {
         message.channel.send(ListEmbed);      
   message.delete(1000);
      //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
-
+     catch (error) {
+            console.error('One of the emojis failed to react.');
+        }
    
     }	else
 	    
