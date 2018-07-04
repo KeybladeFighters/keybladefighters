@@ -552,6 +552,7 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('455135672592760832').members.map(m=>m.user.tag).join('\n'));
 	    
         message.channel.send(ListEmbed);  
+	      message.delete(1000);
 	 //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
     }else
 	
@@ -563,7 +564,7 @@ client.on("message", (message) => {
 	    .setThumbnail("https://i.imgur.com/tODBzy2.png")
             .setDescription(message.guild.roles.get('455135602929565696').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
-
+  message.delete(1000);
      //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 
    
@@ -576,7 +577,8 @@ client.on("message", (message) => {
 	    .setThumbnail("https://i.imgur.com/Q8uZ3mI.png")
             .setDescription(message.guild.roles.get('434695269897207819' || "434695066167279616").members.map(m=>m.user).join('\n'));
 	   
-        message.channel.send(ListEmbed);      
+        message.channel.send(ListEmbed);
+	  message.delete(1000); 
  //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 
    
@@ -589,7 +591,7 @@ client.on("message", (message) => {
             .setDescription(message.guild.roles.get('455138716529459202').members.map(m=>m.user).join('\n'));
 	   
         message.channel.send(ListEmbed);      
-
+  message.delete(1000);
        //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 
    
