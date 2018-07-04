@@ -110,7 +110,6 @@ client.on("guildMemberAdd", function(member){
 	
 	member.guild.channels.find("name", "spam-town").sendMessage("!atributo");
 	
-	member.addRole(member.guild.roles.find("name", "Keyblade Rangers"));
 		
 	member.addRole(member.guild.roles.find("name", "↯                                                 Atributo                                    ↯"));
 		
