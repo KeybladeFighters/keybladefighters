@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require ("config.json");
+
 const yourID = "125557470616616960";
 const setupCMD = "!atributo"
 let initialMessage = `**Elije tu atributo**`;
@@ -760,4 +760,4 @@ client.on('message', function(message) {
 });
 
 
-client.login(config.token);
+client.login(NDQzOTAyNjE0ODgzNzk0OTQ1.DiFdgw.elNba-O9E6oAuXKhS9Q1n66kN-8);
