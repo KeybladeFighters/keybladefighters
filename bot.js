@@ -760,4 +760,4 @@ client.on('message', function(message) {
 });
 
 
-client.login(config.token);
+client.login("NDQzMTcwODk3MTQ3MzMwNTgx.DiFcaA.nFDaMHVlnM5Nqfcl9K2bM2zSsmA");
