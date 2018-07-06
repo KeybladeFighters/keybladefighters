@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
-const config = require("./config.json");
+
 const yourID = "125557470616616960";
 const setupCMD = "!atributo"
 let initialMessage = `**Elije tu atributo**`;
 const roles = ["Upright", "Reverse"];
 const reactions = ["428233218895118357", "428233668235100170"];
-const botToken = "NDQ0NTk0NDMxOTk2NDYxMDU4.DdeUNA.yqvkC_T7DUkMJyvY2c7Sf6OjM9U"; 
+
 const rando_imgs = [
 'https://media.giphy.com/media/CZpro4AZHs436/giphy.gif',
 'https://media.giphy.com/media/lXiRKBj0SAA0EWvbG/giphy.gif',
