@@ -1,4 +1,4 @@
-##################
-#Ignore API token#
-##################
-config.yaml
+# Removed config.json file
+config.json
+config.js
+
