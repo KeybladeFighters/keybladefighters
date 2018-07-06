@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const config = require("./config.json");
 const yourID = "125557470616616960";
 const setupCMD = "!atributo"
 let initialMessage = `**Elije tu atributo**`;
