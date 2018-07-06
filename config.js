@@ -1,4 +1,4 @@
 {
-  "token": "NDQzMTcwODk3MTQ3MzMwNTgx.Dh_5LA.-T9k9AbK2lFLqq71BKD8gaRSHbc",
+  "token": "NDQzOTAyNjE0ODgzNzk0OTQ1.DiFZpw.6aKCq5NCAbUTd67ZNljhJOiFNEg",
   "prefix": "!"
 }
