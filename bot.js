@@ -79,22 +79,22 @@ var fortunes = [
 var pelea = [
 	
     "acaba de abofetear a " ,
-    "golpeó con su keyblade a <:KB:462421414000066590> " ,
-    "ha usado impactrueno en contra de <:pikachu:462422223186296855> " ,
+    "golpeó con su keyblade a " ,
+    "ha usado impactrueno en contra de " ,
     "usó de limpia pisos a " ,
     "le ha dado una patada en el lóbulo occipital a " ,
     "usó granizo de Farron en contra de " ,
     "<:BibleThump:454069403437236226> le ha lanzado lagrimas a  " ,
     "pisoteó a " ,
-    "lanzó un Kamehameha a <:Kame:462422418817024003> " ,
+    "lanzó un Kamehameha a " ,
     "hizo un fatality a " ,
-    "le lanzó un caparazón de tortuga a <:Caparazn_Rojo:462422923735465984> " ,
-    "se enojó y usó ira primigenia en contra de <:Ira_primigenia:462423974454755348> " ,
-    "se comió una flor <:flor:462421736755822592> y le lanzó bolas de fuego a <:mario:462421778224906260> " ,
+    "le lanzó un caparazón de tortuga a " ,
+    "se enojó y usó ira primigenia en contra de " ,
+    "se comió una flor y le lanzó bolas de fuego a " ,
     "usó FUS-RO-DAH! en contra de " ,
-    "usó Látigo cepa en contra de <:latigo:462423146981490708> " ,
+    "usó Látigo cepa en contra de " ,
     " :fire: :sheep: :fire: ha quemado como a una oveja a " ,
-    "usó su espada de diamante en contra de <:Espada_de_Diamante:462423261091856395> " ,
+    "usó su espada de diamante en contra de " ,
     "usó rugido de dinosaurio <:rawrr:438377900153241610> *(es super efectivo)* en contra de " ,
 	
 ];
@@ -760,4 +760,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DiFdgw.elNba-O9E6oAuXKhS9Q1n66kN-8");
