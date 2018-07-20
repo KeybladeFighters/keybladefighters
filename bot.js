@@ -760,4 +760,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DiFdgw.elNba-O9E6oAuXKhS9Q1n66kN-8");
+client.login("");
