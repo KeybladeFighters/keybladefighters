@@ -787,9 +787,9 @@ client.on("message", msg => {
   .setColor(embedPurple)
   .addField("Level", curlevel, true)
   .addField("XP", XP, true)
-  .setFooter(`${difference} XP til level up`, message.author.displayAvatarURL);
+ 
 
-  message.channel.send(lvlEmbed).then(msg => {msg.delete(5000)});
+  message.channel.send({embed}).then(msg => {msg.delete(5000)});
 		
 	}
 	
@@ -824,4 +824,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DmkBpg.3jSSNPuEYPdQuaOucbPrxG7c0Ns");
