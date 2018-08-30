@@ -138,7 +138,7 @@ function generateMessages(){
 
 
 client.on("message", message => {
-    if (message.member.roles.some(r=>["administrador", "moderador", "KeyBlade Fighters"].includes(r.name)) && message.content.toLowerCase() == setupCMD){
+    if (message.member.roles.some(r=>["administrador", "moderador", "KeyBlade Fighters (BOT)"].includes(r.name)) && message.content.toLowerCase() == setupCMD){
         var toSend = generateMessages();
         let mappedArray = [[toSend[0], false], ...toSend.slice(1).map( (message, idx) => [message, reactions[idx]])];
         for (let mapObj of mappedArray){
@@ -781,7 +781,16 @@ client.on("message", msg => {
 	
 	console.log("level")
 	if (msg.content.startsWith(prefix + "nivel")) {
-		msg.reply(`Tu nivel es ${userData.level}, con ${userData.XP} XP actualmente.`);
+		
+		let lvlEmbed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor(purple)
+  .addField("Level", curlvl, true)
+  .addField("XP", curxp, true)
+  .setFooter(`${difference} XP til level up`, message.author.displayAvatarURL);
+
+  message.channel.send(lvlEmbed).then(msg => {msg.delete(5000)});
+		
 	}
 	
 	if (!XP[msg.author.id]) XP[msg.author.id] = {XP: 0, level: 0}
@@ -815,4 +824,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DmkBpg.3jSSNPuEYPdQuaOucbPrxG7c0Ns");
