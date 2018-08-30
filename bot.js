@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 const fs = require('fs');
-let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
+
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
 
 const yourID = "125557470616616960";
@@ -32,6 +32,7 @@ const rando_latigo = [
 ];
 
 let prefix = "!";
+const prefix = "!";
 const game = "Khux! "
 const status = "Online"
 
@@ -794,4 +795,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DmkBpg.3jSSNPuEYPdQuaOucbPrxG7c0Ns");
