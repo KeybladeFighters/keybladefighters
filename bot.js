@@ -761,8 +761,8 @@ client.on("message", msg => {
 	//Only use the above for testing as only the person with that ID can use the bot.
 	
 	console.log("help command")
-	if (msg.content.startsWith(prefix + "help")) {
-		msg.reply("Here are my commands: !help,")
+	if (msg.content.startsWith(prefix + "ayuda")) {
+		msg.reply("Comandos de Exp: !ayuda, !nivel, !killcamii")
 	}
 	
 	let userData = XP[msg.author.id];
@@ -772,12 +772,12 @@ client.on("message", msg => {
 	let curLevel = Math.floor(0.1 * Math.sqrt(userXP));
 	if (curLevel > userData.level) {
 		userData.level = curLevel;
-		msg.reply(`You have lvled ^ to lvl **${curLevel}**!`);
+		msg.reply(`Subiste a nivel **${curLevel}**!`);
 	}
 	
 	console.log("level")
-	if (msg.content.startsWith(prefix + "level")) {
-		msg.reply(`You are lvl ${userData.level}, with ${userData.XP} XP Right Now.`);
+	if (msg.content.startsWith(prefix + "nivel")) {
+		msg.reply(`Tu nivel es ${userData.level}, con ${userData.XP} XP actualmente.`);
 	}
 	
 	if (!XP[msg.author.id]) XP[msg.author.id] = {XP: 0, level: 0}
@@ -785,9 +785,9 @@ client.on("message", msg => {
 	
 	
 	console.log("Example")
-	if (msg.content.startsWith(prefix + "killExample")) {
+	if (msg.content.startsWith(prefix + "killcamii")) {
 		userData.XP += 10
-		msg.channel.sendMessage(`${msg.author} has killed an Example!`)
+		msg.channel.sendMessage(`${msg.author} ha matado a camii!`)
 	}
 	
 	console.log(XP)
