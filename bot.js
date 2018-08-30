@@ -782,9 +782,9 @@ client.on("message", msg => {
 	console.log("level")
 	if (msg.content.startsWith(prefix + "nivel")) {
 		
-		let lvlEmbed = new Discord.RichEmbed()
+		 const embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setColor(purple)
+  .setColor(embedPurple)
   .addField("Level", curlevel, true)
   .addField("XP", XP, true)
   .setFooter(`${difference} XP til level up`, message.author.displayAvatarURL);
@@ -824,4 +824,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DmkBpg.3jSSNPuEYPdQuaOucbPrxG7c0Ns");
