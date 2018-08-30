@@ -770,12 +770,6 @@ client.on("message", msg => {
 	if (!userData) userData = {XP: 0, level: 0};
 	
 	
-	  if (!XP[message.author.id]) XP[message.author.id] = {
-    points: 0,
-    level: 0
-  };
-  let userData = XP[message.author.id];
-  userData.points++;
 	
 	
 	let userXP = XP[msg.author.id] ? XP[msg.author.id].XP : 0;
@@ -821,4 +815,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DmkBpg.3jSSNPuEYPdQuaOucbPrxG7c0Ns");
