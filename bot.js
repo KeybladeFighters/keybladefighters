@@ -785,8 +785,8 @@ client.on("message", msg => {
 		let lvlEmbed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor(purple)
-  .addField("Level", curlvl, true)
-  .addField("XP", curxp, true)
+  .addField("Level", curlevel, true)
+  .addField("XP", XP, true)
   .setFooter(`${difference} XP til level up`, message.author.displayAvatarURL);
 
   message.channel.send(lvlEmbed).then(msg => {msg.delete(5000)});
@@ -824,4 +824,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DmkBpg.3jSSNPuEYPdQuaOucbPrxG7c0Ns");
