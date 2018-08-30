@@ -782,15 +782,7 @@ client.on("message", msg => {
 	console.log("level")
 	if (msg.content.startsWith(prefix + "nivel")) {
 		
-		 const embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor(embedPurple)
-  .addField("Level", curlevel, true)
-  .addField("XP", XP, true)
-   .setFooter(`XP til level up`, message.author.displayAvatarURL);
- 
-
-  message.channel.send({embed}).then(msg => {msg.delete(5000)});
+	msg.reply(`Tu nivel es ${userData.level}, con ${userData.XP} XP actualmente.`);
 		
 	}
 	
@@ -825,4 +817,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DmkBpg.3jSSNPuEYPdQuaOucbPrxG7c0Ns");
