@@ -817,6 +817,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("a")) {
 		userData.XP += 10
 	}
+	console.log("passive")	
 	if (msg.content.startsWith("A")) {
 		userData.XP += 10
 	}
@@ -824,6 +825,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("b")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("B")) {
 		userData.XP += 10
 	}
@@ -831,13 +833,15 @@ client.on("message", msg => {
 	if (msg.content.startsWith("c")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("C")) {
 		userData.XP += 10
 	}
 	console.log("passive")
 	if (msg.content.startsWith("d")) {
 		userData.XP += 10
-	}		
+	}
+	console.log("passive")
 	if (msg.content.startsWith("D")) {
 		userData.XP += 10
 	}
@@ -845,6 +849,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("e")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("E")) {
 		userData.XP += 10
 	}
@@ -852,6 +857,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("f")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("F")) {
 		userData.XP += 10
 	}
@@ -859,6 +865,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("g")) {
 		userData.XP += 10
 	}	
+	console.log("passive")
 	if (msg.content.startsWith("G")) {
 		userData.XP += 10
 	}
@@ -866,20 +873,23 @@ client.on("message", msg => {
 	if (msg.content.startsWith("h")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("H")) {
 		userData.XP += 10
 	}
 	console.log("passive")
 	if (msg.content.startsWith("i")) {
 		userData.XP += 10
-	}	
+	}
+	console.log("passive")
 	if (msg.content.startsWith("I")) {
 		userData.XP += 10
 	}
 	console.log("passive")
 	if (msg.content.startsWith("j")) {
 		userData.XP += 10
-	}	
+	}
+	console.log("passive")
 	if (msg.content.startsWith("J")) {
 		userData.XP += 10
 	}
@@ -887,26 +897,32 @@ client.on("message", msg => {
 	if (msg.content.startsWith("k")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("K")) {
 		userData.XP += 10
 	}
 	console.log("passive")
 	if (msg.content.startsWith("l")) {
 		userData.XP += 10
-	}	
+	}
+	console.log("passive")
 	if (msg.content.startsWith("L")) {
 		userData.XP += 10
 	}
+	
 	console.log("passive")
 	if (msg.content.startsWith("m")) {
 		userData.XP += 10
 	}	
+	console.log("passive")
 	if (msg.content.startsWith("M")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("n")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("N")) {
 		userData.XP += 10
 	}
@@ -920,10 +936,12 @@ client.on("message", msg => {
 	console.log("passive")
 	if (msg.content.startsWith("o")) {
 		userData.XP += 10
-	}	
+	}
+	console.log("passive")
 	if (msg.content.startsWith("O")) {
 		userData.XP += 10
 	}
+	console.log("passive")
 	if (msg.content.startsWith("p")) {
 		userData.XP += 10
 	}
@@ -934,7 +952,8 @@ client.on("message", msg => {
 	console.log("passive")
 	if (msg.content.startsWith("q")) {
 		userData.XP += 10
-	}	
+	}
+	console.log("passive")
 	if (msg.content.startsWith("Q")) {
 		userData.XP += 10
 	}
@@ -948,7 +967,8 @@ client.on("message", msg => {
 	console.log("passive")
 	if (msg.content.startsWith("s")) {
 		userData.XP += 10
-	}	
+	}
+	console.log("passive")
 	if (msg.content.startsWith("S")) {
 		userData.XP += 10
 	}
@@ -956,6 +976,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("t")) {
 		userData.XP += 10
 	}	
+	console.log("passive")
 	if (msg.content.startsWith("T")) {
 		userData.XP += 10
 	}
@@ -963,6 +984,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("u")) {
 		userData.XP += 10
 	}	
+	console.log("passive")
 	if (msg.content.startsWith("U")) {
 		userData.XP += 10
 	}
@@ -970,6 +992,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("v")) {
 		userData.XP += 10
 	}	
+	console.log("passive")
 	if (msg.content.startsWith("V")) {
 		userData.XP += 10
 	}
@@ -984,6 +1007,7 @@ client.on("message", msg => {
 	if (msg.content.startsWith("x")) {
 		userData.XP += 10
 	}	
+	console.log("passive")
 	if (msg.content.startsWith("X")) {
 		userData.XP += 10
 	}
@@ -1025,4 +1049,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
