@@ -1025,4 +1025,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnsLEQ.TQc7oEm5jBxvDkOK4IfGcE7lrhk");
+client.login("");
