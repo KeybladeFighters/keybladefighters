@@ -759,7 +759,7 @@ client.on("message", msg => {
 	
 	
 	console.log("Example")
-	if (msg.content.includes("a")) {
+	if (msg.content.startsWith("a")) {
 		userData.XP += 10
 		msg.channel.sendMessage(`${msg.author} ha funcionado!`)
 	}
@@ -829,4 +829,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
