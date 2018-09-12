@@ -799,17 +799,17 @@ client.on("message", msg => {
 	console.log("Example")
 	if (msg.content.startsWith(prefix + "killcamii")) {
 		userData.XP -= 5
-		msg.channel.sendMessage(`${msg.author} ha matado a camii!`)
+		msg.channel.sendMessage(`${msg.author} ha matado a camii! y recibiras tu castigo`)
 	}
 	console.log("Example")
 	if (msg.content.startsWith(prefix + "killallen")) {
 		userData.XP += 15
-		msg.channel.sendMessage(`${msg.author} ha matado a camii!`)
+		msg.channel.sendMessage(`${msg.author} ha matado a allen!`)
 	}
 	console.log("Example")
 	if (msg.content.startsWith(prefix + "killroxas")) {
 		userData.XP += 15
-		msg.channel.sendMessage(`${msg.author} ha matado a camii!`)
+		msg.channel.sendMessage(`${msg.author} ha matado a roxas!`)
 	}
 	
 	
@@ -1025,4 +1025,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
