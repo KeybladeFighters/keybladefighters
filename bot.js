@@ -801,6 +801,12 @@ client.on("message", msg => {
 		msg.channel.sendMessage(`${msg.author} ha matado a camii!`)
 	}
 	
+	
+	console.log("passive")
+	if (msg.content.startWith("a")) {
+		userData.XP += 10
+	}
+
 		
 
 	console.log(XP)
@@ -824,4 +830,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
