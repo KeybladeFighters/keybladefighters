@@ -3,8 +3,6 @@ const Discord = require('discord.js');
 const fs = require('fs');
 let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
 
-const pasiva = ["a", "b"];
-
 
 
 const yourID = "125557470616616960";
@@ -800,7 +798,7 @@ client.on("message", msg => {
 	}
 	
 	console.log("Example")
-	if (msg.content.includes(pasiva)) {
+	if (msg.content.includes("a")) {
 		userData.XP += 10
 		msg.channel.sendMessage(`${msg.author} ha funcionado!`)
 	}
@@ -826,4 +824,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
