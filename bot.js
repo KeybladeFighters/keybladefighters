@@ -1049,4 +1049,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
+client.login("");
