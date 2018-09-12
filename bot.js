@@ -803,11 +803,114 @@ client.on("message", msg => {
 	
 	
 	console.log("Example")
-	if (msg.content.startWith(["a", "b"])) {
+	if (msg.content.startWith("a")) {
 		userData.XP += 10
-		msg.channel.sendMessage(`${msg.author} ha funcionado!`)
+	}
+	console.log("Example")
+	if (msg.content.startWith("b")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("c")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("d")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("e")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("f")) {
+		userData.XP += 10
 	}
 	
+	console.log("Example")
+	if (msg.content.startWith("g")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("h")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("i")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("j")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("k")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("l")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("m")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("n")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("ñ")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("o")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("p")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("q")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("r")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("s")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("t")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("u")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("v")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("w")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("x")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("y")) {
+		userData.XP += 10
+	}
+	console.log("Example")
+	if (msg.content.startWith("z")) {
+		userData.XP += 10
+	}
 	
 	console.log(XP)
 	fs.writeFile('./XP.json', JSON.stringify(XP), console.error);
@@ -830,4 +933,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
