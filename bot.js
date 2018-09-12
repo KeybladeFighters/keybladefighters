@@ -797,7 +797,7 @@ client.on("message", msg => {
 	}
 	
 	console.log("passive")
-	if (msg.content === "a", "b", "c" ) {
+	if (msg.content === "a") {
 		userData.XP += 10
 		msg.channel.sendMessage(`${msg.author} ha funcionado!`)
 	}
@@ -823,4 +823,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
