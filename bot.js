@@ -914,10 +914,13 @@ client.on("message", msg => {
 	if (msg.content.startsWith("J")) {
 		userData.XP += 10
 	}
+	
 	console.log("passive")
 	if (msg.content.startsWith("k")) {
 		userData.XP += 10
 	}
+	
+	console.log("passive")
 	if (msg.content.startsWith("K")) {
 		userData.XP += 10
 	}
@@ -955,7 +958,8 @@ client.on("message", msg => {
 	console.log("passive")
 	if (msg.content.startsWith("ñ")) {
 		userData.XP += 10
-	}	
+	}
+	
 	console.log("passive")
 	if (msg.content.startsWith("Ñ")) {
 		userData.XP += 10
@@ -966,10 +970,12 @@ client.on("message", msg => {
 		userData.XP += 10
 	}
 	
+	console.log("passive")
 	if (msg.content.startsWith("O")) {
 		userData.XP += 10
 	}
 	
+	console.log("passive")
 	if (msg.content.startsWith("p")) {
 		userData.XP += 10
 	}
@@ -1100,4 +1106,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnsLEQ.TQc7oEm5jBxvDkOK4IfGcE7lrhk");
