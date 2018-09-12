@@ -824,7 +824,7 @@ client.on("message", msg => {
 	console.log("passive")
 	if (msg.content.startsWith("B")) {
 		userData.XP += 10
-	}
+	}.catch(O_o=>{});
 	
 	console.log("passive")
 	if (msg.content.startsWith("c")) {
@@ -1098,4 +1098,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnsLEQ.TQc7oEm5jBxvDkOK4IfGcE7lrhk");
