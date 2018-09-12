@@ -757,7 +757,7 @@ client.on("message", msg => {
 	let prefix = "!";
 	
 	console.log(0)
-	if(!msg.content.startsWith(prefix)) return;
+	//if(!msg.content.startsWith(prefix)) return;
 	
 	//console.log(0.1)
 	//if(msg.author.id != "Your ID") return;
@@ -1098,4 +1098,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnsLEQ.TQc7oEm5jBxvDkOK4IfGcE7lrhk");
