@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 const fs = require('fs');
-let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
+
 
 
 
@@ -769,4 +769,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnsLEQ.TQc7oEm5jBxvDkOK4IfGcE7lrhk");
