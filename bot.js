@@ -753,6 +753,336 @@ message.delete()
 
 
 
+client.on("message", msg => {
+	let prefix = "!";
+	
+	console.log(0)
+	if(!msg.content.startsWith(prefix)) return;
+	
+	//console.log(0.1)
+	//if(msg.author.id != "Your ID") return;
+	//Only use the above for testing as only the person with that ID can use the bot.
+	
+	console.log("help command")
+	if (msg.content.startsWith(prefix + "ayuda")) {
+		msg.reply("Comandos de Exp: !ayuda, !nivel, !killcamii")
+	}
+	
+	let userData = XP[msg.author.id];
+	if (!userData) userData = {XP: 0, level: 0};
+	
+	let userXP = XP[msg.author.id] ? XP[msg.author.id].XP : 0;
+	let curLevel = Math.floor(0.1 * Math.sqrt(userXP));
+	if (curLevel > userData.level) {
+		userData.level = curLevel;
+		msg.reply(`Subiste a nivel **${curLevel}**!`);
+	}
+	
+	console.log("level")
+	if (msg.content.startsWith(prefix + "nivel")) {
+		msg.reply(`Tu nivel es ${userData.level}, con ${userData.XP} XP actualmente.`);
+	}
+	
+	if (!XP[msg.author.id]) XP[msg.author.id] = {XP: 0, level: 0}
+	
+	
+	console.log("Example")
+	if (msg.content.startsWith(prefix + "killcamii")) {
+		userData.XP -= 5
+		msg.channel.sendMessage(`${msg.author} ha matado a camii! y pagaras el precio por ello`)
+	}
+	
+	
+	console.log("Example")
+	if (msg.content.startsWith(prefix + "killallen")) {
+		userData.XP += 15
+		msg.channel.sendMessage(`${msg.author} ha matado a allen!`)
+	}
+	
+	console.log("Example")
+	if (msg.content.startsWith(prefix + "killroxas")) {
+		userData.XP += 15
+		msg.channel.sendMessage(`${msg.author} ha matado a roxas!`)
+	}
+	
+	
+	console.log("passive")
+	if (msg.content.startsWith("a")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("A")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("b")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("B")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("c")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("C")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("d")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("D")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("e")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("E")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("f")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("F")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("g")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("G")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("h")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("H")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("i")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("I")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("j")) {
+		userData.XP += 10
+	}	
+	
+	console.log("passive")
+	if (msg.content.startsWith("J")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("k")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("K")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("l")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("L")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("m")) {
+		userData.XP += 10
+	}	
+	
+	console.log("passive")
+	if (msg.content.startsWith("M")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("n")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("N")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("ñ")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("Ñ")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("o")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("O")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("p")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("P")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("q")) {
+		userData.XP += 10
+	}
+	console.log("passive")
+	if (msg.content.startsWith("Q")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("r")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("R")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("s")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("S")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("t")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("T")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("u")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("U")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("v")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("V")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("w")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("W")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("x")) {
+		userData.XP += 10
+	}	
+	
+	console.log("passive")
+	if (msg.content.startsWith("X")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("y")) {
+		userData.XP += 10
+	}	
+	
+	console.log("passive")
+	if (msg.content.startsWith("Y")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("z")) {
+		userData.XP += 10
+	}
+	
+	console.log("passive")
+	if (msg.content.startsWith("Z")) {
+		userData.XP += 10
+	}
+	
+	console.log(XP)
+	fs.writeFile('./XP.json', JSON.stringify(XP), console.error);
+	
+});
+
+
+
+
 		
 
 
@@ -768,4 +1098,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnsLEQ.TQc7oEm5jBxvDkOK4IfGcE7lrhk");
