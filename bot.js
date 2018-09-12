@@ -756,6 +756,15 @@ client.on("message", msg => {
 	let prefix = "!";
 	
 	console.log(0)
+	
+	
+	console.log("Example")
+	if (msg.content.includes("a")) {
+		userData.XP += 10
+		msg.channel.sendMessage(`${msg.author} ha funcionado!`)
+	}
+	
+	
 	if(!msg.content.startsWith(prefix)) return;
 	
 	//console.log(0.1)
@@ -797,11 +806,7 @@ client.on("message", msg => {
 		msg.channel.sendMessage(`${msg.author} ha matado a camii!`)
 	}
 	
-	console.log("Example")
-	if (msg.content.includes("a")) {
-		userData.XP += 10
-		msg.channel.sendMessage(`${msg.author} ha funcionado!`)
-	}
+	
 	
 	console.log(XP)
 	fs.writeFile('./XP.json', JSON.stringify(XP), console.error);
@@ -824,4 +829,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DnqvhA.PF82om6mttmxc-xxWEd_JxCOCHA");
