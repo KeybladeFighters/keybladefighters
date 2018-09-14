@@ -769,4 +769,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dn1pUA.MIqfJpE1qW8Z-09FURZlyH2GRaM");
+client.login("");
