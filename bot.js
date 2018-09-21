@@ -84,22 +84,22 @@ var fortunes = [
 var pelea = [
 	
     "acaba de abofetear a " ,
-    "golpeó con su keyblade a " ,
-    "ha usado impactrueno en contra de " ,
+    "golpeó con su keyblade a <:keyblade:492483606179086347> " ,
+    "ha usado impactrueno en contra de <:impac:492484169901932546> " ,
     "usó de limpia pisos a " ,
     "le ha dado una patada en el lóbulo occipital a " ,
     "usó granizo de Farron en contra de " ,
-    "<:BibleThump:454069403437236226> le ha lanzado lagrimas a  " ,
+    " <:bible:492484567484203008> le ha lanzado lagrimas a  " ,
     "pisoteó a " ,
-    "lanzó un Kamehameha a " ,
+    "lanzó un Kamehameha a <:kame:492485404973465600> " ,
     "hizo un fatality a " ,
-    "le lanzó un caparazón de tortuga a " ,
+    "le lanzó un caparazón de tortuga a <:caparaz:492485601032011788> " ,
     "se enojó y usó ira primigenia en contra de " ,
-    "se comió una flor y le lanzó bolas de fuego a " ,
+    "se comió una flor <:floria:492486028523733013>  y le lanzó bolas de fuego a <:mario:492485956251942923> " ,
     "usó FUS-RO-DAH! en contra de " ,
     "usó Látigo cepa en contra de " ,
     " :fire: :sheep: :fire: ha quemado como a una oveja a " ,
-    "usó su espada de diamante en contra de " ,
+    "usó su espada de diamante en contra de <:espadamc:492486421207318528> " ,
     "usó rugido de dinosaurio <:rawrr:438377900153241610> *(es super efectivo)* en contra de " ,
 	
 ];
@@ -625,22 +625,22 @@ client.on("message", (message) => {
 message.delete()
 	message.channel.send('👀').then(msg => {
 		setTimeout(() => {
-			msg.edit('<:ojos:453450937168822273>').then(msg => {
+			msg.edit('<:eyes2:492488093538975758>').then(msg => {
 				setTimeout(() => {
 					msg.edit('👀').then(msg => {
 						setTimeout(() => {
-							msg.edit('<:ojos:453450937168822273>').then(msg => {
+							msg.edit('<:eyes2:492488093538975758>').then(msg => {
 								setTimeout(() => {
 									msg.edit('👀').then(msg => {
 										setTimeout(() => {
-											msg.edit('<:ojos:453450937168822273>').then(msg => {
+											msg.edit('<:eyes2:492488093538975758>').then(msg => {
 												setTimeout(() => {
 													msg.edit('👀').then(msg => {
 														setTimeout(() => {
-															msg.edit('<:ojos:453450937168822273>')
+															msg.edit('<:eyes2:492488093538975758>')
 																msg.edit('👀').then(msg => {
 																	setTimeout(() => {
-																		msg.edit('<:ojos:453450937168822273>')
+																		msg.edit('<:eyes2:492488093538975758>')
 																
 																	}, 500)
 																})
@@ -750,10 +750,29 @@ message.delete()
 
 });
 
-
+client.on("guildMemberAdd", (member) => { // Check out previous chapter for information about this event
+let guild = member.guild; 
+let memberTag = member.user.tag; 
+if(guild.systemChannel){
+	guild.systemChannel.send(new Discord.RichEmbed() // Creating instance of Discord.RichEmbed
+	.setTitle("Nuevo Usuario") // Calling method setTitle on constructor. 
+	.setDescription(memberTag + " se ha unido") // Setting embed description
+	.setThumbnail(member.user.displayAvatarURL) // The image on the top right; method requires an url, not a path to file!
+	.addField("Miembros actuales", member.guild.memberCount) // Adds a field; First parameter is the title and the second is the value.
+	.setTimestamp() // Sets a timestamp at the end of the embed
+	);
+}
+});
 
 	
-	
+	client.on("message", (message)){ // EventEmitter
+	if(message.content == "!pingp"){ // Check if message is "!ping"
+			message.channel.send("Pinging ...") // Placeholder for pinging ... 
+			.then((msg) => { // Resolve promise
+				msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
+			});
+		}
+}
 		
 
 
@@ -769,4 +788,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
