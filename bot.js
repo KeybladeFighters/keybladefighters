@@ -5,13 +5,6 @@ var end = new Date('09/21/2018 10:00 AM');
 const today = new Date();
 
 
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    var timer;
-
-
 const yourID = "125557470616616960";
 const setupCMD = "!atributo"
 let initialMessage = `**Elije tu atributo**`;
@@ -818,4 +811,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
