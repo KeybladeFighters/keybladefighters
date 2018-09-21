@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
 
-var schedule = require('node-schedule');	
+
 
 const yourID = "125557470616616960";
 const setupCMD = "!atributo"
@@ -627,22 +627,7 @@ client.on("message", (message) => {
     }	else
 	    
 
-  if(message.content.startsWith (prefix + "serverinfo")){
-
  
-    let serverembed = new Discord.RichEmbed()
-    .setDescription("Server Information")
-    .setColor("#15f153")
-    .setThumbnail("https://i.imgur.com/rkfgpxv.jpg")
-    .addField("Server Name", message.guild.name)
-    .addField("Created On", message.guild.createdAt)
-    .addField("You Joined", message.member.joinedAt)
-    .addField("Total Members", message.guild.memberCount);
-
-    return message.channel.send(serverembed);
-  }
-	
-	    	else
 	    
 	   if (message.content.startsWith(prefix + "say") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
       message.delete(0000); //Supposed to delete message
@@ -806,4 +791,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
