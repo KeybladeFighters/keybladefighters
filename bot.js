@@ -781,7 +781,15 @@ client.on("message", message =>  { // EventEmitter
 			});
 		}
 });
-		
+	
+client.on("message", message =>  { // EventEmitter
+
+	if(message.content == "!mensaje"){ // Check if message is "!ping"
+			client.channels.get("467801888029409303").send("hola") 
+			
+		}
+});
+			
 
 	
 
@@ -800,4 +808,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dob4vg.7SqdpGwcQNoUrn3JYX_4eaNf2ds");
