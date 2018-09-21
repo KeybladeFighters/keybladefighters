@@ -537,22 +537,7 @@ client.on("message", (message) => {
   
     
 } else 
-	 if(message.content.startsWith (prefix + "serverinfo")){
-
- 
-    let serverembed = new Discord.RichEmbed()
-    .setDescription("Server Information")
-    .setColor("#15f153")
-    .setThumbnail("https://i.imgur.com/rkfgpxv.jpg")
-    .addField("Server Name", message.guild.name)
-    .addField("Created On", message.guild.createdAt)
-    .addField("You Joined", message.member.joinedAt)
-    .addField("Total Members", message.guild.memberCount);
-
-    return message.channel.send(serverembed);
-  }
-	
-	    	else
+	 
 
 	 if(message.content.startsWith (prefix + "regaño") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
 
@@ -588,6 +573,22 @@ client.on("message", (message) => {
 	 //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
 	  
     }else
+	    if(message.content.startsWith (prefix + "serverinfo")){
+
+ 
+    let serverembed = new Discord.RichEmbed()
+    .setDescription("Server Information")
+    .setColor("#15f153")
+    .setThumbnail("https://i.imgur.com/rkfgpxv.jpg")
+    .addField("Server Name", message.guild.name)
+    .addField("Created On", message.guild.createdAt)
+    .addField("You Joined", message.member.joinedAt)
+    .addField("Total Members", message.guild.memberCount);
+
+     message.channel.send(serverembed);
+  }
+	
+	    	else
 	
  if(message.content.startsWith (prefix + "reverse") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         const ListEmbed = new Discord.RichEmbed()
@@ -808,4 +809,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
