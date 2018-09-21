@@ -796,7 +796,7 @@ client.on("message", message =>  {
 client.on("message", message =>  { 
 
 	if(message.content == "!textB" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
-			message.channels.get("467801888029409303").send(message.content.slice(6, message.content.length));
+			Client.channels.get("467801888029409303").send(message.content.slice(6, message.content.length));
 			
 		}
 });
@@ -805,7 +805,7 @@ client.on("message", message =>  {
 client.on("message", message =>  { 
 
 	if(message.content == "!hola" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
-			Client.guilds.get(421507242748018693).channels.get(455134311197179907).send("Hola!")
+			Client.guilds.get("421507242748018693").channels.get("455134311197179907").send("Hola!")
 			
 		}
 });
@@ -824,4 +824,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dob4vg.7SqdpGwcQNoUrn3JYX_4eaNf2ds");
