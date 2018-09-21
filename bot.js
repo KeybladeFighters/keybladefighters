@@ -783,17 +783,7 @@ client.on("message", message =>  { // EventEmitter
 });
 		
 
-client.on("message", message =>  { // EventEmitter
-	var end = new Date('09/21/2018 10:00 AM');
-const today = new Date();
- var distance = end - today;
-	if(message.content == "!tiempo"){ // Check if message is "!ping"
-			message.channel.send("as" + distance) // Placeholder for pinging ... 
-			
-			});
-		}
-});
-		
+	
 
 
 
@@ -810,4 +800,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
