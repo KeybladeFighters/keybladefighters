@@ -234,7 +234,7 @@ client.on('message', async message => {
             await message.react('🇦');
             await message.react('🇳');
             await message.react('🇸');
-            await message.react('🇦');
+            await message.react(':a:');
 		await message.react('🇸');
 		 await message.react('438378115601793034');
 		
@@ -444,7 +444,7 @@ case "dm":
  .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
      .addField("!meh", "Descripcion: meh", true)
 .addField("!abrazo , !abrazo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!abrazo)", true)
-	     .addField("!oveja", "Descripcion: je", true)
+	     
     
   .addField("!8ball [pregunta]", "Descripcion: Responde la pregunta que le hagas.", true);
 		   
@@ -593,20 +593,20 @@ client.on("message", (message) => {
      
    
     }	else
-	     if(message.content.startsWith (prefix + "kas") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	     if(message.content.startsWith (prefix + "upright") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         const ListEmbed = new Discord.RichEmbed()
 	    .setAuthor("Usuarios Upright:", "https://i.imgur.com/tODBzy2.png")
             
 	    .setColor(embedPurple)
 	    .setThumbnail("https://i.imgur.com/tODBzy2.png")
-            .setDescription(message.guild.roles.get('455138716529459202').members.map(m=>m.user.tag).join('\n'));
+            .setDescription(message.guild.roles.get('455135672592760832').members.map(m=>m.user.tag).join('\n'));
         message.channel.send(ListEmbed);      
   message.delete(1000);
      //borra el mensaje en 0000 milisegundos (1000 = 1 seg)
  
    
     }	else
-	         if(message.content.startsWith (prefix + "f") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	         if(message.content.startsWith (prefix + "fighter") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         const ListEmbed = new Discord.RichEmbed()
 	    .setAuthor("Keyblade Fighters", "https://i.imgur.com/dnyKx2z.jpg")
             
@@ -619,7 +619,7 @@ client.on("message", (message) => {
  
    
     }	else
-	             if(message.content.startsWith (prefix + "reverse") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	             if(message.content.startsWith (prefix + "rangers") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
         const ListEmbed = new Discord.RichEmbed()
 	    .setAuthor("Keyblade Rangers", "https://i.imgur.com/rkfgpxv.jpg")
             
@@ -748,8 +748,8 @@ message.delete()
         
       .addField("!adminc , !comandos", "Descripcion: Publica una lista de comandos   ", true)
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
-   
-
+   .addField("!mensaje", "Descripcion: Publica imagen en spam-town", true)
+   .addField("!sayB", "Descripcion: El bot publica tu mensaje en spam-town", true)
     
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
         .addField("!latigo , !latigo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!latigo)", true)
@@ -782,17 +782,24 @@ client.on("message", message =>  { // EventEmitter
 		}
 });
 	
-client.on("message", message =>  { // EventEmitter
+client.on("message", message =>  { 
 
-	if(message.content == "!mensaje"){ // Check if message is "!ping"
+	if(message.content == "!mensaje" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
 			client.channels.get("467801888029409303").send("hola") 
 			
 		}
 });
 			
-
 	
+client.on("message", message =>  { 
 
+	if(message.content == "!sayB" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
+			client.channels.get("467801888029409303").send(message.content.slice(4, message.content.length));
+			
+		}
+});
+		
+	
 
 
 client.on('message', function(message) {
@@ -808,4 +815,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dob4vg.7SqdpGwcQNoUrn3JYX_4eaNf2ds");
