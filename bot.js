@@ -111,13 +111,14 @@ client.on("ready", () => {
  console.log(`Logged in as ${client.user.tag}!`);
 
 });
+
 client.on("guildMemberAdd", function(member){
 	member.guild.channels.find("name", "spam-town").sendMessage(member.toString() + " bienvenido, elige tu atributo en el siguiente mensaje");
 	
 	member.guild.channels.find("name", "spam-town").sendMessage("!atributo");
 	
 		
-	member.addRole(member.guild.roles.find("id", "<@&458406101952495647>"));
+	member.addRole("458406101952495647"));
 		
 	member.addRole(member.guild.roles.find("name", "⇙ In Development ⇘"));
 		
@@ -131,8 +132,31 @@ client.on("guildMemberAdd", function(member){
 
 
 
+//empieza el rol por reacciones
+if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
+
+//Function to generate the role messages, based on your settings
+function generateMessages(){
+    var messages = [];
+    messages.push(initialMessage);
+    for (let role of roles) messages.push(` **"${role}"** `); //DONT CHANGE THIS
+    return messages;
+}
 
 
+client.on("message", message => {
+    if (message.member.roles.some(r=>["administrador", "moderador", "KeyBlade Fighters (BOT)"].includes(r.name)) && message.content.toLowerCase() == setupCMD){
+        var toSend = generateMessages();
+        let mappedArray = [[toSend[0], false], ...toSend.slice(1).map( (message, idx) => [message, reactions[idx]])];
+        for (let mapObj of mappedArray){
+            message.channel.send(mapObj[0]).then( sent => {
+                if (mapObj[1]){
+                  sent.react(mapObj[1]);  
+                } 
+            });
+        }
+    }
+})
 
 
 
@@ -735,19 +759,6 @@ message.delete()
 
 });
 
-client.on("guildMemberAdd", (member) => { // Check out previous chapter for information about this event
-let guild = member.guild; 
-let memberTag = member.user.tag; 
-if(guild.systemChannel){
-	guild.systemChannel.send(new Discord.RichEmbed() // Creating instance of Discord.RichEmbed
-	.setTitle("Nuevo Usuario") // Calling method setTitle on constructor. 
-	.setDescription(memberTag + " se ha unido") // Setting embed description
-	.setThumbnail(member.user.displayAvatarURL) // The image on the top right; method requires an url, not a path to file!
-	.addField("Miembros actuales", member.guild.memberCount) // Adds a field; First parameter is the title and the second is the value.
-	.setTimestamp() // Sets a timestamp at the end of the embed
-	);
-}
-});
 
 	
 
@@ -765,4 +776,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
