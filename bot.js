@@ -118,7 +118,7 @@ client.on("guildMemberAdd", function(member){
 	member.guild.channels.find("name", "spam-town").sendMessage("!atributo");
 	
 		
-	member.addRole("458406101952495647"));
+
 		
 	member.addRole(member.guild.roles.find("name", "⇙ In Development ⇘"));
 		
@@ -776,4 +776,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
