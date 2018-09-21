@@ -117,7 +117,7 @@ client.on("guildMemberAdd", function(member){
 	member.guild.channels.find("name", "spam-town").sendMessage("!atributo");
 	
 		
-	member.addRole(member.guild.roles.find("name", "↯                                                 Atributo                                    ↯"));
+	member.addRole(member.guild.roles.find("id", "<@&458406101952495647>"));
 		
 	member.addRole(member.guild.roles.find("name", "⇙ In Development ⇘"));
 		
@@ -765,15 +765,7 @@ if(guild.systemChannel){
 });
 
 	
-	client.on("message", (message)){ // EventEmitter
-	if(message.content == "!pingp"){ // Check if message is "!ping"
-			message.channel.send("Pinging ...") // Placeholder for pinging ... 
-			.then((msg) => { // Resolve promise
-				msg.edit("Ping: " + (Date.now() - msg.createdTimestamp)) // Edits message with current timestamp minus timestamp of message
-			});
-		}
-}
-		
+
 
 
 
@@ -788,4 +780,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
