@@ -627,6 +627,23 @@ client.on("message", (message) => {
     }	else
 	    
 
+  if(message.content.startsWith (prefix + "serverinfo")){
+
+    let sicon = message.guild.iconURL;
+    let serverembed = new Discord.RichEmbed()
+    .setDescription("Server Information")
+    .setColor("#15f153")
+    .setThumbnail(sicon)
+    .addField("Server Name", message.guild.name)
+    .addField("Created On", message.guild.createdAt)
+    .addField("You Joined", message.member.joinedAt)
+    .addField("Total Members", message.guild.memberCount);
+
+    return message.channel.send(serverembed);
+  }
+	
+	    	else
+	    
 	   if (message.content.startsWith(prefix + "say") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
       message.delete(0000); //Supposed to delete message
       message.channel.send(message.content.slice(4, message.content.length));
@@ -739,6 +756,7 @@ message.delete()
         
       .addField("!adminc , !comandos", "Descripcion: Publica una lista de comandos   ", true)
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
+   
 
     
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
@@ -785,35 +803,7 @@ client.on('message', function(message) {
     }
 });
 
-client.on('message', function(message) {
-if (message.content === "global") {
-  if (message.author.id === "125557470616616960") {
-    try {
-      let toSay = "messageToSend"
-      this.client.guilds.map((guild) => {
-        let found = 0
-        guild.channels.map((c) => {
-          if (found === 0) {
-            if (c.type === "text") {
-              if (c.permissionsFor(this.client.user).has("VIEW_CHANNEL") === true) {
-                if (c.permissionsFor(this.client.user).has("SEND_MESSAGES") === true) {
-                  c.send(toSay);
-                  found = 1;
-                }
-              }
-            }
-          }
-        });
-      });
-    }
-    catch (err) {
-      console.log("Could not send message to a (few) guild(s)!");
-    }
-  } else {
-    message.reply("You cant do that!")
-  }
-}
-});	
+
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
