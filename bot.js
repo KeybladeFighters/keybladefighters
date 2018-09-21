@@ -126,31 +126,16 @@ client.on("guildMemberAdd", function(member){
 });
 
 
-//empieza el rol por reacciones
-if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
-
-//Function to generate the role messages, based on your settings
-function generateMessages(){
-    var messages = [];
-    messages.push(initialMessage);
-    for (let role of roles) messages.push(` **"${role}"** `); //DONT CHANGE THIS
-    return messages;
-}
 
 
-client.on("message", message => {
-    if (message.member.roles.some(r=>["administrador", "moderador", "KeyBlade Fighters (BOT)"].includes(r.name)) && message.content.toLowerCase() == setupCMD){
-        var toSend = generateMessages();
-        let mappedArray = [[toSend[0], false], ...toSend.slice(1).map( (message, idx) => [message, reactions[idx]])];
-        for (let mapObj of mappedArray){
-            message.channel.send(mapObj[0]).then( sent => {
-                if (mapObj[1]){
-                  sent.react(mapObj[1]);  
-                } 
-            });
-        }
-    }
-})
+
+
+
+
+
+
+
+
 
 
 client.on('raw', event => {
@@ -780,4 +765,4 @@ client.on('message', function(message) {
 });
 
 
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
