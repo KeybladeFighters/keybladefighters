@@ -749,7 +749,7 @@ message.delete()
       .addField("!adminc , !comandos", "Descripcion: Publica una lista de comandos   ", true)
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
    .addField("!mensaje", "Descripcion: Publica imagen en spam-town", true)
-   .addField("!sayB", "Descripcion: El bot publica tu mensaje en spam-town", true)
+   .addField("!textB", "Descripcion: El bot publica tu mensaje en spam-town", true)
     
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
         .addField("!latigo , !latigo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!latigo)", true)
@@ -793,8 +793,8 @@ client.on("message", message =>  {
 	
 client.on("message", message =>  { 
 
-	if(message.content == "!sayB" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
-			client.channels.get("467801888029409303").send(message.content.slice(4, message.content.length));
+	if(message.content == "!textB" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
+			client.channels.get("467801888029409303").send(message.content.slice(5, message.content.length));
 			
 		}
 });
@@ -815,4 +815,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dob4vg.7SqdpGwcQNoUrn3JYX_4eaNf2ds");
