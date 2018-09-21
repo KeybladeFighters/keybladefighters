@@ -771,7 +771,7 @@ client.on("message", message =>  { // EventEmitter
 	if(message.content == "!pingp"){ // Check if message is "!ping"
 			message.channel.send("Pinging ...") // Placeholder for pinging ... 
 			.then((msg) => { // Resolve promise
-				msg.edit("Ping: " + (Date.now().toLocaleDateString())) // Edits message with current timestamp minus timestamp of message
+				msg.edit("Ping: " + (new Date().toLocaleDateString())) // Edits message with current timestamp minus timestamp of message
 			});
 		}
 });
@@ -793,4 +793,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
