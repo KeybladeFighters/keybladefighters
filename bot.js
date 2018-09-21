@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
-var end = new Date('09/21/2018 10:00 AM');
-const today = new Date();
+
 
 
 const yourID = "125557470616616960";
@@ -789,7 +788,7 @@ client.on("message", message =>  { // EventEmitter
 const today = new Date();
  var distance = end - today;
 	if(message.content == "!tiempo"){ // Check if message is "!ping"
-			message.channel.send(distance) // Placeholder for pinging ... 
+			message.channel.send("as" + distance) // Placeholder for pinging ... 
 			
 			});
 		}
@@ -811,4 +810,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DoXKqg.vsDnXXjJQaWXobQcEiwroszGdJA");
