@@ -823,4 +823,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DolrjQ.f_z_AlNvL_rYs64dcplM8JCzrXY");
+client.login("");
