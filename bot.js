@@ -530,7 +530,7 @@ client.on("message", (message) => {
   
     
 } else 
-	    if(message.content.startsWith (prefix + "latigo") && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ) {
+	    if(message.content.startsWith (prefix + "latigo") && message.member.roles.some(r=>["administrador", "moderador", "♔ King ♔ KB Rangers"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
@@ -823,4 +823,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DolrjQ.f_z_AlNvL_rYs64dcplM8JCzrXY");
