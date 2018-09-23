@@ -762,7 +762,7 @@ message.delete()
       .addField("!adminc , !comandos", "Descripcion: Publica una lista de comandos   ", true)
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
    .addField("!mensaje", "Descripcion: Publica imagen en spam-town", true)
-     .addField("!remo, !remo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!remo), true)
+     .addField("!remo, !remo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!remo)", true)
    
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
         .addField("!latigo , !latigo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!latigo)", true)
@@ -837,4 +837,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DolrjQ.f_z_AlNvL_rYs64dcplM8JCzrXY");
