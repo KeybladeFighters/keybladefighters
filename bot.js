@@ -549,7 +549,7 @@ client.on("message", (message) => {
 	message.delete(0000);
 		      if(message.mentions.users.size < 1) return message.channel.send("Hay remo para todos!", {files: ["https://thumbs.gfycat.com/BaggyAppropriateErne-small.gif"]});
      message.channel.send(`Hay remo para ti ${member} !`, {
-    file:["https://thumbs.gfycat.com/BaggyAppropriateErne-small.gif"]
+    files:["https://thumbs.gfycat.com/BaggyAppropriateErne-small.gif"]
 	     
 	     
      });
