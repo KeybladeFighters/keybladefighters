@@ -543,12 +543,12 @@ client.on("message", (message) => {
   
     
 } else 
-	 if(message.content.startsWith (prefix + "tabla") && message.member.roles.some(r=>["administrador", "moderador", "♔ King ♔ KB Rangers"].includes(r.name)) ) {
+	 if(message.content.startsWith (prefix + "remo") && message.member.roles.some(r=>["administrador", "moderador", "♔ King ♔ KB Rangers"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
-		      if(message.mentions.users.size < 1) return message.channel.send("Hya tabla para todos!", {files: ["https://thumbs.gfycat.com/BaggyAppropriateErne-small.gif"]});
-     message.channel.send(` hay tabla para ${member} !`, {
+		      if(message.mentions.users.size < 1) return message.channel.send("Hay remo para todos!", {files: ["https://thumbs.gfycat.com/BaggyAppropriateErne-small.gif"]});
+     message.channel.send(` hay remo para ti ${member} !`, {
     file: rando_latigo[Math.floor(Math.random() * rando_latigo.length)]
 	     
 	     
@@ -836,4 +836,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DolrjQ.f_z_AlNvL_rYs64dcplM8JCzrXY");
