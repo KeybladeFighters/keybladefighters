@@ -548,8 +548,8 @@ client.on("message", (message) => {
         let member = message.mentions.members.first()
 	message.delete(0000);
 		      if(message.mentions.users.size < 1) return message.channel.send("Hay remo para todos!", {files: ["https://thumbs.gfycat.com/BaggyAppropriateErne-small.gif"]});
-     message.channel.send(` hay remo para ti ${member} !`, {
-    file: rando_latigo[Math.floor(Math.random() * rando_latigo.length)]
+     message.channel.send(`Hay remo para ti ${member} !`, {
+    file:["https://thumbs.gfycat.com/BaggyAppropriateErne-small.gif"]
 	     
 	     
      });
@@ -762,6 +762,7 @@ message.delete()
       .addField("!adminc , !comandos", "Descripcion: Publica una lista de comandos   ", true)
         .addField("!ping!", "Descripcion: Responde con: Pong!", true)
    .addField("!mensaje", "Descripcion: Publica imagen en spam-town", true)
+     .addField("!remo, !remo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!remo), true)
    
       .addField("!regaño [@usuario] , !abrazo  [@usuario]", "Descripcion: Regaña o abraza a un usuario (con respectivo gif)", true)
         .addField("!latigo , !latigo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!latigo)", true)
@@ -836,4 +837,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DolrjQ.f_z_AlNvL_rYs64dcplM8JCzrXY");
