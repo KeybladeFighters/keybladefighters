@@ -848,4 +848,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dov-LA.Qs6OSlKcQo7EZ9xLixjTc1HX3WU");
+client.login("");
