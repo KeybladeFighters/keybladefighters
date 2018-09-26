@@ -637,7 +637,7 @@ client.on("message", (message) => {
      });
     
 } else 
-		 if(message.content.startsWith (prefix + "enfado") && message.member.roles.some(r=>["administrador", "moderador", "♔ King ♔ KB Rangers"].includes(r.name)) ) {
+		 if(message.content.startsWith (prefix + "regaño") && message.member.roles.some(r=>["administrador", "moderador", "♔ King ♔ KB Rangers"].includes(r.name)) ) {
 
         let member = message.mentions.members.first()
 	message.delete(0000);
@@ -648,10 +648,8 @@ client.on("message", (message) => {
      });
     
 } else 
-	 if(message.content.startsWith (prefix + "oiezi") {
+	 if(message.content.startsWith (prefix + "oiezi")) {
 
-        let member = message.mentions.members.first()
-	message.delete(0000);
      message.channel.send(``, {
     file: rando_oiezi[Math.floor(Math.random() * rando_oiezi.length)]
 	     
@@ -927,4 +925,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Do1-7A.pFxl1W1Zfkr_UsESpa2NxetdjkU");
