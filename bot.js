@@ -433,7 +433,7 @@ client.on("message", function(message) {
 		    
         let user = message.mentions.users.first();
         if (!user) {
-            return message.reply('You must mention someone!');
+            return message.reply('Menciona a alguien!');
         }
         const mentioneduser = message.mentions.users.first();
         const joineddiscord = (mentioneduser.createdAt.getDate() + 1) + '-' + (mentioneduser.createdAt.getMonth() + 1) + '-' + mentioneduser.createdAt.getFullYear() + ' | ' + mentioneduser.createdAt.getHours() + ':' + mentioneduser.createdAt.getMinutes() + ':' + mentioneduser.createdAt.getSeconds();
@@ -478,16 +478,16 @@ client.on("message", function(message) {
       message.channel.send({embed: {
         color: 3447003,
         author: {
-          name: `Got some info about ${user.username}`,
+          name: `Información sobre ${user.username}`,
           icon_url: user.displayAvatarURL
         },
         fields: [{
-            name: '**UserInfo:**',
-            value: `**Username:** ${user.tag}\n**Joined Discord:** ${joineddiscord}\n**Last message:** ${messag}\n**Playing:** ${game}\n**Status:** ${status}\n**Bot?** ${user.bot}`
+            name: '**Información:**',
+            value: `**Username:** ${user.tag}\n**Se unió a discord:** ${joineddiscord}\n**Último mensaje:** ${messag}\n**Jugando:** ${game}\n**Status:** ${status}\n**Bot?** ${user.bot}`
           },
           {
             name: 'DiscordInfo:',
-            value: `**Discriminator:** ${user.discriminator}\n**ID:** ${user.id}\n**Username:** ${user.username}`
+            value: `**Discriminador:** ${user.discriminator}\n**ID:** ${user.id}\n**Username:** ${user.username}`
           },
         ],
         timestamp: new Date(),
@@ -508,50 +508,8 @@ client.on("message", function(message) {
             "\nAvatar URL: " + user.avatarURL; /*The Avatar URL*/
             message.channel.sendMessage(output); //We send the output in the current channel.
       } else {
-            message.reply("Please mention someone :thinking:"); //Reply with a mention saying "Invalid user."
+            message.reply("Menciona a alguien :thinking:"); //Reply with a mention saying "Invalid user."
       }
-        break;
-
- case "serverinfo":
-   
-        let guildmessageServerInfo = message.guild;
-        let nameServerInfo = message.guild.name;
-        let createdAtServerInfo = moment(message.guild.createdAt).format('MMMM Do YYYY, h:mm:ss a');
-        let channelsServerInfo = message.guild.channels.size;
-        let ownerServerInfo = message.guild.owner.user.tag;
-        let memberCountServerInfo = message.guild.memberCount;
-        let largeServerInfo = message.guild.large;
-        let iconUrlServerInfo = message.guild.iconURL;
-        let regionServerInfo = message.guild.region;
-        let afkServerInfo = message.guild.channels.get(message.guild.afkChannelID) === undefined ? 'None' : message.guild.channels.get(guildmessageServerInfo.afkChannelID).name;
-
-            message.channel.send({embed: {
-                color: 3447003,
-                author: {
-                  name: message.guild.name,
-                  icon_url: message.guild.iconURL
-                },
-                title: "Server info",
-                fields: [{
-                    name: "Canales",
-                    value: `**Channel Count:** ${channelsServerInfo}\n**AFK Channel:** ${afkServerInfo}`
-                  },
-                  {
-                    name: "Miembros",
-                    value: `**Member Count:** ${memberCountServerInfo}\n**Owner:** ${ownerServerInfo}\n**Owner ID:** ${message.guild.owner.id}`
-                  },
-                  {
-                    name: "Más",
-                    value: `**Created at:** ${createdAtServerInfo}\n**Large Guild?:** ${largeServerInfo ? 'Yes' : 'No'}\n**Region:** ${regionServerInfo}`
-                  }
-                ],
-                timestamp: new Date(),
-                footer: {
-                  icon_url: client.user.avatarURL,
-                 
-                }
-              }
-            });
         break;
 
 		    
@@ -1019,4 +977,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Do1-7A.pFxl1W1Zfkr_UsESpa2NxetdjkU");
