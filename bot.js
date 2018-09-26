@@ -406,6 +406,155 @@ client.on("message", function(message) {
 	       message.channel.send(' http://api.sp.kingdomhearts.com/information/list ');
    
             break;
+ 
+	      case "coinflip":
+        let answers = [
+            'cara',
+            'sello'
+        ];
+
+        message.channel.send({embed: {
+            color: 3447003,
+            title: "Coinflip:",
+            fields: [{
+                name: "Resultado",
+                value: `\`${answers[~~(Math.random() * answers.length)]}\``
+              }
+            ],
+            timestamp: new Date(),
+            footer: {
+              icon_url: client.user.avatarURL,
+             
+            }
+          }
+        });
+        break;
+		    case "userinfo":
+		    
+        let user = message.mentions.users.first();
+        if (!user) {
+            return message.reply('You must mention someone!');
+        }
+        const mentioneduser = message.mentions.users.first();
+        const joineddiscord = (mentioneduser.createdAt.getDate() + 1) + '-' + (mentioneduser.createdAt.getMonth() + 1) + '-' + mentioneduser.createdAt.getFullYear() + ' | ' + mentioneduser.createdAt.getHours() + ':' + mentioneduser.createdAt.getMinutes() + ':' + mentioneduser.createdAt.getSeconds();
+        let game;
+        if (user.presence.game === null) {
+            game = 'Not currently Playing.';
+        } else {
+            game = user.presence.game.name;
+        }
+        let messag;
+        if (user.lastMessage === null) {
+            messag = 'He didnt sent a message.';
+        } else {
+            messag = user.lastMessage;
+        }
+        let status;
+        if (user.presence.status === 'online') {
+            status = ':green_heart:';
+        } else if (user.presence.status === 'dnd') {
+            status = ':heart:';
+        } else if (user.presence.status === 'idle') {
+            status = ':yellow_heart:';
+        } else if (user.presence.status === 'offline') {
+            status = ':black_heart:';
+        }
+      // Let afk;
+      // if (user.presence.data.afk === true) {
+      //   afk = "✅"
+      // } else {
+      //   afk = "❌"
+      // }
+        let stat;
+        if (user.presence.status === 'offline') {
+            stat = 0x000000;
+        } else if (user.presence.status === 'online') {
+            stat = 0x00AA4C;
+        } else if (user.presence.status === 'dnd') {
+            stat = 0x9C0000;
+        } else if (user.presence.status === 'idle') {
+            stat = 0xF7C035;
+        }
+      message.channel.send({embed: {
+        color: 3447003,
+        author: {
+          name: `Got some info about ${user.username}`,
+          icon_url: user.displayAvatarURL
+        },
+        fields: [{
+            name: '**UserInfo:**',
+            value: `**Username:** ${user.tag}\n**Joined Discord:** ${joineddiscord}\n**Last message:** ${messag}\n**Playing:** ${game}\n**Status:** ${status}\n**Bot?** ${user.bot}`
+          },
+          {
+            name: 'DiscordInfo:',
+            value: `**Discriminator:** ${user.discriminator}\n**ID:** ${user.id}\n**Username:** ${user.username}`
+          },
+        ],
+        timestamp: new Date(),
+        footer: {
+          icon_url: client.user.avatarURL,
+          
+        }
+      }
+    });
+        break;
+
+        case "avatar":
+      
+        
+        if(message.mentions.users.first()) { //Check if the message has a mention in it.
+            let user = message.mentions.users.first(); //Since message.mentions.users returns a collection; we must use the first() method to get the first in the collection.
+            let output = user.username + "#" + user.discriminator /*Username and Discriminator*/ +
+            "\nAvatar URL: " + user.avatarURL; /*The Avatar URL*/
+            message.channel.sendMessage(output); //We send the output in the current channel.
+      } else {
+            message.reply("Please mention someone :thinking:"); //Reply with a mention saying "Invalid user."
+      }
+        break;
+
+ case "serverinfo":
+   
+        let guildmessageServerInfo = message.guild;
+        let nameServerInfo = message.guild.name;
+        let createdAtServerInfo = moment(message.guild.createdAt).format('MMMM Do YYYY, h:mm:ss a');
+        let channelsServerInfo = message.guild.channels.size;
+        let ownerServerInfo = message.guild.owner.user.tag;
+        let memberCountServerInfo = message.guild.memberCount;
+        let largeServerInfo = message.guild.large;
+        let iconUrlServerInfo = message.guild.iconURL;
+        let regionServerInfo = message.guild.region;
+        let afkServerInfo = message.guild.channels.get(message.guild.afkChannelID) === undefined ? 'None' : message.guild.channels.get(guildmessageServerInfo.afkChannelID).name;
+
+            message.channel.send({embed: {
+                color: 3447003,
+                author: {
+                  name: message.guild.name,
+                  icon_url: message.guild.iconURL
+                },
+                title: "Server info",
+                fields: [{
+                    name: "Canales",
+                    value: `**Channel Count:** ${channelsServerInfo}\n**AFK Channel:** ${afkServerInfo}`
+                  },
+                  {
+                    name: "Miembros",
+                    value: `**Member Count:** ${memberCountServerInfo}\n**Owner:** ${ownerServerInfo}\n**Owner ID:** ${message.guild.owner.id}`
+                  },
+                  {
+                    name: "Más",
+                    value: `**Created at:** ${createdAtServerInfo}\n**Large Guild?:** ${largeServerInfo ? 'Yes' : 'No'}\n**Region:** ${regionServerInfo}`
+                  }
+                ],
+                timestamp: new Date(),
+                footer: {
+                  icon_url: client.user.avatarURL,
+                 
+                }
+              }
+            });
+        break;
+
+		    
 
 
 case "dm":
@@ -870,4 +1019,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Do1-7A.pFxl1W1Zfkr_UsESpa2NxetdjkU");
