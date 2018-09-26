@@ -406,23 +406,7 @@ client.on("message", function(message) {
 	       message.channel.send(' http://api.sp.kingdomhearts.com/information/list ');
    
             break;
-	
-	case "anime":
-    
-        const animesf = require('snekfetch');
 
-            let res = await animesf.get('http://api.cutegirls.moe/json');
-            if (res.body.status !== 200) {
-                return message.channel.send('An error occurred while processing this command.');
-            }
-            let animepicembed = new Discord.RichEmbed()
-            .setColor('#f266f9')
-            .setTitle('Anime Picture')
-            .setImage(res.body.data.image);
-    
-            message.channel.send(animepicembed);
-        break;
-   
 
 case "dm":
             let person = message.mentions.users.first();
@@ -886,4 +870,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Do1-7A.pFxl1W1Zfkr_UsESpa2NxetdjkU");
