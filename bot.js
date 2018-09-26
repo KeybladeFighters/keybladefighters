@@ -21,6 +21,21 @@ const rando_rega = [
 'https://78.media.tumblr.com/tumblr_matnctrgBQ1rpa4tjo1_400.gif',
 "https://media.giphy.com/media/11VW2xPAb4OFPO/giphy.gif",	
 ];
+const rando_oiezi = [
+'https://78.media.tumblr.com/606d134e5707fda77c1829beda78b48f/tumblr_mg2lexqQbm1r8tdf1o1_500.gif',
+'https://78.media.tumblr.com/99bbe55f355dc70f078aee30e65119dc/tumblr_mg2lexqQbm1r8tdf1o2_500.gif',
+'https://78.media.tumblr.com/b78d2bf0da2d1f2e54f25bfbda5c745b/tumblr_mg2lexqQbm1r8tdf1o3_500.gif',
+'https://78.media.tumblr.com/45e4d0b521358773ae6f1699aebc86e6/tumblr_mg2lexqQbm1r8tdf1o4_500.gif',
+'https://78.media.tumblr.com/b5b6a0545211d764d6faa76f5b41ed5a/tumblr_mg2lexqQbm1r8tdf1o5_500.gif',
+'https://78.media.tumblr.com/a579e169b2f782a8e1e2f0681efefb71/tumblr_mg2lexqQbm1r8tdf1o6_500.gif',
+'https://78.media.tumblr.com/201404a2ab7128d0fa57516bcef57c26/tumblr_mg2lexqQbm1r8tdf1o7_500.gif',	
+'https://78.media.tumblr.com/c2f592110a447ab5c72caeecb9d9c8fa/tumblr_mg2lexqQbm1r8tdf1o8_500.gif',	
+'https://78.media.tumblr.com/dde5475c890543a4cdc201a171eb9bef/tumblr_mg2lexqQbm1r8tdf1o9_500.gif',	
+'https://78.media.tumblr.com/e79b4dc6967ee8354f05a5cf95bba8d9/tumblr_mg2lexqQbm1r8tdf1o10_500.gif',	
+'http://media.tumblr.com/dc1768b2f2bc6a64514212a38c5bb12e/tumblr_inline_mg2lb1vXSG1r4pf7e.gif',	
+'http://media.tumblr.com/9090f76aa226ba85630f89e436eea790/tumblr_inline_mg2lb5nCXa1r4pf7e.gif',	
+'http://media.tumblr.com/c4150f3e0b5de8a6ae21f19218188d77/tumblr_inline_mg2lbaz7R21r4pf7e.gif',	
+];
 const rando_risa = [
 
 "https://media.giphy.com/media/TJKm32CqAr0CA/giphy.gif",	
@@ -392,8 +407,273 @@ client.on("message", function(message) {
    
             break;
 		    		    
+    case "weather":
+    
+
+        let apiKey = "https://openweathermap.org"
+        const fetch = require('node-fetch');
+        let arg = message.content.split(' ').join(' ').slice(9);
+        if (!arg) {
+            return message.reply('I need a city to check :wink:');
+        }
+        fetch('http://api.openweathermap.org/data/2.5/weather?q=' + arg + '&APPID=' + apiKey + '&units=metric')
+            .then(res => {
+                return res.json();
+            }).then(json => {
+                if (json.main === undefined) {
+                    return message.reply(`**${arg}** Isnt inside my query, please check again`);
+                }
+                let rise = json.sys.sunrise;
+                let date = new Date(rise * 1000);
+                let timestr = date.toLocaleTimeString();
+                let set = json.sys.sunset;
+                let setdate = new Date(set * 1000);
+                let timesstr = setdate.toLocaleTimeString();
+                const embed = new Discord.RichEmbed()
+              .setColor(26368)
+              .setTitle(`This is the weather for :flag_${json.sys.country.toLowerCase()}: **${json.name}**`)
+              .addField('Information:', `**Temp:** ${json.main.temp}°C\n**Wind speed:** ${json.wind.speed}m/s\n**Humidity:** ${json.main.humidity}%\n**Sunrise:** ${timestr}\n**Sunset:** ${timesstr}`);
+                message.channel.send({embed})
+              .catch(console.error);
+            }).catch(err => {
+                if (err) {
+                    message.channel.send('Something went wrong while checking the query!');
+                }
+            });
+        break;
+	      case "coinflip":
+        let answers = [
+            'cara',
+            'sello'
+        ];
+
+        message.channel.send({embed: {
+            color: 3447003,
+            title: "Coinflip:",
+            fields: [{
+                name: "Resultado",
+                value: `\`${answers[~~(Math.random() * answers.length)]}\``
+              }
+            ],
+            timestamp: new Date(),
+            footer: {
+              icon_url: client.user.avatarURL,
+             
+            }
+          }
+        });
+        break;
+		    case "userinfo":
+		    
+        let user = message.mentions.users.first();
+        if (!user) {
+            return message.reply('You must mention someone!');
+        }
+        const mentioneduser = message.mentions.users.first();
+        const joineddiscord = (mentioneduser.createdAt.getDate() + 1) + '-' + (mentioneduser.createdAt.getMonth() + 1) + '-' + mentioneduser.createdAt.getFullYear() + ' | ' + mentioneduser.createdAt.getHours() + ':' + mentioneduser.createdAt.getMinutes() + ':' + mentioneduser.createdAt.getSeconds();
+        let game;
+        if (user.presence.game === null) {
+            game = 'Not currently Playing.';
+        } else {
+            game = user.presence.game.name;
+        }
+        let messag;
+        if (user.lastMessage === null) {
+            messag = 'He didnt sent a message.';
+        } else {
+            messag = user.lastMessage;
+        }
+        let status;
+        if (user.presence.status === 'online') {
+            status = ':green_heart:';
+        } else if (user.presence.status === 'dnd') {
+            status = ':heart:';
+        } else if (user.presence.status === 'idle') {
+            status = ':yellow_heart:';
+        } else if (user.presence.status === 'offline') {
+            status = ':black_heart:';
+        }
+      // Let afk;
+      // if (user.presence.data.afk === true) {
+      //   afk = "✅"
+      // } else {
+      //   afk = "❌"
+      // }
+        let stat;
+        if (user.presence.status === 'offline') {
+            stat = 0x000000;
+        } else if (user.presence.status === 'online') {
+            stat = 0x00AA4C;
+        } else if (user.presence.status === 'dnd') {
+            stat = 0x9C0000;
+        } else if (user.presence.status === 'idle') {
+            stat = 0xF7C035;
+        }
+      message.channel.send({embed: {
+        color: 3447003,
+        author: {
+          name: `Got some info about ${user.username}`,
+          icon_url: user.displayAvatarURL
+        },
+        fields: [{
+            name: '**UserInfo:**',
+            value: `**Username:** ${user.tag}\n**Joined Discord:** ${joineddiscord}\n**Last message:** ${messag}\n**Playing:** ${game}\n**Status:** ${status}\n**Bot?** ${user.bot}`
+          },
+          {
+            name: 'DiscordInfo:',
+            value: `**Discriminator:** ${user.discriminator}\n**ID:** ${user.id}\n**Username:** ${user.username}`
+          },
+        ],
+        timestamp: new Date(),
+        footer: {
+          icon_url: client.user.avatarURL,
+          text: "© NotABot"
+        }
+      }
+    });
+        break;
+
+        case "avatar":
+      
+        
+        if(message.mentions.users.first()) { //Check if the message has a mention in it.
+            let user = message.mentions.users.first(); //Since message.mentions.users returns a collection; we must use the first() method to get the first in the collection.
+            let output = user.username + "#" + user.discriminator /*Username and Discriminator*/ +
+            "\nAvatar URL: " + user.avatarURL; /*The Avatar URL*/
+            message.channel.sendMessage(output); //We send the output in the current channel.
+      } else {
+            message.reply("Please mention someone :thinking:"); //Reply with a mention saying "Invalid user."
+      }
+        break;
+
+ case "serverinfo":
    
-	   
+        let guildmessageServerInfo = message.guild;
+        let nameServerInfo = message.guild.name;
+        let createdAtServerInfo = moment(message.guild.createdAt).format('MMMM Do YYYY, h:mm:ss a');
+        let channelsServerInfo = message.guild.channels.size;
+        let ownerServerInfo = message.guild.owner.user.tag;
+        let memberCountServerInfo = message.guild.memberCount;
+        let largeServerInfo = message.guild.large;
+        let iconUrlServerInfo = message.guild.iconURL;
+        let regionServerInfo = message.guild.region;
+        let afkServerInfo = message.guild.channels.get(message.guild.afkChannelID) === undefined ? 'None' : message.guild.channels.get(guildmessageServerInfo.afkChannelID).name;
+
+            message.channel.send({embed: {
+                color: 3447003,
+                author: {
+                  name: message.guild.name,
+                  icon_url: message.guild.iconURL
+                },
+                title: "Server info",
+                fields: [{
+                    name: "Canales",
+                    value: `**Channel Count:** ${channelsServerInfo}\n**AFK Channel:** ${afkServerInfo}`
+                  },
+                  {
+                    name: "Miembros",
+                    value: `**Member Count:** ${memberCountServerInfo}\n**Owner:** ${ownerServerInfo}\n**Owner ID:** ${message.guild.owner.id}`
+                  },
+                  {
+                    name: "Más",
+                    value: `**Created at:** ${createdAtServerInfo}\n**Large Guild?:** ${largeServerInfo ? 'Yes' : 'No'}\n**Region:** ${regionServerInfo}`
+                  }
+                ],
+                timestamp: new Date(),
+                footer: {
+                  icon_url: client.user.avatarURL,
+                 
+                }
+              }
+            });
+        break;
+ case "todo":
+      
+
+        if (message.author.id == '125557470616616960') {
+            return message.channel.send(`**Unban command.**\n
+**Bot's owner commands.**\n
+**Some fun commands.**\n
+~~Mute command~~\n
+~~Unmute command~~\n
+~~Server info~~\n
+~~Softban command\n~~
+**~~watch porn man~~**`);
+        } else {
+            message.react('❌');
+            message.channel.send(`\`📛\` You don't have permissions to execute that command.`);
+        }
+        break;
+		    
+        case "dog":
+      
+        const dogsuperagent = require('superagent');
+
+        let {body} = await dogsuperagent
+        .get(`https://random.dog/woof.json`);
+
+        let dogpicembed = new Discord.RichEmbed()
+        .setColor('#ff9900')
+        .setTitle('Fotodog')
+        .setImage(body.url);
+
+        message.channel.send(dogpicembed);
+        break;
+		    case "translate":
+      
+        const translate = require('google-translate-api');
+
+    let toTrans = message.content.split(' ').slice(1);
+    let language;
+
+    language = toTrans[toTrans.length - 2] === 'to' ? toTrans.slice(toTrans.length - 2, toTrans.length)[1].trim() : undefined;
+    if (!language) {
+        return message.reply(`Please supply valid agruments.\n**Example** \`${settings.botPREFIX}translate [text] to [language]\``);
+    }
+    let finalToTrans = toTrans.slice(toTrans.length - toTrans.length, toTrans.length - 2).join(' ');
+    translate(finalToTrans, {to: language}).then(res => {
+            message.channel.send({embed: {
+                color: 3447003,
+                author: {
+                  name: 'NotABot\'s translator',
+                  icon_url: client.user.avatarURL
+                },
+                fields: [{
+                    name: "Translator",
+                    value: `**From:** ${res.from.language.iso}\n\`\`\`${finalToTrans}\`\`\`\n**To: **${language}\n\`\`\`${res.text}\`\`\``
+                  }
+                ],
+                timestamp: new Date(),
+                footer: {
+                  icon_url: client.user.avatarURL,
+                  text: "© NotABot"
+                }
+              }
+            });
+    }).catch(err => {
+        message.channel.send({
+            embed: {
+                description: '❌ We could not find the supplied language.',
+                color: 0xE8642B
+            }
+        });
+    });
+        break;
+ case "anime":
+    
+        const animesf = require('snekfetch');
+
+            let res = await animesf.get('http://api.cutegirls.moe/json');
+            if (res.body.status !== 200) {
+                return message.channel.send('An error occurred while processing this command.');
+            }
+            let animepicembed = new Discord.RichEmbed()
+            .setColor('#f266f9')
+            .setTitle('Anime Picture')
+            .setImage(res.body.data.image);
+    
+            message.channel.send(animepicembed);
+        break;
 
 case "dm":
             let person = message.mentions.users.first();
@@ -575,6 +855,17 @@ client.on("message", (message) => {
 	message.delete(0000);
      message.channel.send(`${message.author} ha regañado a ${member} !`, {
     file: rando_rega[Math.floor(Math.random() * rando_rega.length)]
+	     
+	     
+     });
+    
+} else 
+	 if(message.content.startsWith (prefix + "oiezi") {
+
+        let member = message.mentions.members.first()
+	message.delete(0000);
+     message.channel.send(``, {
+    file: rando_oiezi[Math.floor(Math.random() * rando_oiezi.length)]
 	     
 	     
      });
@@ -848,4 +1139,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Do1-7A.pFxl1W1Zfkr_UsESpa2NxetdjkU");
