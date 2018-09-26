@@ -527,7 +527,7 @@ client.on("message", function(message) {
         timestamp: new Date(),
         footer: {
           icon_url: client.user.avatarURL,
-          text: "© NotABot"
+         
         }
       }
     });
@@ -628,7 +628,7 @@ client.on("message", function(message) {
 
     language = toTrans[toTrans.length - 2] === 'to' ? toTrans.slice(toTrans.length - 2, toTrans.length)[1].trim() : undefined;
     if (!language) {
-        return message.reply(`Please supply valid agruments.\n**Example** \`${settings.botPREFIX}translate [text] to [language]\``);
+        return message.reply(`Please supply valid agruments.\n**Example** \`translate [text] to [language]\``);
     }
     let finalToTrans = toTrans.slice(toTrans.length - toTrans.length, toTrans.length - 2).join(' ');
     translate(finalToTrans, {to: language}).then(res => {
@@ -1139,4 +1139,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Do1-7A.pFxl1W1Zfkr_UsESpa2NxetdjkU");
