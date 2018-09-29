@@ -140,7 +140,7 @@ client.on("guildMemberAdd", function(member){
 	
 		
 
-		
+	member.addRole(member.guild.roles.find("name", "Recluta"));	
 	member.addRole(member.guild.roles.find("name", "⇙ In Development ⇘"));
 		
 	member.addRole(member.guild.roles.find("name", "↬                                                 Estado                                    ↫"));
