@@ -994,4 +994,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DpMieA.J4M7ui7SwDFKa_gBFJ2x3XWRl_c");
+client.login("");
