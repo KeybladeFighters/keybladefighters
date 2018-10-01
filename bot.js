@@ -561,7 +561,7 @@ case "dm":
    */
  .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
      .addField("!meh", "Descripcion: meh", true)
-      .addField("!jewels - !porlaqueen - !queen - !minimos", "Descripcion: Imagen ")
+      .addField("!jewels - !porlaqueen - !laqueen - !minimos", "Descripcion: Imagen ")
 .addField("!abrazo , !abrazo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!abrazo)", true)
 	     
     
@@ -988,4 +988,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DpMUdA.zUZeVga7gQvaGKpcL8Rd9wvZv_Q");
