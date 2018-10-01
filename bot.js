@@ -561,7 +561,7 @@ case "dm":
    */
  .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
      .addField("!meh", "Descripcion: meh", true)
-      .addField("!jewels - !porlaqueen - !laqueen - !minimos", "Descripcion: Imagen ")
+      .addField("!jewels - !porlaqueen - !laqueen - !minimos - !cabeza", "Descripcion: Imagen ")
 .addField("!abrazo , !abrazo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!abrazo)", true)
 	     
     
@@ -645,6 +645,12 @@ client.on("message", (message) => {
   } else
 	   if (message.content.startsWith(prefix + "minimos")) {
     message.channel.send('', {files: ["https://i.imgur.com/KsF0cOQ.jpg"]});
+  } else
+	   if (message.content.startsWith(prefix + "cabeza")) {
+    message.channel.send('', {files: ["https://i.imgur.com/3xCnlnH.gif"]});
+  } else
+	   if (message.content.startsWith(prefix + "lala")) {
+    message.channel.send('', {files: ["https://i.imgur.com/g91LSW9.jpg"]});
   } else
 	          
     if(message.content.startsWith (prefix + "abrazo") ) {
@@ -988,4 +994,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DpMieA.J4M7ui7SwDFKa_gBFJ2x3XWRl_c");
