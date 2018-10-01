@@ -561,6 +561,7 @@ case "dm":
    */
  .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
      .addField("!meh", "Descripcion: meh", true)
+      .addField("!jewels - !porlaqueen - !queen - !minimos", "Descripcion: Imagen ")
 .addField("!abrazo , !abrazo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!abrazo)", true)
 	     
     
@@ -633,7 +634,19 @@ client.on("message", (message) => {
   		  message.delete(0000);
 	       message.channel.send(' <:omaewa:438377799041024010> ', {files: ["https://www.espreso.rs/data/images/2017/03/16/15/179809_post16097herculeshadesokayfinefiner5pu.gif"]});
   } else   
-	     
+	    if (message.content.startsWith(prefix + "jewels")) {
+    message.channel.send('', {files: ["https://i.imgur.com/1dRh8wj.png"]});
+  } else
+	    if (message.content.startsWith(prefix + "porlaqueen")) {
+    message.channel.send('', {files: ["https://i.imgur.com/npZSuMs.jpg"]});
+  } else
+	   if (message.content.startsWith(prefix + "laqueen")) {
+    message.channel.send('', {files: ["https://i.imgur.com/JR4CsbG.png"]});
+  } else
+	   if (message.content.startsWith(prefix + "minimos")) {
+    message.channel.send('', {files: ["https://i.imgur.com/KsF0cOQ.jpg"]});
+  } else
+	          
     if(message.content.startsWith (prefix + "abrazo") ) {
 
         let member = message.mentions.members.first()
@@ -975,4 +988,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.DpMMSQ.1vw6LMpY7-hSKpkZSMWFn07SK5s");
