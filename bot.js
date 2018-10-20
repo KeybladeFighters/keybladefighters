@@ -2,7 +2,9 @@ const Discord = require('discord.js');
 const fs = require('fs');
 let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
 
-
+function randomIntInc (low, high) {
+  return Math.floor(Math.random() * (high - low + 1) + low);
+}
 
 const yourID = "125557470616616960";
 const setupCMD = "!atributo"
@@ -1054,4 +1056,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
