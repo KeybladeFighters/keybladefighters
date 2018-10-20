@@ -980,17 +980,66 @@ client.on("message", message =>  {
 		}
 });
 	
-	client.on("message", function(message)
-{
-    
-	var input = message.content.toUpperCase();
+	var res=0;
+var result="";
 
-var mes = message.content.split(" ").slice(1).join(" ");
-    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
-    if(input.startsWith(prefix + "YOUTUBE")) {
-    client.sendMessage(message, "https://www.youtube.com/results?search_query=" + mes)
+client.on('message', message => {
+  if(message.content==="!tic"){
+    res = randomIntInc(1,3);
+    //scissors 1
+    //paper 2
+    //rock 3
+    if(res===1){
+      result="scissors";
+    }else if(res===2){
+      result="paper";
+    }else if(res===3){
+      result="rock";
     }
-		});
+    message.channel.sendMessage("/rock, /paper or /scissors?");
+  }
+    if(message.content==="/rock"){
+      if(res===2){
+        //win
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("You got Rekt boi");
+      }else if(res===1){
+        //lose
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("I'm triggered right now");
+      }else if(res===3){
+        //draw
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("Draw");
+      }else{
+        message.channel.sendMessage("You have to /start the game")
+      }
+    }else if(message.content==="/paper"){
+      if(res===1){
+        //win
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("You got Rekt boi");
+      }else if(res===3){
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("I'm triggered right now");
+      }else if(res===2){
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("Draw");
+      }
+    }else if(message.content==="/scissors"){
+      if(res===3){
+        //win
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("You got Rekt boi");
+      }else if(res===2){
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("I'm triggered right now");
+      }else if(res===1){
+        message.channel.sendMessage("I got "+ result);
+        message.channel.sendMessage("Draw");
+      }
+    }
+});
 
 client.on('message', function(message) {
     // Now, you can use the message variable inside
@@ -1005,4 +1054,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
