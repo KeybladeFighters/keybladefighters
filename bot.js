@@ -981,7 +981,7 @@ client.on("message", message =>  {
 });
 	
 
-
+client.on("message", message =>  { 
 if(command === `${prefix}fight`) {
     //checks if the username to fight is in the message
     let author1 = message.author.username;
@@ -1020,7 +1020,7 @@ if(command === `${prefix}fight`) {
                 message.channel.send(`No response. Fight has been cancelled.`);
             });
         });       
-};
+}});
 
 client.on('message', function(message) {
     // Now, you can use the message variable inside
@@ -1035,4 +1035,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
