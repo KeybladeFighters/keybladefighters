@@ -1003,30 +1003,30 @@ client.on('message', message => {
     if(message.content==="/roca"){
       if(res===2){
         //win
-        message.channel.sendMessage("${message.author} Saqué "+ result);
-        message.channel.sendMessage("${message.author} perdiste noob");
+        message.channel.sendMessage(`${message.author} Saqué `+ result);
+        message.channel.sendMessage(`${message.author} perdiste noob`);
       }else if(res===1){
         //lose
-        message.channel.sendMessage("${message.author} Saqué "+ result);
-        message.channel.sendMessage("${message.author} Ganaste uwu");
+        message.channel.sendMessage(`${message.author} Saqué `+ result);
+        message.channel.sendMessage(`${message.author} Ganaste uwu`);
       }else if(res===3){
         //draw
-        message.channel.sendMessage("${message.author} Saqué "+ result);
-        message.channel.sendMessage("${message.author} Empate");
+        message.channel.sendMessage(`${message.author} Saqué `+ result);
+        message.channel.sendMessage(`${message.author} Empate`);
       }else{
         message.channel.sendMessage("!tic para empezar el juego")
       }
     }else if(message.content==="/papel"){
       if(res===1){
-        //win
-        message.reply(`${message.author} Saqué `+ result);
-        message.reply(`${message.author} JA perdiste ;)`);
+        //win 
+        message.channel.send(`${message.author} Saqué `+ result);
+        message.channel.send(`${message.author} JA perdiste ;)`);
       }else if(res===3){
-        message.reply(`${message.author} Saqué `+ result);
-        message.reply(`${message.author} Ganaste bb`);
+        message.channel.send(`${message.author} Saqué `+ result);
+        message.channel.send(`${message.author} Ganaste bb`);
       }else if(res===2){
-        message.reply(`${message.author} Saqué `+ result);
-        message.reply(`${message.author} Empate`);
+      message.channel.send(`${message.author} Saqué `+ result);
+       message.channel.send(`${message.author} Empate`);
       }
     }else if(message.content==="/tijera"){
       if(res===3){
