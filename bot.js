@@ -1001,13 +1001,13 @@ if(message.content ==  `!fight`) {
 
     //announces challenge and awaits response
     var challenged = user.toString();
-    message.channel.send(`, ${author1} has challenged you to a duel. Do you accept the challenge, yes or no?`)
-        .then(() => {
-           message.channel.awaitMessages(response => response.content == 'yes' && response.author.id == fighter2 || response.content == 'no' && response.author.id == fighter2, {
-                max: 1,
-                time: 60000,
-                errors: ['time'],
-            })
+  message.channel.awaitMessages(response => return (response.content == 'yes' && message.author.id == fighter2)
+|| (response.content == 'no' && message.author.id == fighter2), 
+{
+    max: 1,
+    time: 60000,
+    errors: ['time'],
+})
             .then((collected) => {
                 if (collected.first().content == 'yes') {
                     message.channel.send(` has accepted the challenge!`);
@@ -1035,4 +1035,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
