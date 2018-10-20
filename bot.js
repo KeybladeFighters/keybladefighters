@@ -1019,26 +1019,26 @@ client.on('message', message => {
     }else if(message.content==="/papel"){
       if(res===1){
         //win
-        message.reply("${message.author} Saqué "+ result);
-        message.reply("${message.author} JA perdiste ;)");
+        message.reply(`${message.author} Saqué `+ result);
+        message.reply(`${message.author} JA perdiste ;)`);
       }else if(res===3){
-        message.reply("${message.author} Saqué "+ result);
-        message.reply("${message.author} Ganaste bb");
+        message.reply(`${message.author} Saqué `+ result);
+        message.reply(`${message.author} Ganaste bb`);
       }else if(res===2){
-        message.reply("${message.author} Saqué "+ result);
-        message.reply("${message.author} Empate");
+        message.reply(`${message.author} Saqué `+ result);
+        message.reply(`${message.author} Empate`);
       }
     }else if(message.content==="/tijera"){
       if(res===3){
         //win
-        message.reply("${message.author} Saqué "+ result);
-        message.reply("${message.author} Estamos en modo facil?");
+        message.channel.send(`${message.author} Saqué `+ result);
+        message.channel.send(`${message.author} Estamos en modo facil?`);
       }else if(res===2){
-        message.reply("${message.author} Saqué "+ result);
-        message.reply("${message.author} Ganaste GG");
+        message.channel.send(`${message.author} Saqué `+ result);
+       message.channel.send(`${message.author} Ganaste GG`);
       }else if(res===1){
-        message.reply("${message.author} Saqué "+ result);
-        message.reply("${message.author} Empate");
+       message.channel.send(`${message.author} Saqué `+ result);
+        message.channel.send(`${message.author} Empate`);
       }
     }
 });
@@ -1056,4 +1056,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
