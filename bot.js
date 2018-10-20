@@ -389,8 +389,24 @@ client.on("message", function(message) {
             if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre a quien pegarle.");
             message.reply((pelea[Math.floor(Math.random() * pelea.length)]) + slappedUser);
             break;
+		    
+		    
+		       case "casa":
+            let slappedUser = message.mentions.users.first();
+
+		    
+          {
+		     var rnd = randomIntInc(1,5);
+   console.log(rnd);
+           if(rnd===1)  message.reply(`1.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===2)  message.reply(`2.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===3)  message.reply(`3.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===4)  message.reply(`4.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===5)  message.reply(`5e.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+				   }
+            break;
 		      
-	
+
       
         case "disco":
 		   
@@ -1052,5 +1068,4 @@ client.on('message', function(message) {
 });
 
 	
-	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
