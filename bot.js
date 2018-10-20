@@ -985,20 +985,10 @@ client.on("message", message =>  {
     
 	var input = message.content.toUpperCase();
 
-if (input.startsWith(prefix + "MEME")) {
-        var image = message.content.split(" ")[1];
-        var line1 = message.content.split(" ")[2];
-
-        var line2 = message.content.split(" ")[3];
-
-        var url = "http://memegen.link/" + image + "/" + line1 + "/" + line2 + ".jpg";
-        client.sendMessage(message, "Here is your meme:");
-        client.sendMessage(message, url);
-
-        if (image === "undefined") {
-            client.reply(message, "Here is a list of meme images");
-        }
-
+var mes = message.content.split(" ").slice(1).join(" ");
+    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
+    if(input.startsWith(prefix + "YOUTUBE")) {
+    client.sendMessage(message, "https://www.youtube.com/results?search_query=" + mes)
     }
 		});
 
@@ -1015,4 +1005,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
