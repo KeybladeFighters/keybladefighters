@@ -982,7 +982,7 @@ client.on("message", message =>  {
 	
 
 client.on("message", message =>  { 
-if(command === `${prefix}fight`) {
+if(message.content ==  `!fight`) {
     //checks if the username to fight is in the message
     let author1 = message.author.username;
     let user = message.mentions.users.first();
@@ -1035,4 +1035,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
