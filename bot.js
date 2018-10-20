@@ -1019,26 +1019,26 @@ client.on('message', message => {
     }else if(message.content==="/papel"){
       if(res===1){
         //win
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("JA perdiste ;)");
+        message.reply("Saqué "+ result);
+        message.reply("JA perdiste ;)");
       }else if(res===3){
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("Ganaste bb");
+        message.reply("Saqué "+ result);
+        message.reply("Ganaste bb");
       }else if(res===2){
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("Empate");
+        message.reply("Saqué "+ result);
+        message.reply("Empate");
       }
     }else if(message.content==="/tijera"){
       if(res===3){
         //win
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("Estamos en modo facil?");
+        message.reply("Saqué "+ result);
+        message.reply("Estamos en modo facil?");
       }else if(res===2){
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("Ganaste GG");
+        message.reply("Saqué "+ result);
+        message.reply("Ganaste GG");
       }else if(res===1){
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("Empate");
+        message.reply("Saqué "+ result);
+        message.reply("Empate");
       }
     }
 });
@@ -1056,4 +1056,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
