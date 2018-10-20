@@ -980,47 +980,53 @@ client.on("message", message =>  {
 		}
 });
 	
-
+	
 client.on("message", message =>  { 
-if(message.content ==  `!fight`) {
-    //checks if the username to fight is in the message
-    let author1 = message.author.username;
-    let user = message.mentions.users.first();
-    if(!user) return message.reply("you did not specify who you would like to fight!");
 
-    //checks if the users is trying to fight themselves
-    if(user.id == message.author.id) return message.reply('you cannot fight yourself!');
+if (message.startsWith(prefix + "MEME")) {
+        var image = message.content.split(" ")[1];
+        var line1 = message.content.split(" ")[2];
 
-    //checks if the user is trying to fight the bot
-    if(user.bot ==  true)
-        return message.reply('you cannot fight a bot!');
+        var line2 = message.content.split(" ")[3];
 
-    //saves the two user ids to variables
-    var fighter1 = message.author.id;
-    var fighter2 = user.id;
+        var url = "http://memegen.link/" + image + "/" + line1 + "/" + line2 + ".jpg";
+        clien.sendMessage(message, "Here is your meme:");
+        client.sendMessage(message, url);
 
-    //announces challenge and awaits response
-    var challenged = user.toString();
-  message.channel.awaitMessages(response => return (response.content == 'yes' && message.author.id == fighter2)
-|| (response.content == 'no' && message.author.id == fighter2), 
-{
-    max: 1,
-    time: 60000,
-    errors: ['time'],
-})
-            .then((collected) => {
-                if (collected.first().content == 'yes') {
-                    message.channel.send(` has accepted the challenge!`);
-                }
-                else if(collected.first().content == 'no') {
-                    message.channel.send(`nope`);
-                }
-            })
-            .catch(() => {
-                message.channel.send(`No response. Fight has been cancelled.`);
-            });
-        });       
-}});
+        if (image === "undefined") {
+            client.reply(message, "Here is a list of meme images");
+        }
+
+    }
+	 if(message.startsWith(prefix + "GOOGLE")) {
+    client.sendMessage(message, "http://lmgtfy.com/?q=" + mes)
+    }
+    var mes = message.content.split(" ").slice(1).join(" ");
+    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
+    
+    if(message.startsWith(prefix + "IMAGES")) {
+    client.sendMessage(message, "https://www.google.com/search?site=&tbm=isch&source=hp&biw=2560&bih=1274&q=" + mes)
+    }
+    var mes = message.content.split(" ").slice(1).join(" ");
+    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
+    if(message.startsWith(prefix + "SHOP")) {
+    client.sendMessage(message, "https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=" + mes)
+    }
+    var mes = message.content.split(" ").slice(1).join(" ");
+    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
+    if(message.startsWith(prefix + "WIKI")) {
+    client.sendMessage(message, "https://en.wikipedia.org/wiki/" + mes)
+    }
+    var mes = message.content.split(" ").slice(1).join(" ");
+    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
+    if(message.startsWith(prefix + "YOUTUBE")) {
+    client.sendMessage(message, "https://www.youtube.com/results?search_query=" + mes)
+    }
+    var mes = message.content.split(" ").slice(1).join(" ");
+    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
+	
+});
+
 
 client.on('message', function(message) {
     // Now, you can use the message variable inside
@@ -1035,4 +1041,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
