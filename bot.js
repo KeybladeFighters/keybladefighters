@@ -1003,42 +1003,42 @@ client.on('message', message => {
     if(message.content==="/roca"){
       if(res===2){
         //win
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("perdiste noob");
+        message.channel.sendMessage("${message.author} Saqué "+ result);
+        message.channel.sendMessage("${message.author} perdiste noob");
       }else if(res===1){
         //lose
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("Ganaste uwu");
+        message.channel.sendMessage("${message.author} Saqué "+ result);
+        message.channel.sendMessage("${message.author} Ganaste uwu");
       }else if(res===3){
         //draw
-        message.channel.sendMessage("Saqué "+ result);
-        message.channel.sendMessage("Empate");
+        message.channel.sendMessage("${message.author} Saqué "+ result);
+        message.channel.sendMessage("${message.author} Empate");
       }else{
-        message.channel.sendMessage("You have to /start the game")
+        message.channel.sendMessage("!tic para empezar el juego")
       }
     }else if(message.content==="/papel"){
       if(res===1){
         //win
-        message.reply("Saqué "+ result);
-        message.reply("JA perdiste ;)");
+        message.reply("${message.author} Saqué "+ result);
+        message.reply("${message.author} JA perdiste ;)");
       }else if(res===3){
-        message.reply("Saqué "+ result);
-        message.reply("Ganaste bb");
+        message.reply("${message.author} Saqué "+ result);
+        message.reply("${message.author} Ganaste bb");
       }else if(res===2){
-        message.reply("Saqué "+ result);
-        message.reply("Empate");
+        message.reply("${message.author} Saqué "+ result);
+        message.reply("${message.author} Empate");
       }
     }else if(message.content==="/tijera"){
       if(res===3){
         //win
-        message.reply("Saqué "+ result);
-        message.reply("Estamos en modo facil?");
+        message.reply("${message.author} Saqué "+ result);
+        message.reply("${message.author} Estamos en modo facil?");
       }else if(res===2){
-        message.reply("Saqué "+ result);
-        message.reply("Ganaste GG");
+        message.reply("${message.author} Saqué "+ result);
+        message.reply("${message.author} Ganaste GG");
       }else if(res===1){
-        message.reply("Saqué "+ result);
-        message.reply("Empate");
+        message.reply("${message.author} Saqué "+ result);
+        message.reply("${message.author} Empate");
       }
     }
 });
@@ -1056,4 +1056,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
