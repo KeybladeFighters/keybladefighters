@@ -1071,4 +1071,4 @@ client.on("message", message => {
 });
 	
 	
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
+client.login("");
