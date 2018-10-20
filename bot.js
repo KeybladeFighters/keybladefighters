@@ -998,47 +998,47 @@ client.on('message', message => {
     }else if(res===3){
       result="rock";
     }
-    message.channel.sendMessage("/rock, /paper or /scissors?");
+    message.channel.sendMessage("/roca, /papel o /tijera?");
   }
     if(message.content==="/rock"){
       if(res===2){
         //win
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("You got Rekt boi");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("perdiste noob");
       }else if(res===1){
         //lose
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("I'm triggered right now");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("Ganaste uwu");
       }else if(res===3){
         //draw
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("Draw");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("Empate");
       }else{
         message.channel.sendMessage("You have to /start the game")
       }
     }else if(message.content==="/paper"){
       if(res===1){
         //win
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("You got Rekt boi");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("JA perdiste ;)");
       }else if(res===3){
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("I'm triggered right now");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("Ganaste bb");
       }else if(res===2){
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("Draw");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("Empate");
       }
     }else if(message.content==="/scissors"){
       if(res===3){
         //win
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("You got Rekt boi");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("Estamos en modo facil?");
       }else if(res===2){
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("I'm triggered right now");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("Ganaste GG");
       }else if(res===1){
-        message.channel.sendMessage("I got "+ result);
-        message.channel.sendMessage("Draw");
+        message.channel.sendMessage("Saqué "+ result);
+        message.channel.sendMessage("Empate");
       }
     }
 });
@@ -1056,4 +1056,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
