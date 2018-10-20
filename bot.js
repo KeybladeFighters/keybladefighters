@@ -990,7 +990,7 @@ if (message.startsWith(prefix + "MEME")) {
         var line2 = message.content.split(" ")[3];
 
         var url = "http://memegen.link/" + image + "/" + line1 + "/" + line2 + ".jpg";
-        clien.sendMessage(message, "Here is your meme:");
+        client.sendMessage(message, "Here is your meme:");
         client.sendMessage(message, url);
 
         if (image === "undefined") {
@@ -998,32 +998,6 @@ if (message.startsWith(prefix + "MEME")) {
         }
 
     }
-	 if(message.startsWith(prefix + "GOOGLE")) {
-    client.sendMessage(message, "http://lmgtfy.com/?q=" + mes)
-    }
-    var mes = message.content.split(" ").slice(1).join(" ");
-    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
-    
-    if(message.startsWith(prefix + "IMAGES")) {
-    client.sendMessage(message, "https://www.google.com/search?site=&tbm=isch&source=hp&biw=2560&bih=1274&q=" + mes)
-    }
-    var mes = message.content.split(" ").slice(1).join(" ");
-    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
-    if(message.startsWith(prefix + "SHOP")) {
-    client.sendMessage(message, "https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=" + mes)
-    }
-    var mes = message.content.split(" ").slice(1).join(" ");
-    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
-    if(message.startsWith(prefix + "WIKI")) {
-    client.sendMessage(message, "https://en.wikipedia.org/wiki/" + mes)
-    }
-    var mes = message.content.split(" ").slice(1).join(" ");
-    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
-    if(message.startsWith(prefix + "YOUTUBE")) {
-    client.sendMessage(message, "https://www.youtube.com/results?search_query=" + mes)
-    }
-    var mes = message.content.split(" ").slice(1).join(" ");
-    var mes = encodeURI(message.content.split(" ").slice(1).join(" "))
 	
 });
 
@@ -1041,4 +1015,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
