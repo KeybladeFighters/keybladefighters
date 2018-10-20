@@ -990,11 +990,11 @@ if (message.startsWith(prefix + "MEME")) {
         var line2 = message.content.split(" ")[3];
 
         var url = "http://memegen.link/" + image + "/" + line1 + "/" + line2 + ".jpg";
-        client.sendMessage(message, "Here is your meme:");
-        client.sendMessage(message, url);
+       message.channel.send(message, "Here is your meme:");
+        message.channel.send(message, url);
 
         if (image === "undefined") {
-            client.reply(message, "Here is a list of meme images");
+            message.channel.send(message, "Here is a list of meme images");
         }
 
     }
@@ -1015,4 +1015,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
