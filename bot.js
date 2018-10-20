@@ -390,9 +390,7 @@ client.on("message", function(message) {
             message.reply((pelea[Math.floor(Math.random() * pelea.length)]) + slappedUser);
             break;
 		      
-    
-
-
+	
       
         case "disco":
 		   
@@ -1053,7 +1051,24 @@ client.on('message', function(message) {
     }
 });
 
-
+client.on("message", message => {
+ if ((message.content.startsWith('!casa'))) {
+   var rnd = randomIntInc(1,5);
+   console.log(rnd);
+	 //message.channel.send(`MUAJAJAJAJA  <:jaja:425806439076986893> !`, {
+   // file: rando_risa[Math.floor(Math.random() * rando_risa.length)]
+	 
+	 
+	// let slappedUser = message.mentions.users.first();
+        //    if(message.mentions.users.size < 1) return message.reply("Te olvidaste del nombre a quien pegarle.");
+       //     message.reply((pelea[Math.floor(Math.random() * pelea.length)]) + slappedUser);
+   if(rnd===1) message.channel.sendMessage(`Not Probable.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===2) message.channel.sendMessage(`Not Probable.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===3) message.channel.sendMessage(`Not Probable.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===4) message.channel.sendMessage(`Not Probable.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+   else if(rnd===5) message.channel.sendMessage(`Not Probable.`, {file: rando_risa[Math.floor(Math.random() * rando_risa.length)])};
+ };
+});
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
