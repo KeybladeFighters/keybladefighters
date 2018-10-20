@@ -1000,7 +1000,7 @@ client.on('message', message => {
     }
     message.channel.sendMessage("/roca, /papel o /tijera?");
   }
-    if(message.content==="/rock"){
+    if(message.content==="/roca"){
       if(res===2){
         //win
         message.channel.sendMessage("Saqué "+ result);
@@ -1016,7 +1016,7 @@ client.on('message', message => {
       }else{
         message.channel.sendMessage("You have to /start the game")
       }
-    }else if(message.content==="/paper"){
+    }else if(message.content==="/papel"){
       if(res===1){
         //win
         message.channel.sendMessage("Saqué "+ result);
@@ -1028,7 +1028,7 @@ client.on('message', message => {
         message.channel.sendMessage("Saqué "+ result);
         message.channel.sendMessage("Empate");
       }
-    }else if(message.content==="/scissors"){
+    }else if(message.content==="/tijera"){
       if(res===3){
         //win
         message.channel.sendMessage("Saqué "+ result);
@@ -1056,4 +1056,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
