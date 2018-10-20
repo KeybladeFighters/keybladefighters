@@ -992,11 +992,11 @@ client.on('message', message => {
     //paper 2
     //rock 3
     if(res===1){
-      result="scissors";
+      result="tijera";
     }else if(res===2){
-      result="paper";
+      result="papel";
     }else if(res===3){
-      result="rock";
+      result="roca";
     }
     message.channel.sendMessage("/roca, /papel o /tijera?");
   }
@@ -1056,4 +1056,4 @@ client.on('message', function(message) {
 
 	
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq0bHg.y_Qk5Y7WmKcuo8gwNGCjlUP9yhM");
