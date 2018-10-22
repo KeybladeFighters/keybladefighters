@@ -1033,4 +1033,4 @@ client.on('message', function(message) {
 });
 
 	
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq-XNQ.uh_teNRSkyeBIz-DB4pnx76fzik");
+client.login("");
