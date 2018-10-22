@@ -1054,4 +1054,4 @@ client.on('message', function(message) {
 });
 
 	
-client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq6rdg.lMOL6G526l5qYmmwlwe5s1mmhhU");
+client.login("");
