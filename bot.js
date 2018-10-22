@@ -965,7 +965,7 @@ client.on("message", message =>  {
     client.on("message", message =>  { 
 
 	if(message.content == "!mess" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
-			client.channels.get("467801888029409303").send("hola!", {files: ["https://media.giphy.com/media/3orieMQ7zX5X633T2g/giphy.gif"]}) 
+			client.channels.get("455134311197179907").send(" ", {files: ["https://media.giphy.com/media/3orieMQ7zX5X633T2g/giphy.gif"]}) 
 			
 		}
 });
@@ -1054,4 +1054,4 @@ client.on('message', function(message) {
 });
 
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq6rdg.lMOL6G526l5qYmmwlwe5s1mmhhU");
