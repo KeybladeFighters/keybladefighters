@@ -563,6 +563,7 @@ case "dm":
    */
  .addField("!slap @[usuario]", "Descripcion: Abofetea a un usuario.", true)
      .addField("!meh", "Descripcion: meh", true)
+      .addField("!impact - !palomitas", "Descripcion: gif", true)
       .addField("!jewels - !porlaqueen - !laqueen - !minimos - !cabeza", "Descripcion: Imagen ")
 .addField("!abrazo , !abrazo [@usuario]", "Descripcion:Puede ser usado en contra de alguien en especifico, o para todos (!abrazo)", true)
 	     
@@ -654,7 +655,13 @@ client.on("message", (message) => {
 	   if (message.content.startsWith(prefix + "lala")) {
     message.channel.send('', {files: ["https://i.imgur.com/g91LSW9.jpg"]});
   } else
-	          
+	     if (message.content.startsWith(prefix + "palomitas")) {
+    message.channel.send('', {files: ["https://media.giphy.com/media/pUeXcg80cO8I8/giphy.gif"]});
+  } else
+	      if (message.content.startsWith(prefix + "impact")) {
+    message.channel.send('', {files: ["https://cdn.discordapp.com/attachments/455140062762631169/503610379998461962/gafas_gif.gif"]});
+  } else
+	         
     if(message.content.startsWith (prefix + "abrazo") ) {
 
         let member = message.mentions.members.first()
@@ -1033,4 +1040,4 @@ client.on('message', function(message) {
 });
 
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq-Zrg.qp6ZRuVHyucLoc8MXex9KoJ06NY");
