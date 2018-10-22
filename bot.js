@@ -954,22 +954,7 @@ client.on("message", message =>  { // EventEmitter
 		}
 });
 	
-client.on("message", message =>  { 
 
-	if(message.content == "!mensaje" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
-			client.channels.get("455134311197179907").send("hola!") 
-			
-		}
-});
-		
-    client.on("message", message =>  { 
-
-	if(message.content == "!mess" && message.member.roles.some(r=>["administrador", "moderador"].includes(r.name)) ){ // Check if message is "!ping"
-			client.channels.get("455134311197179907").send("xd", {files: ["https://media.giphy.com/media/3orieMQ7zX5X633T2g/giphy.gif"]}) 
-			
-		}
-});
-	
 
 	
 		
@@ -1048,4 +1033,4 @@ client.on('message', function(message) {
 });
 
 	
-client.login("");
+client.login("NDQzOTAyNjE0ODgzNzk0OTQ1.Dq-XNQ.uh_teNRSkyeBIz-DB4pnx76fzik");
